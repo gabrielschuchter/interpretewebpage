@@ -1,0 +1,4 @@
+@media(max-width:760px){
+  .nutrition-hero-copy,.interprete-hero-copy{min-width:0}
+  .nutrition-hero-v2 h1{max-width:100%;font-size:clamp(39px,10.5vw,58px);letter-spacing:-.08em}
+}
