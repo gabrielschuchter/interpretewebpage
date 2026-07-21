@@ -32,6 +32,17 @@ O Nutriwork aponta para `https://www.gruponutriwork.com.br`. Os CTAs de agendame
 
 `npm.cmd run build` aprovado, incluindo compilação TypeScript, geração estática das três rotas, sitemap e robots.
 
+## Aperfeiçoamentos interativos
+
+- Seletor de caminho na Home para Nutrição ou Interprete.
+- Modal contextual de conversa inicial com mensagens específicas e foco preso.
+- CTA mobile persistente com safe area e encerramento no CTA final.
+- Ciclo de situações da Nutrição para viagem, evento, mudança de horário, rotina corrida e refeições fora.
+- Navegação interna sticky nas páginas de serviço.
+- Timeline interativa das 12 semanas do Interprete.
+- Demonstração clicável Pergunta -> Estudo -> Resultado -> Limitações -> Interpretação -> Aplicação.
+- Orientador de plano com três perguntas e recomendação inicial.
+
 ## Limitações reais
 
 O repositório remoto estava vazio no momento da implementação. Não foram incluídos preços, depoimentos, CRN em página legal ou formulário de backend porque esses dados/integrações não foram fornecidos.
