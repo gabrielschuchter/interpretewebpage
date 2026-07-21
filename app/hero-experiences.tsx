@@ -30,13 +30,23 @@ export function HomeHero() {
       <span className="home-hero-location">Uberlândia / online</span>
     </div>
 
-    <div className="home-hero-titleblock">
-      <SectionLabel>Uma marca pessoal em dois territórios</SectionLabel>
-      <h1 id="home-hero-title">Nutrição <em>e</em> evidência<br /><span>na prática.</span></h1>
-      <p>Gabriel Schuchter é nutricionista, professor e pesquisador. Escolha o caminho que melhor descreve o que você precisa agora.</p>
-    </div>
+    <div className="home-hero-composition">
+      <div className="home-hero-copy">
+        <div className="home-hero-titleblock">
+          <SectionLabel>Uma marca pessoal em dois territórios</SectionLabel>
+          <h1 id="home-hero-title">Nutrição <em>e</em> evidência<br /><span>na prática.</span></h1>
+          <p>Gabriel Schuchter é nutricionista, professor e pesquisador. Escolha o caminho que melhor descreve o que você precisa agora.</p>
+        </div>
+      </div>
 
-    <div className="home-hero-stage">
+      <figure className="home-hero-portrait">
+        <div className="home-portrait-frame">
+          <Image src="/gabriel-home.jpg" alt="Gabriel Schuchter em retrato profissional" fill priority sizes="(max-width: 760px) 88vw, 43vw" />
+        </div>
+        <span className="home-hero-greeting">oi<span>.</span></span>
+        <figcaption>Gabriel Schuchter · professor e pesquisador</figcaption>
+      </figure>
+
       <div className="home-hero-service home-hero-service--left">
         <span className="hero-service-index">01 / cuidado contínuo</span>
         <Link href="/acompanhamento-nutricional" className="home-service-path" onMouseEnter={() => setActive('nutrition')} onFocus={() => setActive('nutrition')}>
@@ -46,14 +56,6 @@ export function HomeHero() {
         </Link>
         <span className="home-service-context">rotina · suporte · ajustes</span>
       </div>
-
-      <figure className="home-hero-portrait">
-        <div className="home-portrait-frame">
-          <Image src="/gabriel-home.jpg" alt="Gabriel Schuchter em retrato profissional" fill priority sizes="(max-width: 760px) 88vw, 39vw" />
-        </div>
-        <span className="home-hero-greeting">oi<span>.</span></span>
-        <figcaption>Gabriel Schuchter · professor e pesquisador</figcaption>
-      </figure>
 
       <div className="home-hero-service home-hero-service--right">
         <span className="hero-service-index">02 / leitura crítica</span>
@@ -88,8 +90,8 @@ export function NutritionHero() {
       <h1 id="nutrition-hero-title">Acompanhamento nutricional que <em>continua depois da consulta.</em></h1>
       <p className="lead">A estratégia é construída a partir da sua rotina e ajustada conforme sua evolução, suas dificuldades e as mudanças que acontecem no caminho.</p>
       <div className="actions">
-        <ServiceModalTrigger initialService="nutrition" className="button">Agendar conversa inicial <Arrow /></ServiceModalTrigger>
-        <Link className="hero-text-action" href="#como-funciona">Ver como funciona <Arrow /></Link>
+        <ServiceModalTrigger initialService="nutrition" className="button">Quero entender meu acompanhamento <Arrow /></ServiceModalTrigger>
+        <Link className="hero-text-action" href="#como-funciona">Ver o processo antes de decidir <Arrow /></Link>
       </div>
       <div className="nutrition-hero-details"><span>conversa inicial gratuita</span><span>sem compromisso</span><span>CRN9 38302/P</span></div>
     </div>
@@ -111,7 +113,7 @@ export function InterpreteHero() {
       <div className="interprete-hero-kicker"><SectionLabel>Interprete. / aulas particulares</SectionLabel><span>12 semanas · 03 planos</span></div>
       <h1 id="interprete-hero-title">Aprenda a interpretar evidências <em>— não apenas a repetir conclusões.</em></h1>
       <p className="lead">Aulas particulares em Prática Baseada em Evidências para construir leitura crítica, raciocínio e aplicação com mais autonomia.</p>
-      <div className="actions"><ServiceModalTrigger initialService="interprete" className="button interprete-hero-button">Agendar conversa inicial <Arrow /></ServiceModalTrigger><Link className="hero-text-action" href="#como-funciona">Traçar a jornada <Arrow /></Link></div>
+      <div className="actions"><ServiceModalTrigger initialService="interprete" className="button interprete-hero-button">Quero uma rota de estudo <Arrow /></ServiceModalTrigger><Link className="hero-text-action" href="#como-funciona">Ver como as aulas funcionam <Arrow /></Link></div>
     </div>
     <figure className="interprete-hero-portrait">
       <div className="interprete-paper-frame"><Image src="/gabriel-interprete.jpg" alt="Gabriel Schuchter em retrato para a página Interprete." fill priority sizes="(max-width: 760px) 82vw, 31vw" /></div>

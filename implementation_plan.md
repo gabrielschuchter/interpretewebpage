@@ -10,7 +10,7 @@ Next.js App Router, TypeScript, CSS variables sem dependências UI adicionais. R
 1. Criar base Next.js e tokens globais.
 2. Implementar navegação, Home e dois serviços.
 3. Integrar fotografias reais fornecidas.
-4. Implementar responsividade, foco, reduced motion e metadata.
+4. Implementar responsividade, estados de foco e metadata.
 5. Validar build e revisar estados/links.
 
 ## Riscos e dados ausentes

@@ -2,7 +2,6 @@
 :root {
   --gs-font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --gs-font-body: "Manrope", Inter, system-ui, sans-serif;
-  --gs-font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
   --gs-container: 73.75rem;
   --gs-container-wide: 90rem;
   --gs-reading: 68ch;

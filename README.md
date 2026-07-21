@@ -17,7 +17,8 @@ npm run build
 
 ## Rotas
 
-- `/` — Home da marca pessoal
+- `/` — seleção inicial de caminho
+- `/home` — Home editorial da marca pessoal
 - `/acompanhamento-nutricional` — serviço clínico
 - `/interprete` — aulas individuais em Prática Baseada em Evidências
 
