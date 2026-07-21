@@ -22,7 +22,7 @@ Os tokens fornecidos foram incorporados em `app/tokens.css` e refletidos nas var
 
 ## Acessibilidade e responsividade
 
-HTML semântico, foco visível, alt text nas fotografias, alvos de toque, layout mobile-first e suporte a `prefers-reduced-motion`. O CSS recompõe a grade em telas pequenas e evita overflow horizontal.
+HTML semântico, foco visível, alt text nas fotografias, alvos de toque e layout mobile-first. O CSS recompõe a grade em telas pequenas e evita overflow horizontal.
 
 ## Integrações
 
