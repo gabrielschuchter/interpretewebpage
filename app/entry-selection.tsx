@@ -14,19 +14,19 @@ export function EntrySelection(){
       </div>
       <div>
         <p className="entry-selection-eyebrow">Gabriel Schuchter</p>
-        <h1 id="entry-title">Por onde<br /><em>começamos?</em></h1>
+        <h1 id="entry-title">Por onde <em>começamos?</em></h1>
         <p className="entry-selection-lead">Escolha o caminho que combina com o que você procura agora.</p>
       </div>
     </div>
     <nav className="entry-selection-choices" aria-label="Escolha um caminho">
       <Link className="entry-choice entry-choice--nutrition" href="/acompanhamento-nutricional">
         <span className="entry-choice-number">01</span>
-        <span className="entry-choice-copy"><strong>Acompanhamento<br /><em>Nutricional</em></strong><small>Uma estratégia que acompanha a vida real.</small></span>
+        <span className="entry-choice-copy"><strong>Acompanhamento <em>Nutricional</em></strong><small>Uma estratégia que acompanha a vida real.</small></span>
         <span className="entry-choice-arrow" aria-hidden="true">↗</span>
       </Link>
       <Link className="entry-choice entry-choice--interprete" href="/interprete">
         <span className="entry-choice-number">02</span>
-        <span className="entry-choice-copy"><strong>Aulas particulares em<br /><em>Prática Baseada em Evidências</em></strong><small>Aprenda a ler, interpretar e aplicar evidências.</small></span>
+        <span className="entry-choice-copy"><strong>Aulas particulares em <em>Prática Baseada em Evidências</em></strong><small>Aprenda a ler, interpretar e aplicar evidências.</small></span>
         <span className="entry-choice-arrow" aria-hidden="true">↗</span>
       </Link>
     </nav>

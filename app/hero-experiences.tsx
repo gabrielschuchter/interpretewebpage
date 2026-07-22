@@ -34,7 +34,7 @@ export function HomeHero() {
       <div className="home-hero-copy">
         <div className="home-hero-titleblock">
           <SectionLabel>Uma marca pessoal em dois territórios</SectionLabel>
-          <h1 id="home-hero-title">Nutrição <em>e</em> evidência<br /><span>na prática.</span></h1>
+          <h1 id="home-hero-title">Nutrição <em>e</em> evidência <span>na prática.</span></h1>
           <p>Gabriel Schuchter é nutricionista, professor e pesquisador. Escolha o caminho que melhor descreve o que você precisa agora.</p>
         </div>
       </div>
@@ -50,7 +50,7 @@ export function HomeHero() {
       <div className="home-hero-service home-hero-service--left">
         <span className="hero-service-index">01 / cuidado contínuo</span>
         <Link href="/acompanhamento-nutricional" className="home-service-path" onMouseEnter={() => setActive('nutrition')} onFocus={() => setActive('nutrition')}>
-          <strong>Acompanhamento<br /><em>nutricional</em></strong>
+          <strong>Acompanhamento <em>nutricional</em></strong>
           <span>Uma estratégia que continua sendo ajustada para funcionar na sua vida.</span>
           <Arrow />
         </Link>

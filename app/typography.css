@@ -1,0 +1,713 @@
+/* Semantic typography application for the GS design system v2.1. */
+:root {
+  --serif: var(--gs-font-display);
+  --sans: var(--gs-font-body);
+  --mono: var(--gs-font-mono);
+}
+
+html {
+  font-family: var(--gs-font-body);
+  font-feature-settings: var(--gs-font-feature-text);
+  font-optical-sizing: var(--gs-font-optical-sizing);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--type-body-family);
+}
+
+body {
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-line);
+  letter-spacing: var(--type-body-tracking);
+}
+
+p,
+li,
+dd,
+blockquote {
+  text-wrap: pretty;
+  orphans: 2;
+  widows: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-optical-sizing: auto;
+  text-wrap: pretty;
+}
+
+.entry-selection-intro h1,
+.authority-home-copy h1,
+.home-hero-titleblock h1 {
+  max-width: 15ch;
+  font-family: var(--type-display-family);
+  font-size: var(--type-display-size);
+  font-weight: var(--type-display-weight);
+  line-height: var(--type-display-line);
+  letter-spacing: var(--type-display-tracking);
+  text-wrap: balance;
+}
+
+.entry-selection-intro h1 {
+  max-width: var(--type-display-width);
+}
+
+.nutrition-hero-v2 h1,
+.interprete-hero-v2 h1 {
+  max-width: var(--type-page-title-width);
+  font-family: var(--type-page-title-family);
+  font-size: var(--type-page-title-size);
+  font-weight: var(--type-page-title-weight);
+  line-height: var(--type-page-title-line);
+  letter-spacing: var(--type-page-title-tracking);
+  text-wrap: balance;
+}
+
+.nutrition-hero-v2 h1 em,
+.interprete-hero-v2 h1 em,
+.entry-selection-intro h1 em,
+.entry-choice-copy strong em {
+  font-style: italic;
+  font-weight: inherit;
+}
+
+.section h2,
+.dark-section h2,
+.map-section h2,
+.final-cta h2,
+.service-modal h2 {
+  max-width: var(--type-section-title-width);
+  font-family: var(--type-section-title-family);
+  font-size: var(--type-section-title-size);
+  font-weight: var(--type-section-title-weight);
+  line-height: var(--type-section-title-line);
+  letter-spacing: var(--type-section-title-tracking);
+  text-wrap: pretty;
+}
+
+.service-modal h2 {
+  max-width: 12ch;
+  padding-right: var(--gs-space-8);
+}
+
+[data-theme="nutrition"] :is(
+  .problem-section,
+  .comparison-section,
+  .cycle-section,
+  .routine-section,
+  .nutrition-format,
+  .faq-section
+) h2,
+[data-theme="interprete"] :is(
+  .development-section,
+  .demo-section,
+  .plans-section,
+  .faq-section,
+  .support-strip
+) h2 {
+  font-family: var(--gs-font-body);
+  font-weight: 620;
+  letter-spacing: 0;
+}
+
+.section-label,
+.service-modal .eyebrow,
+.path-selector .eyebrow {
+  display: block;
+  margin: 0 0 var(--gs-space-3);
+  max-width: 32ch;
+  color: var(--theme-text-muted, var(--muted));
+  font-family: var(--type-label-family);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line);
+  letter-spacing: var(--type-label-tracking);
+  text-transform: var(--type-label-transform);
+}
+
+.dark-section .section-label,
+.map-section .section-label,
+.interprete-hero-v2 .section-label {
+  color: currentColor;
+  opacity: .74;
+}
+
+.entry-selection-eyebrow {
+  display: block !important;
+  margin: 0 0 var(--gs-space-3);
+  font-family: var(--type-label-family);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line);
+  letter-spacing: var(--type-label-tracking);
+  text-transform: none;
+}
+
+.lead,
+.entry-selection-lead,
+.authority-home-copy > p,
+.final-cta > p {
+  max-width: var(--type-lead-width);
+  font-family: var(--type-lead-family);
+  font-size: var(--type-lead-size);
+  font-weight: var(--type-lead-weight);
+  line-height: var(--type-lead-line);
+  letter-spacing: var(--type-lead-tracking);
+}
+
+.section > div > p,
+.section-intro > p,
+.authority-copy > p,
+.portrait-story p,
+.map-header > p,
+.paper-content > p,
+.faq details p {
+  max-width: var(--type-body-width);
+  font-family: var(--type-body-family);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-line);
+  letter-spacing: var(--type-body-tracking);
+}
+
+.authority-scope-grid p,
+.authority-service-grid p,
+.problem-list p,
+.comparison-table p,
+.included-grid p,
+.routine-note p,
+.format-list p,
+.difficulty-grid p,
+.skill-ledger p,
+.interpret-panel .demo-note,
+.plan p,
+.plan-advisor p,
+.support-items p,
+.testimonial-card figcaption,
+.prepared-message p,
+.modal-note {
+  font-family: var(--type-body-compact-family);
+  font-size: var(--type-body-compact-size);
+  font-weight: var(--type-body-compact-weight);
+  line-height: var(--type-body-compact-line);
+  letter-spacing: 0;
+}
+
+.site-header .wordmark,
+.footer .wordmark,
+.home-hero-signature {
+  font-family: var(--gs-font-body);
+  font-size: 1.0625rem;
+  font-weight: 620;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.entry-selection-mark {
+  font-family: var(--gs-font-display);
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.desktop-nav,
+.mobile-menu nav,
+.mobile-menu summary,
+.in-page-nav,
+.footer-links {
+  font-family: var(--type-nav-family);
+  font-size: var(--type-nav-size);
+  font-weight: var(--type-nav-weight);
+  line-height: var(--type-nav-line);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.mobile-menu summary,
+.faq summary,
+.advisor-questions button {
+  min-height: 2.75rem;
+}
+
+.in-page-nav a {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.button,
+.header-cta,
+.hero-conversation-button,
+.hero-text-action,
+.plan > a,
+.modal-action,
+.mobile-contact {
+  font-family: var(--type-button-family);
+  font-size: var(--type-button-size);
+  font-weight: var(--type-button-weight);
+  line-height: var(--type-button-line);
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+  text-wrap: pretty;
+}
+
+.plans-grid .plan > a,
+.plans-grid .plan.featured > a {
+  font-family: var(--type-button-family);
+  font-size: var(--type-button-size);
+  font-weight: var(--type-button-weight);
+  line-height: var(--type-button-line);
+  letter-spacing: 0;
+}
+
+.text-link,
+.footer a:not(.button),
+.advisor-result a {
+  font-family: var(--gs-font-body);
+  font-size: var(--type-body-compact-size);
+  font-weight: 520;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.testimonial-card figcaption strong,
+.testimonial-card figcaption span {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.testimonial-card figcaption strong {
+  font-weight: 620;
+}
+
+.testimonial-card figcaption span {
+  font-weight: 400;
+}
+
+.entry-choice-copy strong,
+.authority-scope-grid strong,
+.authority-service-grid h3,
+.format-list strong,
+.skill-ledger strong,
+.difficulty-grid strong,
+.cycle-response h3,
+.included-grid h3,
+.plan h3,
+.advisor-copy h3,
+.advisor-result strong,
+.support-items strong,
+.timeline-interactive button strong,
+.interpret-panel h3 {
+  font-family: var(--gs-font-body);
+  font-weight: 620;
+  line-height: 1.16;
+  letter-spacing: 0;
+  text-wrap: pretty;
+}
+
+.entry-choice-copy strong {
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+}
+
+.authority-scope-grid strong,
+.authority-service-grid h3,
+.format-list strong,
+.skill-ledger strong,
+.difficulty-grid strong,
+.support-items strong {
+  font-size: clamp(1.1875rem, 1.7vw, 1.5rem);
+}
+
+.cycle-response h3,
+.included-grid h3,
+.plan h3,
+.advisor-copy h3,
+.advisor-result strong,
+.interpret-panel h3 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.nutrition-dark .included-grid h3 {
+  font-family: var(--gs-font-body) !important;
+  font-size: clamp(1.375rem, 2vw, 1.625rem) !important;
+  font-weight: 620 !important;
+  line-height: 1.16 !important;
+  letter-spacing: 0 !important;
+}
+
+.faq summary,
+.service-options button,
+.cycle-tabs button,
+.interpret-rail button,
+.advisor-questions legend,
+.advisor-questions button,
+.path-questions > button,
+.timeline-interactive button {
+  font-family: var(--type-ui-family);
+  font-size: var(--type-ui-size);
+  font-weight: var(--type-ui-weight);
+  line-height: var(--type-ui-line);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.modal-close {
+  font-family: var(--type-label-family);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line);
+  letter-spacing: var(--type-label-tracking);
+}
+
+.faq summary,
+.path-questions > button strong,
+.advisor-questions legend {
+  font-weight: 620;
+}
+
+.faq details p {
+  margin-top: var(--gs-space-3);
+}
+
+.quote-band blockquote,
+.testimonial-card blockquote {
+  font-family: var(--type-quote-family);
+  font-size: var(--type-quote-size);
+  font-style: var(--type-quote-style);
+  font-weight: var(--type-quote-weight);
+  line-height: var(--type-quote-line);
+  letter-spacing: 0;
+}
+
+.quote-band blockquote {
+  max-width: 58ch;
+}
+
+.quote-band blockquote p,
+.testimonial-card blockquote {
+  font: inherit;
+}
+
+.quote-mark {
+  font-family: var(--gs-font-display);
+  font-weight: 450;
+}
+
+.price,
+.authority-ledger,
+.stats,
+.plan,
+.comparison-table {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.price strong {
+  font-family: var(--type-price-family);
+  font-size: var(--type-price-size);
+  font-weight: var(--type-price-weight);
+  line-height: var(--type-price-line);
+  letter-spacing: var(--type-price-tracking);
+  font-feature-settings: var(--gs-font-feature-ui);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.price s,
+.plan small,
+.authority-ledger span,
+.footer small,
+.entry-choice-copy small,
+.entry-selection-footer {
+  font-family: var(--type-caption-family);
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-caption-weight);
+  line-height: var(--type-caption-line);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.authority-ledger strong,
+.stats strong {
+  font-family: var(--gs-font-body);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+
+.nutrition-hero-kicker,
+.interprete-hero-kicker,
+.nutrition-hero-details,
+.interprete-hero-footer {
+  display: flex !important;
+}
+
+.nutrition-hero-kicker > span,
+.interprete-hero-kicker > span,
+.nutrition-hero-details,
+.interprete-hero-footer,
+.mono-note,
+.annotation span,
+.timeline-interactive button span,
+.interpret-rail button span {
+  font-family: var(--type-data-family);
+  font-size: var(--type-data-size);
+  font-weight: var(--type-data-weight);
+  line-height: var(--type-data-line);
+  letter-spacing: 0;
+  font-feature-settings: var(--gs-font-feature-data);
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+.nutrition-hero-details,
+.interprete-hero-footer {
+  text-transform: none;
+}
+
+.routine-note .mono-note,
+.cycle-response .mono-note,
+.interpret-panel .mono-note,
+.advisor-copy .mono-note,
+.prepared-message .mono-note,
+.annotation span,
+.timeline-interactive button span,
+.interpret-rail button span {
+  display: block !important;
+}
+
+.interpret-rail button {
+  grid-template-columns: 2rem minmax(0, 1fr) 1.25rem;
+}
+
+.plan-index,
+.featured-label {
+  font-family: var(--type-label-family);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line);
+  letter-spacing: var(--type-label-tracking);
+  text-transform: none;
+}
+
+.plans-grid .plan.featured::before {
+  font-family: var(--type-label-family);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line);
+  letter-spacing: var(--type-label-tracking);
+  text-transform: none;
+}
+
+.prepared-message p,
+.modal-note {
+  max-width: 52ch;
+}
+
+.sticky-mobile-cta > span {
+  font-family: var(--type-caption-family);
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-caption-weight);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.footer p {
+  font-family: var(--type-caption-family);
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-caption-weight);
+  line-height: var(--type-caption-line);
+}
+
+.entry-selection-intro,
+.entry-selection-choices,
+.authority-home-copy,
+.nutrition-hero-copy,
+.interprete-hero-copy,
+.section-intro,
+.paper-content {
+  min-width: 0;
+}
+
+.entry-selection-intro h1,
+.entry-choice-copy strong,
+.nutrition-hero-v2 h1,
+.interprete-hero-v2 h1,
+.section h2,
+.final-cta h2,
+.service-modal h2,
+.button,
+.header-cta,
+.hero-conversation-button {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.section h2,
+.final-cta h2 {
+  margin-bottom: var(--gs-space-5);
+}
+
+.section p + p {
+  margin-top: 1em;
+}
+
+.section-label + h2,
+.section-label + h1 {
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .site-header .wordmark {
+    font-size: 1rem;
+  }
+
+  .mobile-menu summary,
+  .mobile-menu nav {
+    font-size: 1rem;
+  }
+
+  .entry-selection-intro h1 {
+    font-size: clamp(2.5rem, 10.6vw, 2.875rem);
+  }
+
+  .authority-home-copy h1,
+  .home-hero-titleblock h1 {
+    font-size: clamp(2.875rem, 12vw, 3.5rem);
+    line-height: 1;
+  }
+
+  .nutrition-hero-v2 h1,
+  .interprete-hero-v2 h1 {
+    font-size: clamp(2.75rem, 11vw, 3.375rem);
+  }
+
+  .nutrition-hero-v2 h1 {
+    font-size: clamp(2.125rem, 10.5vw, 3.25rem);
+  }
+
+  .section h2,
+  .dark-section h2,
+  .map-section h2,
+  .final-cta h2,
+  .service-modal h2 {
+    font-size: clamp(1.875rem, 8.4vw, 2.375rem);
+  }
+
+  .section-label,
+  .entry-selection-eyebrow {
+    font-size: var(--type-label-size);
+  }
+
+  .entry-choice-copy strong {
+    font-size: clamp(1.5rem, 7.3vw, 2rem);
+  }
+
+  .entry-choice-copy small,
+  .authority-scope-grid p,
+  .authority-service-grid p,
+  .problem-list p,
+  .comparison-table p,
+  .included-grid p,
+  .routine-note p,
+  .format-list p,
+  .difficulty-grid p,
+  .skill-ledger p,
+  .plan p,
+  .plan-advisor p,
+  .support-items p,
+  .prepared-message p {
+    font-size: var(--type-body-size);
+    line-height: 1.6;
+  }
+
+  .in-page-nav {
+    display: flex !important;
+    font-size: .875rem;
+    scroll-padding-inline: var(--gs-gutter);
+  }
+
+  .in-page-nav a {
+    font-size: inherit;
+  }
+
+  .button,
+  .header-cta,
+  .hero-conversation-button,
+  .hero-text-action,
+  .plan > a,
+  .modal-action {
+    min-height: 3rem;
+    font-size: var(--type-button-size);
+  }
+
+  .sticky-mobile-cta {
+    align-items: center;
+  }
+
+  .sticky-mobile-cta > span {
+    max-width: 9rem;
+  }
+
+  .sticky-mobile-cta .button {
+    max-width: 10.5rem;
+    min-height: 2.75rem;
+    font-size: .875rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 359px) {
+  .entry-selection-intro {
+    grid-template-columns: 4.75rem minmax(0, 1fr);
+    gap: var(--gs-space-3);
+  }
+
+  .entry-selection-portrait {
+    width: 4.75rem;
+    height: 4.75rem;
+  }
+
+  .entry-selection-intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .sticky-mobile-cta > span {
+    max-width: 7.5rem;
+    font-size: .8125rem;
+  }
+
+  .sticky-mobile-cta .button {
+    max-width: 9.5rem;
+    padding-inline: .75rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .entry-selection-intro h1,
+  .authority-home-copy h1,
+  .home-hero-titleblock h1 {
+    font-size: min(var(--type-display-size), 5rem);
+  }
+
+  .nutrition-hero-v2 h1,
+  .interprete-hero-v2 h1 {
+    font-size: min(var(--type-page-title-size), 4rem);
+  }
+}

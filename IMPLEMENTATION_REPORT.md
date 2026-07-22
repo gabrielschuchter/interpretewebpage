@@ -6,7 +6,7 @@ Site completo da marca pessoal Gabriel Schuchter, com Home, Acompanhamento Nutri
 
 ## Design system
 
-Os tokens fornecidos foram incorporados em `app/tokens.css` e refletidos nas variáveis semânticas de `app/globals.css`. A implementação usa Newsreader para títulos, Manrope para interface e IBM Plex Mono para metadados.
+Os tokens fornecidos foram incorporados em `app/tokens.css` e refletidos nas variáveis semânticas de `app/globals.css`. A implementação usa Literata para títulos, Atkinson Hyperlegible Next para corpo/interface e IBM Plex Mono para dados funcionais.
 
 ## Conteúdo confirmado
 

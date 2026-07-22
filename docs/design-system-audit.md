@@ -5,7 +5,7 @@
 - Fonte original: `C:\Users\gabsc\Documents\Codex\gabriel-schuchter-design-system\design-system`.
 - Cópia versionada no projeto: `app/tokens.css`.
 - Contratos de implementação: `design-system/01_GLOBAL_FOUNDATIONS.md`, `05_COMPONENT_LIBRARY.md` e `08_IMPLEMENTATION_GUIDE.md`.
-- O sistema oficial usa três famílias: Newsreader para display/editorial, Manrope para corpo/UI e IBM Plex Mono para dados e metadados.
+- O sistema oficial usa três famílias: Literata para display/editorial, Atkinson Hyperlegible Next para corpo/UI e IBM Plex Mono para dados e metadados funcionais.
 
 ## Tokens oficiais encontrados
 
