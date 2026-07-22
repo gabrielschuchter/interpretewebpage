@@ -86,7 +86,6 @@ export function NutritionHero() {
   return <section className="hero service-hero nutrition-hero-v2" aria-labelledby="nutrition-hero-title">
     <div className="nutrition-grid-lines" aria-hidden="true" />
     <div className="nutrition-hero-copy">
-      <div className="nutrition-hero-kicker"><SectionLabel>Acompanhamento nutricional</SectionLabel><span>01 / 03</span></div>
       <h1 id="nutrition-hero-title">Acompanhamento nutricional que <em>continua depois da consulta.</em></h1>
       <p className="lead">A estratégia é construída a partir da sua rotina e ajustada conforme sua evolução, suas dificuldades e as mudanças que acontecem no caminho.</p>
       <div className="actions">
@@ -110,7 +109,6 @@ export function InterpreteHero() {
     <div className="interprete-map-lines" aria-hidden="true"><span /><span /><span /><i /><i /></div>
     <div className="interprete-hero-words" aria-hidden="true"><span>LEIA</span><span>APLIQUE</span></div>
     <div className="interprete-hero-copy">
-      <div className="interprete-hero-kicker"><SectionLabel>Interprete. / aulas particulares</SectionLabel><span>12 semanas · 03 planos</span></div>
       <h1 id="interprete-hero-title">Aprenda a interpretar evidências <em>— não apenas a repetir conclusões.</em></h1>
       <p className="lead">Aulas particulares em Prática Baseada em Evidências para construir leitura crítica, raciocínio e aplicação com mais autonomia.</p>
       <div className="actions"><ServiceModalTrigger initialService="interprete" className="button interprete-hero-button">Quero uma rota de estudo <Arrow /></ServiceModalTrigger><Link className="hero-text-action" href="#como-funciona">Ver como as aulas funcionam <Arrow /></Link></div>

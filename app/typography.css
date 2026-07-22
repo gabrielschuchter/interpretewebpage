@@ -452,15 +452,11 @@ h6 {
   letter-spacing: -.01em;
 }
 
-.nutrition-hero-kicker,
-.interprete-hero-kicker,
 .nutrition-hero-details,
 .interprete-hero-footer {
   display: flex !important;
 }
 
-.nutrition-hero-kicker > span,
-.interprete-hero-kicker > span,
 .nutrition-hero-details,
 .interprete-hero-footer,
 .mono-note,
