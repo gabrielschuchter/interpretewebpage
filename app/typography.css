@@ -746,3 +746,18 @@ h6 {
     font-size: min(var(--type-page-title-size), 4rem);
   }
 }
+
+/* Service hero titles should use the available column instead of forcing short, uneven lines. */
+.nutrition-hero-v2 h1,
+.interprete-hero-v2 h1 {
+  max-width: 100%;
+  text-wrap: pretty;
+}
+
+@media (max-width: 760px) {
+  .interprete-hero-v2 h1 {
+    font-size: clamp(2.25rem, 10vw, 3.25rem);
+    line-height: .9;
+    letter-spacing: -.055em;
+  }
+}

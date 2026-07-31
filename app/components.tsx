@@ -9,5 +9,3 @@ export function Footer(){return <footer className="footer"><div><div className="
 export function Button({href,children,secondary=false}:{href:string;children:React.ReactNode;secondary?:boolean}){return <a className={secondary?'button button-secondary':'button'} href={href} target={href.startsWith('http')?'_blank':undefined} rel={href.startsWith('http')?'noreferrer':undefined}>{children} <span>↗</span></a>}
 export function SectionLabel({children}:{children:React.ReactNode}){return <p className="section-label">{children}</p>}
 export function PageShell({theme,children}:{theme:string;children:React.ReactNode}){return <div data-theme={theme}><Header/>{children}<Footer/></div>}
-export function FAQ({items}:{items:{q:string;a:string}[]}){return <div className="faq">{items.map(item=><details key={item.q}><summary>{item.q}<span>+</span></summary><p>{item.a}</p></details>)}</div>}
-export function Quote({children,source}:{children:React.ReactNode;source?:string}){return <blockquote><span className="quote-mark">“</span><p>{children}</p>{source&&<cite>{source}</cite>}</blockquote>}
