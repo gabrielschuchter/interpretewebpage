@@ -114,7 +114,7 @@ export function InterpreteHero() {
       <div className="actions"><ServiceModalTrigger initialService="interprete" className="button interprete-hero-button">Quero uma rota de estudo <Arrow /></ServiceModalTrigger><Link className="hero-text-action" href="#como-funciona">Ver como as aulas funcionam <Arrow /></Link></div>
     </div>
     <figure className="interprete-hero-portrait">
-      <div className="interprete-paper-frame"><Image src="/gabriel-interprete.jpg" alt="Gabriel Schuchter em retrato para a página Interprete." fill priority sizes="(max-width: 760px) 82vw, 31vw" /></div>
+      <div className="interprete-paper-frame"><Image src="/gabriel-microfone.jpg" alt="Gabriel Schuchter falando ao microfone" fill priority sizes="(max-width: 760px) 82vw, 31vw" /></div>
       <span className="interprete-hero-marker">.</span>
       <figcaption><span>LAT 18°55′</span><span>LONG 48°16′</span><strong>um território se lê por camadas</strong></figcaption>
     </figure>

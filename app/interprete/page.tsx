@@ -1,9 +1,100 @@
-/* eslint-disable react/no-unescaped-entities */
-import {Button,PageShell,SectionLabel,FAQ,contact} from '../components';
+import Image from 'next/image';
+import {Button,PageShell,SectionLabel,contact} from '../components';
 import {InterpreteHero} from '../hero-experiences';
-import {InterpreteDemo,Timeline,PlanAdvisor,InPageNav,StickyMobileCTA} from '../interactive';
-const wa=contact('Olá, Gabriel. Quero agendar uma conversa sobre o Interprete.');
-const plans=[{name:'Orientação',price:'R$ 1.000',old:'R$ 1.200',detail:'1 encontro inicial + 1 encontro por mês, com duração de 1 hora.',for:'Para quem já possui expertise, mas precisa de direcionamento.',hour:'R$ 250 por hora de aula'},{name:'Aprofundamento',price:'R$ 1.100',old:'R$ 1.300',detail:'1 encontro inicial + 2 encontros por mês, com duração de 1 hora.',for:'Para quem conhece o básico e busca se aprofundar.',hour:'R$ 185 por hora de aula'},{name:'Imersão clínica',price:'R$ 1.200',old:'R$ 1.400',detail:'1 encontro inicial + 4 encontros por mês, com duração de até 1 hora e meia.',for:'Para quem busca entender do básico ao complexo em uma imersão exclusiva.',hour:'R$ 90 por aula',featured:true}];
-const testimonials=[{quote:'Eu conseguia ler artigos, mas não sabia separar resultado, limitação e aplicação. As aulas organizaram meu raciocínio de um jeito muito mais seguro.',name:'Letícia P.',role:'nutricionista clínica'},{quote:'A mentoria mudou minha forma de estudar. Em vez de procurar respostas prontas, aprendi a formular melhor a pergunta e avaliar o método.',name:'Bruno S.',role:'profissional de saúde'},{quote:'O diferencial foi trabalhar em cima das minhas dúvidas reais. Saí com um plano de estudo claro e mais autonomia para interpretar evidências.',name:'Fernanda L.',role:'aluna do Interprete.'}];
-const faq=[{q:'O que é o Interprete.?',a:'É uma comunidade exclusiva com acompanhamento individual e personalizado em formato de mentorias particulares, em tempo real.'},{q:'Preciso já entender de estatística?',a:'Não. O ponto de partida é definido a partir do que você já sabe e da pergunta que quer aprender a responder.'},{q:'As aulas são individuais?',a:'Sim. O núcleo do serviço são mentorias particulares, em tempo real, com desenvolvimento individual e espaço para trabalhar suas próprias dúvidas.'},{q:'Posso levar artigos da minha área?',a:'Sim. A proposta é aplicar o raciocínio a artigos e problemas reais, respeitando sua área e as prioridades definidas no plano individual.'},{q:'Tenho acesso a materiais, gravações e resumos?',a:'O acompanhamento inclui materiais de apoio, gravações e resumos conforme o percurso, além de acesso vitalício à plataforma. Encontros coletivos acontecem quando previstos.'},{q:'Como funciona o suporte?',a:'O formato de suporte é explicado na conversa inicial e acompanha o período contratado. Não há promessa de disponibilidade ilimitada ou resposta imediata.'},{q:'O que acontece na reunião inicial?',a:'Gabriel entende seu nível atual, suas dificuldades e o que você quer desenvolver para indicar um ponto de partida e o plano mais adequado.'}];
-export default function Interprete(){return <PageShell theme="interprete"><main><InterpreteHero/><InPageNav items={[{id:'para-quem',label:'Para quem é'},{id:'como-funciona',label:'Como funciona'},{id:'desenvolve',label:'O que você desenvolve'},{id:'planos',label:'Planos'},{id:'duvidas',label:'Dúvidas'}]}/><section id="para-quem" className="section interprete-intro"><div className="page-index"><span>INT.</span><strong>01—04</strong></div><div><SectionLabel>Para quem é</SectionLabel><h2>Não é sobre acumular artigos. É sobre saber o que fazer com eles.</h2><p>O Interprete. é uma comunidade exclusiva de mentorias particulares, em tempo real, para quem quer desenvolver uma prática verdadeiramente baseada em evidências.</p><div className="difficulty-grid"><p><strong>Você lê, mas não avalia.</strong> Métodos, risco de viés e estatística tornam difícil saber se um estudo é confiável.</p><p><strong>Você busca, mas sem direção.</strong> Depende de resumos e opiniões porque não sabe qual evidência procurar.</p><p><strong>Você estuda, mas não aplica.</strong> O resultado parece claro até chegar a uma decisão prática.</p></div><div className="discipline-list"><span>Nutrição baseada em evidências</span><span>Aplicação da evidência na prática</span><span>Interpretação crítica da literatura</span></div></div></section><section id="como-funciona" className="map-section evidence-map"><div className="map-header"><div className="map-mark">·</div><SectionLabel>Jornada de 12 semanas</SectionLabel><p>O plano de ação é individualizado: as prioridades mudam conforme seu nível, suas perguntas e a prática que você quer desenvolver.</p></div><Timeline/></section><section id="desenvolve" className="section development-section"><div><SectionLabel>O que você desenvolve</SectionLabel><h2>Você não precisa decorar estatística para interpretar um artigo.</h2><p>As mentorias podem trabalhar elaboração de perguntas, busca de evidências, desenho de estudos, risco de viés, medidas de efeito, intervalos de confiança, significância estatística e relevância clínica, revisões sistemáticas, raciocínio clínico e aplicação prática.</p><p>Em 12 semanas, o plano prioriza o que você precisa agora. A proposta não é prometer domínio completo de todos os temas, e sim construir uma rota de estudo mais autônoma.</p></div><div className="skill-ledger"><div><span>01</span><strong>Buscar</strong><p>Encontrar o estudo adequado para a pergunta.</p></div><div><span>02</span><strong>Interpretar</strong><p>Separar resultado, incerteza e limitação.</p></div><div><span>03</span><strong>Aplicar</strong><p>Reconhecer o que a evidência permite fazer na prática.</p></div></div></section><section className="section demo-section"><div><SectionLabel>Veja o método em ação</SectionLabel><h2>Uma evidência não termina no número.</h2><p>Este exemplo é demonstrativo. Em uma leitura real, cada etapa ajuda a decidir se um resultado merece confiança e como ele conversa com uma decisão clínica.</p></div><InterpreteDemo/></section><section className="section interpreted-page"><div className="paper-margin"><span>NOTA<br/>DE<br/>LEITURA</span></div><div className="paper-content"><SectionLabel>Página interpretada</SectionLabel><h2>A pergunta guia a leitura.</h2><p>Uma boa busca começa antes do campo de pesquisa. Nas mentorias, você aprende a identificar o problema, escolher o desenho de estudo adequado, avaliar validade, compreender estimativas e reconhecer o que pode — ou não — ser aplicado.</p><div className="annotation"><span>grifo 03</span><strong>Significância estatística não é o mesmo que relevância clínica.</strong><p>O resultado pode ser estatisticamente claro e ainda precisar de contexto antes de orientar uma decisão.</p></div></div></section><section id="planos" className="section plans-section"><div className="section-intro"><SectionLabel>Três níveis de acompanhamento</SectionLabel><h2>Mais frequência significa mais espaço para praticar.</h2><p>Todos os planos têm 12 semanas e começam com um encontro inicial. O plano mais completo custa pouco a mais, mas oferece quatro encontros mensais e encontros de até uma hora e meia: mais proximidade para quem quer uma imersão.</p></div><PlanAdvisor/><div className="plans-grid">{plans.map(plan=><article className={`plan ${plan.featured?'featured':''}`} key={plan.name}>{plan.featured&&<span className="featured-label">mais escolhido</span>}<span className="plan-index">INTERPRETE. / {plan.name.toUpperCase()}</span><h3>{plan.name}</h3><p className="plan-for">{plan.for}</p><div className="price"><s>{plan.old}</s><strong>{plan.price}</strong></div><p>{plan.detail}</p><small>{plan.hour}</small><a href={wa}>Quero conversar ↗</a></article>)}</div></section><section className="section testimonials-section testimonials-section--interprete"><div><h2>O que alunos percebem quando aprendem a interpretar com método.</h2><p>Depoimentos provisórios para ocupar o espaço até você enviar os relatos reais.</p></div><div className="testimonials-grid">{testimonials.map(item=><figure key={item.name} className="testimonial-card"><blockquote>{item.quote}</blockquote><figcaption><strong>{item.name}</strong><span>{item.role}</span></figcaption></figure>)}</div></section><section className="section support-strip"><div><SectionLabel>Além do encontro</SectionLabel><h2>Você não precisa interpretar tudo sozinho.</h2></div><div className="support-items"><p><strong>Desenvolvimento individual</strong>As perguntas da mentoria são as suas perguntas.</p><p><strong>Materiais, gravações e resumos</strong>O trabalho continua entre uma conversa e outra.</p><p><strong>Plataforma vitalícia</strong>Acesso à plataforma e a encontros coletivos quando previstos.</p></div></section><section id="duvidas" className="section faq-section"><div><SectionLabel>Perguntas frequentes</SectionLabel><h2>O que você precisa saber antes de começar.</h2></div><FAQ items={faq}/></section><section className="section final-cta final-cta-enhanced interprete-final"><h2>Transforme sua dificuldade com artigos em uma rota de estudo.</h2><p>Na conversa inicial, você apresenta seu nível, suas dúvidas e o tipo de decisão que quer aprender a tomar com mais segurança. A partir disso, Gabriel indica o plano mais coerente.</p><Button href={wa}>Quero montar minha rota de estudo</Button></section></main><StickyMobileCTA/></PageShell>}
+
+const conversation=contact('Olá, Gabriel! Vim pela página do Interprete. e gostaria de agendar a primeira conversa gratuita.');
+
+const actionSteps=[
+  'Identifique o problema clínico.',
+  'Defina a pergunta estruturada.',
+  'Encontre as melhores evidências.',
+  'Avalie a validade das evidências.',
+  'Interprete os resultados.',
+  'Aplique os resultados ao atendimento do paciente.',
+];
+
+const plans=[
+  {name:'Orientação',detail:'1 encontro inicial + 1 encontro por mês, com duração de 1 hora.',for:'Ideal para quem já possui expertise, mas precisa de direcionamento.',old:'R$ 1.200',price:'R$ 1.000',hour:'250 reais por hora de aula.'},
+  {name:'Aprofundamento',detail:'1 encontro inicial + 2 encontros por mês, com duração de uma hora.',for:'Ideal para quem conhece o básico e busca se aprofundar.',old:'R$ 1.300',price:'R$ 1.100',hour:'185 reais por hora de aula.'},
+  {name:'Imersão clínica',detail:'1 encontro inicial + 4 encontros por mês, com duração de até 1 hora e meia.',for:'Ideal para quem busca entender do básico ao complexo, em uma imersão exclusiva.',old:'R$ 1.400',price:'R$ 1.200',hour:'90 reais por aula.'},
+];
+
+export default function Interprete(){
+  return <PageShell theme="interprete"><main>
+    <InterpreteHero/>
+
+    <section className="section interprete-about" aria-labelledby="interprete-about-title">
+      <div className="interprete-about-image">
+        <Image src="/gabriel-microfone.jpg" alt="Gabriel Schuchter falando ao microfone" fill sizes="(max-width: 760px) 100vw, 40vw"/>
+      </div>
+      <div>
+        <SectionLabel>Quem sou eu</SectionLabel>
+        <h2 id="interprete-about-title">Quem sou eu</h2>
+        <p>Forte envolvimento em pesquisa, metodologia científica e epidemiologia clínica durante a graduação.</p>
+        <p>Nutricionista formado pela Universidade Federal de Uberlândia (UFU), Analista do Reviews, pesquisador, mentor e consultor de pesquisa, com atuação voltada à Prática Baseada em Evidências e à análise crítica da literatura científica em saúde.</p>
+        <p>É fundador do Nutriwork, reconhecido como o maior grupo de Nutrição Baseada em Evidências do Brasil, e atua como professor de Prática Baseada em Evidências, já tendo ministrado aulas para estudantes e profissionais das áreas de Nutrição, Medicina, Psicologia, Fisioterapia e Enfermagem.</p>
+      </div>
+    </section>
+
+    <section className="section interprete-definition" aria-labelledby="interprete-definition-title">
+      <div>
+        <SectionLabel>O que é o Interprete.</SectionLabel>
+        <h2 id="interprete-definition-title">O que é o Interprete.</h2>
+        <p>O Interprete. é uma comunidade exclusiva, onde você terá um acompanhamento individual e personalizado em formato de mentorias particulares, em tempo real.</p>
+        <p>A mentoria aborda temas como Prática Baseada em Evidências, leitura crítica de artigos científicos, construção de raciocínio clínico e Nutrição.</p>
+      </div>
+      <ul className="interprete-pillars" aria-label="Pilares do Interprete.">
+        <li>Nutrição Baseada em Evidências</li>
+        <li>Aplicação da evidência na prática</li>
+        <li>Interpretação crítica da literatura</li>
+      </ul>
+    </section>
+
+    <section id="como-funciona" className="dark-section interprete-action" aria-labelledby="action-title">
+      <SectionLabel>Plano de ação</SectionLabel>
+      <div className="interprete-action-intro">
+        <h2 id="action-title">Aprender, de forma constante e progressiva, todos os passos necessários para uma prática clínica verdadeira baseada em evidências.</h2>
+        <p>O fluxo de trabalho:</p>
+      </div>
+      <ol className="interprete-flow">{actionSteps.map((step,index)=><li key={step}><span>{String(index+1).padStart(2,'0')}</span><strong>{step}</strong></li>)}</ol>
+      <cite>Fonte: Diretrizes para a utilização da literatura médica: manual para a prática clínica da medicina baseada em evidências</cite>
+    </section>
+
+    <section className="section interprete-operational" aria-labelledby="operational-title">
+      <div>
+        <SectionLabel>Plano operacional</SectionLabel>
+        <h2 id="operational-title">12 semanas</h2>
+      </div>
+      <div className="interprete-phases">
+        <article><h3>1ª e 2ª semanas</h3><p>Identificação do problema clínico; busca de evidências; compreensão de qual tipo de artigo procurar.</p><strong>“Qual tipo de artigo devo procurar?”</strong></article>
+        <article><h3>3ª a 8ª semanas</h3><p>Validade dos estudos; interpretação dos resultados; compreensão do que torna um estudo mais ou menos confiável; compreensão do significado dos resultados.</p><strong>“Esse estudo é bom ou ruim?”<br/>“O que esse resultado significa?”</strong></article>
+        <article><h3>9ª a 12ª semanas</h3><p>Tomada de decisão baseada em evidências; aplicação dos resultados à prática clínica.</p><strong>“Como aplicar esses resultados na prática clínica?”</strong></article>
+      </div>
+    </section>
+
+    <section id="planos" className="section interprete-plans" aria-labelledby="plans-title">
+      <div className="interprete-plans-intro">
+        <SectionLabel>Formatos do Interprete.</SectionLabel>
+        <h2 id="plans-title">Escolha o formato que corresponde ao seu momento.</h2>
+        <p>Os três formatos têm duração de 12 semanas. Os valores e frequências abaixo são os dados atualmente confirmados no repositório.</p>
+      </div>
+      <div className="interprete-plan-list">{plans.map(plan=><article className="interprete-plan" key={plan.name}>
+        <p className="interprete-plan-name">Interprete. / {plan.name}</p>
+        <h3>{plan.name}</h3>
+        <p>{plan.detail}</p>
+        <strong>{plan.for}</strong>
+        <div className="interprete-plan-price"><s>{plan.old}</s><b>{plan.price}</b></div>
+        <small>{plan.hour}</small>
+      </article>)}</div>
+    </section>
+
+    <section className="section service-conversation interprete-conversation" aria-labelledby="interprete-conversation-title">
+      <div>
+        <SectionLabel>Primeira conversa gratuita</SectionLabel>
+        <h2 id="interprete-conversation-title">Antes de escolher seu caminho, vamos conversar.</h2>
+        <p>Na primeira conversa, você poderá me contar seu momento, as principais dificuldades que encontra ao estudar ou aplicar evidências e o que gostaria de desenvolver. A partir disso, podemos entender se o Interprete. faz sentido para você.</p>
+        <Button href={conversation}>Agendar minha conversa gratuita</Button>
+      </div>
+    </section>
+  </main></PageShell>;
+}
