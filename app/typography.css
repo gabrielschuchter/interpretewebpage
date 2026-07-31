@@ -169,6 +169,12 @@ h6 {
   letter-spacing: var(--type-lead-tracking);
 }
 
+.authority-home-copy > p {
+  max-width: 64ch;
+  font-size: clamp(1rem, 1.22vw, 1.125rem);
+  line-height: 1.62;
+}
+
 .section > div > p,
 .section-intro > p,
 .authority-copy > p,
@@ -560,6 +566,24 @@ h6 {
   margin-bottom: var(--gs-space-5);
 }
 
+.section.authority-project h2 {
+  max-width: 19ch;
+}
+
+.balanced-fixed-title span {
+  color: inherit;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.final-cta h2.balanced-fixed-title {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .section p + p {
   margin-top: 1em;
 }
@@ -585,8 +609,14 @@ h6 {
 
   .authority-home-copy h1,
   .home-hero-titleblock h1 {
-    font-size: clamp(2.875rem, 12vw, 3.5rem);
-    line-height: 1;
+    font-size: clamp(2.875rem, 13vw, 3.875rem);
+    line-height: .92;
+  }
+
+  .authority-home-copy > p {
+    max-width: 100%;
+    font-size: .9375rem;
+    line-height: 1.56;
   }
 
   .nutrition-hero-v2 h1,
@@ -604,6 +634,15 @@ h6 {
   .final-cta h2,
   .service-modal h2 {
     font-size: clamp(1.875rem, 8.4vw, 2.375rem);
+  }
+
+  .section.authority-project h2 {
+    max-width: 100%;
+    font-size: clamp(1.625rem, 6.7vw, 2rem);
+  }
+
+  .final-cta h2.balanced-fixed-title {
+    font-size: clamp(1.75rem, 7.35vw, 2.125rem);
   }
 
   .section-label,
