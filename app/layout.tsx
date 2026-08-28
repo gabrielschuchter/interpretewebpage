@@ -1,40 +1,10 @@
 import type { Metadata, Viewport } from 'next';
-import { Atkinson_Hyperlegible_Next, IBM_Plex_Mono, Literata } from 'next/font/google';
 import { absoluteUrl, SITE_URL } from '../lib/site';
 import './tokens.css';
 import './globals.css';
 
 const siteTitle = 'Interprete. — Prática Baseada em Evidências';
 const siteDescription = 'Formação acompanhada em Prática Baseada em Evidências, leitura crítica e aplicação de resultados.';
-
-const display = Literata({
-  weight: 'variable',
-  style: ['normal', 'italic'],
-  subsets: ['latin', 'latin-ext'],
-  axes: ['opsz'],
-  variable: '--font-literata',
-  display: 'swap',
-  fallback: ['Iowan Old Style', 'Palatino Linotype', 'Georgia', 'serif'],
-});
-
-const body = Atkinson_Hyperlegible_Next({
-  weight: 'variable',
-  style: ['normal', 'italic'],
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-atkinson',
-  display: 'swap',
-  fallback: ['Segoe UI', 'Arial', 'sans-serif'],
-});
-
-const mono = IBM_Plex_Mono({
-  weight: ['500'],
-  style: 'normal',
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-plex-mono',
-  display: 'swap',
-  preload: false,
-  fallback: ['SFMono-Regular', 'Consolas', 'monospace'],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -45,12 +15,8 @@ export const metadata: Metadata = {
   description: siteDescription,
   applicationName: 'Interprete.',
   publisher: 'Interprete.',
-  alternates: {
-    canonical: '/',
-  },
-  icons: {
-    icon: '/favicon.svg',
-  },
+  alternates: { canonical: '/' },
+  icons: { icon: '/favicon.svg' },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
@@ -58,12 +24,7 @@ export const metadata: Metadata = {
     siteName: 'Interprete.',
     locale: 'pt_BR',
     type: 'website',
-    images: [{
-      url: absoluteUrl('/og-interprete.svg'),
-      width: 1200,
-      height: 630,
-      alt: 'Interprete.',
-    }],
+    images: [{ url: absoluteUrl('/og-interprete.svg'), width: 1200, height: 630, alt: 'Interprete.' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -75,12 +36,12 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#f4ede1',
+  themeColor: '#041325',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={display.variable + ' ' + body.variable + ' ' + mono.variable}>
+    <html lang="pt-BR">
       <body>{children}</body>
     </html>
   );
