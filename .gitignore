@@ -7,3 +7,5 @@ out/
 tmp/
 *.tsbuildinfo
 output/playwright/
+
+.vercel
