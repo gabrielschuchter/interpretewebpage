@@ -1,0 +1,185 @@
+settings:
+  content:
+    merge: true
+  commit:
+    identity: app
+    templates:
+      create: "content(blog): create {path}"
+      update: "content(blog): update {path}"
+      delete: "content(blog): delete {path}"
+      rename: "content(blog): rename {oldPath} -> {newPath}"
+
+media:
+  - name: blog_images
+    label: Imagens do blog
+    input: public/blog
+    output: /blog
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+
+content:
+  - name: blog
+    label: Interprete. Blog
+    type: collection
+    path: content/blog
+    format: yaml-frontmatter
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      fields: [title, publishedAt, category, draft, featured]
+      primary: title
+      sort: [publishedAt, title]
+      search: [title, summary, author, tags]
+      default:
+        sort: publishedAt
+        order: desc
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+        options:
+          minlength: 8
+          maxlength: 140
+      - name: summary
+        label: Resumo
+        type: text
+        required: true
+        options:
+          minlength: 24
+          maxlength: 320
+      - name: type
+        label: Tipo
+        type: select
+        required: true
+        options:
+          values:
+            - name: explicador
+              label: Explicador
+            - name: analise
+              label: Análise
+            - name: evento
+              label: Evento
+      - name: category
+        label: Categoria
+        type: select
+        required: true
+        options:
+          values:
+            - name: ciencia-pbe
+              label: Ciência e PBE
+            - name: estatistica
+              label: Estatística
+            - name: leitura-critica
+              label: Leitura crítica
+            - name: epidemiologia
+              label: Epidemiologia
+      - name: tags
+        label: Tags
+        type: string
+        required: true
+        list: true
+        description: Use termos específicos; cada tag participa da busca e dos relacionados.
+      - name: author
+        label: Autor
+        type: string
+        required: true
+      - name: publishedAt
+        label: Data de publicação
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: updatedAt
+        label: Data de atualização
+        type: date
+        default: ""
+        description: Preencha apenas quando houver uma atualização editorial relevante.
+        options:
+          format: yyyy-MM-dd
+      - name: coverImage
+        label: Imagem de capa
+        type: image
+        required: false
+        options:
+          media: blog_images
+          path: public/blog
+          categories: [image]
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+      - name: coverAlt
+        label: Texto alternativo da capa
+        type: text
+        required: false
+        description: Descreva objetivamente a informação visual relevante da imagem.
+      - name: featured
+        label: Exibir em destaque
+        type: boolean
+        default: false
+        description: Se houver mais de um destaque, a publicação mais recente vence.
+      - name: draft
+        label: Manter como rascunho
+        type: boolean
+        default: true
+        description: Rascunhos não aparecem no blog, busca, relacionados nem sitemap.
+      - name: callToAction
+        label: CTA editorial
+        type: object
+        required: false
+        description: Opcional para direcionar a um próximo passo aprovado.
+        fields:
+          - name: label
+            label: Texto do botão
+            type: string
+            required: true
+          - name: url
+            label: URL do botão
+            type: string
+            required: true
+            description: Use uma URL https:// completa ou caminho interno iniciado por /.
+      - name: eventDate
+        label: Data do evento
+        type: date
+        required: false
+        options:
+          format: yyyy-MM-dd
+      - name: eventTime
+        label: Horário do evento
+        type: string
+        required: false
+        description: Use o formato 24h, por exemplo 19:30.
+      - name: eventLocation
+        label: Local ou formato do evento
+        type: string
+        required: false
+      - name: references
+        label: Referências
+        type: object
+        required: false
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{citation}"
+        fields:
+          - name: citation
+            label: Citação
+            type: text
+            required: true
+          - name: url
+            label: URL
+            type: string
+            required: true
+      - name: body
+        label: Conteúdo
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: blog_images
+          path: public/blog
+          extensions: [jpg, jpeg, png, webp]
+          categories: [image]
+          rename: safe
+          switcher: true
