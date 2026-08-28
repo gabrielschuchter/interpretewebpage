@@ -1,12 +1,24 @@
 'use client';
 
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function MobileMenu({ contactHref }: { contactHref: string }) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const summaryRef = useRef<HTMLElement>(null);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape' || !detailsRef.current?.open) return;
+      detailsRef.current.open = false;
+      setOpen(false);
+      summaryRef.current?.focus();
+    };
+
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, []);
 
   const closeMenu = () => {
     if (detailsRef.current) detailsRef.current.open = false;
@@ -16,27 +28,22 @@ export function MobileMenu({ contactHref }: { contactHref: string }) {
   return (
     <details
       ref={detailsRef}
-      className="mobile-menu"
+      className="academy-mobile-menu"
       onToggle={(event) => setOpen(event.currentTarget.open)}
-      onKeyDown={(event) => {
-        if (event.key === 'Escape' && detailsRef.current?.open) {
-          event.preventDefault();
-          closeMenu();
-          summaryRef.current?.focus();
-        }
-      }}
     >
-      <summary ref={summaryRef} aria-expanded={open} aria-controls="mobile-navigation">
-        Menu
+      <summary ref={summaryRef} aria-expanded={open} aria-controls="academy-mobile-navigation">
+        <span className="academy-menu-icon" aria-hidden="true"><i /><i /><i /></span>
+        <span className="sr-only">Abrir menu</span>
       </summary>
-      <nav id="mobile-navigation" aria-label="Navegação móvel">
-        <Link href="/#formacao" onClick={closeMenu}>Formação</Link>
-        <Link href="/#como-funciona" onClick={closeMenu}>Como funciona</Link>
+      <nav id="academy-mobile-navigation" aria-label="Navegação móvel">
+        <Link href="/#cursos" onClick={closeMenu}>Formação</Link>
+        <Link href="/#ferramentas" onClick={closeMenu}>Ferramentas</Link>
         <Link href="/#conteudos" onClick={closeMenu}>Conteúdos</Link>
-        <Link href="/#formatos" onClick={closeMenu}>Formatos</Link>
         <Link href="/blog" onClick={closeMenu}>Blog</Link>
-        <a className="mobile-contact" href={contactHref} target="_blank" rel="noreferrer" onClick={closeMenu}>
-          Quero conhecer <span aria-hidden="true">↗</span>
+        <Link href="/#suporte" onClick={closeMenu}>Suporte</Link>
+        <Link href="/planos" onClick={closeMenu}>Ver formatos</Link>
+        <a className="academy-mobile-contact" href={contactHref} target="_blank" rel="noreferrer" onClick={closeMenu}>
+          Quero começar <span aria-hidden="true">↗</span>
         </a>
       </nav>
     </details>
