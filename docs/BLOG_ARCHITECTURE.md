@@ -27,6 +27,12 @@ draft: true é o default seguro no Pages CMS e no schema. O build ainda valida o
 
 Um artigo só deve receber draft: false após revisão editorial humana.
 
+## Interface editorial
+
+`app/blog/BlogIndexClient.tsx` compõe o portal com hero editorial, busca, filtros de categoria, destaque, grade de recentes, estado vazio, curadoria “Para começar” e CTA contextual. Não há ranking de popularidade, newsletter, comentários ou módulos que dependam de analytics inexistente.
+
+`app/blog/[slug]/page.tsx` mantém o artigo como coluna de leitura com capa/fallback programático, compartilhamento, Markdown, “Leia também”, CTA contextual, referências, “Como citar”, autoria institucional, sidebar editorial e relacionados.
+
 ## Busca e relacionados
 
 A busca é client-side para o corpus inicial. MiniSearch indexa título, tags, resumo, categoria e corpo em texto normalizado, ignorando acentos, aceitando prefixos e usando fuzzy moderado.
