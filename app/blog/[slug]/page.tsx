@@ -156,7 +156,7 @@ function ArticleSidebar({ articles, category }: { articles: ReturnType<typeof ge
         <p className="subsection-label">Estudo acompanhado</p>
         <h2>Uma pergunta pode virar uma rota.</h2>
         <p>Conheça o Interprete. e entenda como o estudo pode continuar com estrutura.</p>
-        <a className="button" href={contactUrl()} target="_blank" rel="noreferrer">Quero conhecer <span aria-hidden="true">↗</span></a>
+        <a className="academy-button" href={contactUrl()} target="_blank" rel="noreferrer">Quero conhecer <span aria-hidden="true">↗</span></a>
       </section>
     </aside>
   );
@@ -239,7 +239,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                       <p>Próximo passo</p>
                       <h2>{article.callToAction.label}</h2>
                     </div>
-                    <a className="button" href={article.callToAction.url} target={externalCta ? '_blank' : undefined} rel={externalCta ? 'noreferrer' : undefined}>
+                    <a className="academy-button" href={article.callToAction.url} target={externalCta ? '_blank' : undefined} rel={externalCta ? 'noreferrer' : undefined}>
                       Acessar <span aria-hidden="true">↗</span>
                     </a>
                   </aside>
@@ -251,7 +251,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                     <h2>Uma pergunta pode virar uma rota de estudo.</h2>
                     <span>Conheça o Interprete. e leve esta forma de ler para a sua prática.</span>
                   </div>
-                  <a className="button" href="/#formatos">Ver formatos <span aria-hidden="true">↗</span></a>
+                  <a className="academy-button" href="/planos">Ver formatos <span aria-hidden="true">↗</span></a>
                 </aside>
 
                 {article.references.length > 0 && (

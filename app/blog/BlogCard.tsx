@@ -22,8 +22,7 @@ export function BlogCover({ article, featured = false }: { article: BlogCardArti
     <div className="blog-cover blog-cover--fallback" aria-hidden="true">
       <span className="blog-cover-kicker">Interprete. / {BLOG_CATEGORY_LABELS[article.category]}</span>
       <div className="blog-cover-copy">{article.title}</div>
-      <strong>LEIA<br />APLIQUE</strong>
-      <i>{BLOG_TYPE_LABELS[article.type]}</i>
+      <strong>{BLOG_TYPE_LABELS[article.type]}</strong>
     </div>
   );
 }
