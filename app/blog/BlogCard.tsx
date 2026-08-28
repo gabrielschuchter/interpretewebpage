@@ -20,17 +20,19 @@ export function BlogCover({ article, featured = false }: { article: BlogCardArti
 
   return (
     <div className="blog-cover blog-cover--fallback" aria-hidden="true">
-      <span>Interprete. / {BLOG_CATEGORY_LABELS[article.category]}</span>
+      <span className="blog-cover-kicker">Interprete. / {BLOG_CATEGORY_LABELS[article.category]}</span>
+      <div className="blog-cover-copy">{article.title}</div>
       <strong>LEIA<br />APLIQUE</strong>
-      <i>{article.type}</i>
+      <i>{BLOG_TYPE_LABELS[article.type]}</i>
     </div>
   );
 }
-export function BlogCard({ article, featured = false }: { article: BlogCardArticle; featured?: boolean }) {
+export function BlogCard({ article, featured = false, compact = false }: { article: BlogCardArticle; featured?: boolean; compact?: boolean }) {
   const Heading = featured ? 'h2' : 'h3';
+  const className = ['blog-card', featured ? 'blog-card--featured' : '', compact ? 'blog-card--compact' : ''].filter(Boolean).join(' ');
 
   return (
-    <article className={'blog-card' + (featured ? ' blog-card--featured' : '')}>
+    <article className={className}>
       <Link className="blog-card-link" href={'/blog/' + article.slug} aria-label={'Ler: ' + article.title}>
         <BlogCover article={article} featured={featured} />
         <div className="blog-card-content">

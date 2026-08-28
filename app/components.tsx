@@ -12,12 +12,13 @@ export function Header() {
       </Link>
       <MobileMenu contactHref={contactHref} />
       <nav className="desktop-nav" aria-label="Navegação principal">
+        <Link href="/#formacao">Formação</Link>
         <Link href="/#como-funciona">Como funciona</Link>
+        <Link href="/#conteudos">Conteúdos</Link>
         <Link href="/#formatos">Formatos</Link>
-        <Link href="/blog">Blog</Link>
       </nav>
       <a className="header-cta" href={contactHref} target="_blank" rel="noreferrer">
-        Conversa inicial <span aria-hidden="true">↗</span>
+        Quero conhecer <span aria-hidden="true">↗</span>
       </a>
     </header>
   );
@@ -34,15 +35,20 @@ export function Footer() {
           <p className="footer-description">Leitura crítica e aplicação de evidências para decisões mais conscientes.</p>
         </div>
         <nav className="footer-links" aria-label="Navegação do rodapé">
-          <Link href="/">Início</Link>
+          <span className="footer-column-label">Navegação</span>
+          <Link href="/#formacao">Formação</Link>
           <Link href="/#como-funciona">Como funciona</Link>
+          <Link href="/#conteudos">Conteúdos</Link>
           <Link href="/#formatos">Formatos</Link>
           <Link href="/blog">Blog</Link>
+        </nav>
+        <nav className="footer-links footer-links--support" aria-label="Suporte">
+          <span className="footer-column-label">Suporte</span>
           <a href={contactUrl()} target="_blank" rel="noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
         </nav>
         <div className="footer-contact">
-          <span className="footer-label">Conversa inicial</span>
-          <a className="footer-contact-link" href={contactUrl(CONTACT_MESSAGE)} target="_blank" rel="noreferrer">Entender o próximo passo <span aria-hidden="true">↗</span></a>
+          <span className="footer-label">Próximo passo</span>
+          <a className="footer-contact-link" href={contactUrl(CONTACT_MESSAGE)} target="_blank" rel="noreferrer">Conversar sobre o Interprete. <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <div className="footer-bottom">

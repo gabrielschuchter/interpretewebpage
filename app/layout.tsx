@@ -5,7 +5,7 @@ import './tokens.css';
 import './globals.css';
 
 const siteTitle = 'Interprete. — Prática Baseada em Evidências';
-const siteDescription = 'Mentorias particulares para interpretar evidências, construir raciocínio e aplicar conhecimento com mais autonomia.';
+const siteDescription = 'Formação acompanhada em Prática Baseada em Evidências, leitura crítica e aplicação de resultados.';
 
 const display = Literata({
   weight: 'variable',

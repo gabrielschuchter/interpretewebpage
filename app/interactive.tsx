@@ -30,11 +30,13 @@ export function MobileMenu({ contactHref }: { contactHref: string }) {
         Menu
       </summary>
       <nav id="mobile-navigation" aria-label="Navegação móvel">
+        <Link href="/#formacao" onClick={closeMenu}>Formação</Link>
         <Link href="/#como-funciona" onClick={closeMenu}>Como funciona</Link>
+        <Link href="/#conteudos" onClick={closeMenu}>Conteúdos</Link>
         <Link href="/#formatos" onClick={closeMenu}>Formatos</Link>
         <Link href="/blog" onClick={closeMenu}>Blog</Link>
         <a className="mobile-contact" href={contactHref} target="_blank" rel="noreferrer" onClick={closeMenu}>
-          Conversa inicial <span aria-hidden="true">↗</span>
+          Quero conhecer <span aria-hidden="true">↗</span>
         </a>
       </nav>
     </details>
