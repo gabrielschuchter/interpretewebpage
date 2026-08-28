@@ -1,13 +1,12 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Atkinson_Hyperlegible_Next, IBM_Plex_Mono, Literata } from 'next/font/google';
+import { absoluteUrl, SITE_URL } from '../lib/site';
 import './tokens.css';
 import './globals.css';
-import './hero-overrides.css';
-import './mobile-fixes.css';
-import './entry-selection.css';
-import './design-system-bridge.css';
-import './typography.css';
-export const metadata: Metadata = { title: 'Gabriel Schuchter — Nutrição, ensino e ciência', description: 'Acompanhamento nutricional e orientação individual em Prática Baseada em Evidências.', metadataBase: new URL('https://gabrielschuchter.com.br'), icons: { icon: '/favicon.svg' }, openGraph: { title: 'Gabriel Schuchter — Nutrição, ensino e ciência', description: 'Acompanhamento nutricional e orientação individual em Prática Baseada em Evidências.', url: 'https://gabrielschuchter.com.br', siteName: 'Gabriel Schuchter', locale: 'pt_BR', type: 'website' }, twitter: { card: 'summary_large_image', title: 'Gabriel Schuchter', description: 'Nutrição, ensino e ciência aplicados a trajetórias reais.' } };
+
+const siteTitle = 'Interprete. — Prática Baseada em Evidências';
+const siteDescription = 'Mentorias particulares para interpretar evidências, construir raciocínio e aplicar conhecimento com mais autonomia.';
+
 const display = Literata({
   weight: 'variable',
   style: ['normal', 'italic'],
@@ -17,6 +16,7 @@ const display = Literata({
   display: 'swap',
   fallback: ['Iowan Old Style', 'Palatino Linotype', 'Georgia', 'serif'],
 });
+
 const body = Atkinson_Hyperlegible_Next({
   weight: 'variable',
   style: ['normal', 'italic'],
@@ -25,6 +25,7 @@ const body = Atkinson_Hyperlegible_Next({
   display: 'swap',
   fallback: ['Segoe UI', 'Arial', 'sans-serif'],
 });
+
 const mono = IBM_Plex_Mono({
   weight: ['500'],
   style: 'normal',
@@ -35,4 +36,52 @@ const mono = IBM_Plex_Mono({
   fallback: ['SFMono-Regular', 'Consolas', 'monospace'],
 });
 
-export default function RootLayout({children}:{children:React.ReactNode}) { return <html lang="pt-BR" className={`${display.variable} ${body.variable} ${mono.variable}`}><body>{children}</body></html>; }
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: siteTitle,
+    template: '%s | Interprete.',
+  },
+  description: siteDescription,
+  applicationName: 'Interprete.',
+  publisher: 'Interprete.',
+  alternates: {
+    canonical: '/',
+  },
+  icons: {
+    icon: '/favicon.svg',
+  },
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: SITE_URL,
+    siteName: 'Interprete.',
+    locale: 'pt_BR',
+    type: 'website',
+    images: [{
+      url: absoluteUrl('/og-interprete.svg'),
+      width: 1200,
+      height: 630,
+      alt: 'Interprete.',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+    images: [absoluteUrl('/og-interprete.svg')],
+  },
+};
+
+export const viewport: Viewport = {
+  colorScheme: 'light',
+  themeColor: '#f4ede1',
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="pt-BR" className={display.variable + ' ' + body.variable + ' ' + mono.variable}>
+      <body>{children}</body>
+    </html>
+  );
+}

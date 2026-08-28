@@ -1,3 +1,5 @@
-import { HomeContent } from '../page';
+import { permanentRedirect } from 'next/navigation';
 
-export default HomeContent;
+export default function HomeLegacyPage() {
+  permanentRedirect('/');
+}

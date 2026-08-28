@@ -1,0 +1,20 @@
+import Link from 'next/link';
+import { Footer, Header, PageShell, SectionLabel } from './components';
+
+export default function NotFound() {
+  return (
+    <PageShell>
+      <Header />
+      <main className="not-found">
+        <SectionLabel>404 / fora do mapa</SectionLabel>
+        <h1>Este caminho não existe.</h1>
+        <p>A página que você procura pode ter sido movida. Volte ao início ou continue pelo arquivo editorial.</p>
+        <div className="actions">
+          <Link className="button" href="/">Voltar ao início <span aria-hidden="true">↗</span></Link>
+          <Link className="button button-secondary" href="/blog">Abrir o blog <span aria-hidden="true">↗</span></Link>
+        </div>
+      </main>
+      <Footer />
+    </PageShell>
+  );
+}

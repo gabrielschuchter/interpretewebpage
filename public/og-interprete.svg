@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Interprete.</title>
+  <desc id="desc">Prática Baseada em Evidências, leitura crítica e aplicação.</desc>
+  <rect width="1200" height="630" fill="#1e1813"/>
+  <path d="M0 490 1200 70M0 610 1200 190" stroke="#d5a85c" stroke-opacity=".3" stroke-width="2"/>
+  <ellipse cx="915" cy="320" rx="470" ry="135" fill="none" stroke="#d5a85c" stroke-opacity=".5" stroke-width="2" transform="rotate(-18 915 320)"/>
+  <ellipse cx="915" cy="320" rx="390" ry="95" fill="none" stroke="#d5a85c" stroke-opacity=".3" stroke-width="2" transform="rotate(-18 915 320)"/>
+  <circle cx="1015" cy="272" r="8" fill="#d5a85c"/>
+  <text x="76" y="92" fill="#d5a85c" font-family="monospace" font-size="20" letter-spacing="4">PRÁTICA BASEADA EM EVIDÊNCIAS</text>
+  <text x="76" y="350" fill="#f6eedc" font-family="Georgia, serif" font-size="104">Interprete.</text>
+  <text x="80" y="415" fill="#c9b9a4" font-family="Arial, sans-serif" font-size="26">Leia melhor. Raciocine com critério. Aplique.</text>
+  <text x="80" y="550" fill="#d5a85c" font-family="monospace" font-size="17" letter-spacing="3">LEIA / APLIQUE</text>
+</svg>

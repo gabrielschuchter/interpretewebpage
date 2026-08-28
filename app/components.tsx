@@ -1,11 +1,88 @@
 import Link from 'next/link';
-import {MobileMenu} from './interactive';
+import { CONTACT_MESSAGE, contactUrl } from '../lib/contact';
+import { MobileMenu } from './interactive';
 
-export const whatsapp='https://wa.me/5534984123241';
-export const contact=(message:string)=>`${whatsapp}?text=${encodeURIComponent(message)}`;
+export function Header() {
+  const contactHref = contactUrl();
 
-export function Header(){const contactHref=contact('Olá, Gabriel. Gostaria de agendar uma conversa inicial.');return <header className="site-header"><Link className="wordmark" href="/home">Gabriel Schuchter<span>.</span></Link><MobileMenu contactHref={contactHref}/><nav className="desktop-nav"><Link href="/home">Início</Link><Link href="/acompanhamento-nutricional">Nutrição</Link><Link href="/interprete">Interprete.</Link><a href="https://www.gruponutriwork.com.br" target="_blank" rel="noreferrer">Nutriwork ↗</a></nav><a className="header-cta" href={contactHref} target="_blank" rel="noreferrer">Agendar conversa</a></header>}
-export function Footer(){return <footer className="footer"><div><div className="wordmark">Gabriel Schuchter<span>.</span></div><p>Nutrição, ensino e ciência aplicados a trajetórias reais.</p><p>Nutricionista · CRN9 38302/P</p></div><div className="footer-links"><Link href="/home">Início</Link><Link href="/acompanhamento-nutricional">Acompanhamento nutricional</Link><Link href="/interprete">Interprete.</Link><a href="https://instagram.com/gabrielschuchter" target="_blank" rel="noreferrer">Instagram ↗</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp ↗</a><a href="mailto:schuchtergabriel@gmail.com">schuchtergabriel@gmail.com</a></div><small>© {new Date().getFullYear()} Gabriel Schuchter</small></footer>}
-export function Button({href,children,secondary=false}:{href:string;children:React.ReactNode;secondary?:boolean}){return <a className={secondary?'button button-secondary':'button'} href={href} target={href.startsWith('http')?'_blank':undefined} rel={href.startsWith('http')?'noreferrer':undefined}>{children} <span>↗</span></a>}
-export function SectionLabel({children}:{children:React.ReactNode}){return <p className="section-label">{children}</p>}
-export function PageShell({theme,children}:{theme:string;children:React.ReactNode}){return <div data-theme={theme}><Header/>{children}<Footer/></div>}
+  return (
+    <header className="site-header">
+      <Link className="wordmark" href="/" aria-label="Interprete., voltar ao início">
+        Interprete<span>.</span>
+      </Link>
+      <MobileMenu contactHref={contactHref} />
+      <nav className="desktop-nav" aria-label="Navegação principal">
+        <Link href="/#como-funciona">Como funciona</Link>
+        <Link href="/#formatos">Formatos</Link>
+        <Link href="/blog">Blog</Link>
+      </nav>
+      <a className="header-cta" href={contactHref} target="_blank" rel="noreferrer">
+        Conversa inicial <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="footer-main">
+        <div>
+          <Link className="wordmark" href="/" aria-label="Interprete., voltar ao início">
+            Interprete<span>.</span>
+          </Link>
+          <p className="footer-description">Leitura crítica e aplicação de evidências para decisões mais conscientes.</p>
+        </div>
+        <nav className="footer-links" aria-label="Navegação do rodapé">
+          <Link href="/">Início</Link>
+          <Link href="/#como-funciona">Como funciona</Link>
+          <Link href="/#formatos">Formatos</Link>
+          <Link href="/blog">Blog</Link>
+          <a href={contactUrl()} target="_blank" rel="noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+        </nav>
+        <div className="footer-contact">
+          <span className="footer-label">Conversa inicial</span>
+          <a className="footer-contact-link" href={contactUrl(CONTACT_MESSAGE)} target="_blank" rel="noreferrer">Entender o próximo passo <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <small>© {new Date().getFullYear()} Interprete. Todos os direitos reservados.</small>
+        <span className="footer-coordinate" aria-hidden="true">LEIA / APLIQUE</span>
+      </div>
+    </footer>
+  );
+}
+
+export function Button({
+  href,
+  children,
+  secondary = false,
+}: {
+  href: string;
+  children: React.ReactNode;
+  secondary?: boolean;
+}) {
+  const external = href.startsWith('http');
+
+  if (external) {
+    return (
+      <a className={secondary ? 'button button-secondary' : 'button'} href={href} target="_blank" rel="noreferrer">
+        {children} <span aria-hidden="true">↗</span>
+      </a>
+    );
+  }
+
+  return (
+    <Link className={secondary ? 'button button-secondary' : 'button'} href={href}>
+      {children} <span aria-hidden="true">↗</span>
+    </Link>
+  );
+}
+
+export function SectionLabel({ children }: { children: React.ReactNode }) {
+  return <p className="section-label">{children}</p>;
+}
+
+export function PageShell({ children }: { children: React.ReactNode }) {
+  return <div data-theme="interprete">{children}</div>;
+}

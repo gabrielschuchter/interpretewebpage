@@ -1,13 +1,42 @@
 'use client';
-import {useEffect,useRef,useState} from 'react';
-import {createPortal} from 'react-dom';
-import Link from 'next/link';
 
-type Service='nutrition'|'interprete'|'unknown';
-const serviceCopy={nutrition:{label:'Acompanhamento nutricional',message:'Olá, Gabriel! Gostaria de conhecer melhor o acompanhamento nutricional e entender qual formato faz sentido para meu momento.',href:'/acompanhamento-nutricional'},interprete:{label:'Interprete.',message:'Olá, Gabriel! Gostaria de entender melhor o Interprete. e descobrir qual plano faz sentido para meu momento.',href:'/interprete'},unknown:{label:'Ainda não sei',message:'Olá, Gabriel! Gostaria de explicar meu momento e entender qual caminho faz sentido para mim.',href:'/'}};
-const whatsapp='https://wa.me/5534984123241';
-export function MobileMenu({contactHref}:{contactHref:string}){const detailsRef=useRef<HTMLDetailsElement>(null);const summaryRef=useRef<HTMLElement>(null);const [open,setOpen]=useState(false);return <details ref={detailsRef} className="mobile-menu" onToggle={event=>setOpen(event.currentTarget.open)} onKeyDown={event=>{if(event.key==='Escape'&&detailsRef.current?.open){event.preventDefault();detailsRef.current.open=false;setOpen(false);summaryRef.current?.focus()}}}><summary ref={summaryRef} aria-expanded={open} aria-controls="main-nav">Menu</summary><nav id="main-nav"><Link href="/home">Início</Link><Link href="/acompanhamento-nutricional">Nutrição</Link><Link href="/interprete">Interprete.</Link><a href="https://www.gruponutriwork.com.br" target="_blank" rel="noreferrer">Nutriwork ↗</a><a className="mobile-contact" href={contactHref}>Agendar conversa ↗</a></nav></details>}
-export function serviceFromHref(href:string):Service{if(href.includes('acompanhamento')||href.includes('nutricional'))return 'nutrition';if(href.includes('interprete'))return 'interprete';return 'unknown'}
-export function ServiceModalTrigger({children,initialService='unknown',className='button'}:{children:React.ReactNode;initialService?:Service;className?:string}){const [open,setOpen]=useState(false);const modal=open&&typeof document!=='undefined'?createPortal(<ServiceModal initialService={initialService} onClose={()=>setOpen(false)}/>,document.body):null;return <><button className={className} type="button" aria-expanded={open} onClick={()=>setOpen(true)}>{children}</button>{modal}</>}
-export function ServiceModal({initialService='unknown',onClose}:{initialService?:Service;onClose:()=>void}){const [service,setService]=useState<Service>(initialService);const closeRef=useRef<HTMLButtonElement>(null);const previous=useRef<HTMLElement|null>(null);useEffect(()=>{previous.current=document.activeElement as HTMLElement;closeRef.current?.focus();const key=(event:KeyboardEvent)=>{if(event.key==='Escape')onClose();if(event.key==='Tab'){const modal=document.querySelector<HTMLElement>('[role=dialog]');if(!modal)return;const focusable=Array.from(modal.querySelectorAll<HTMLElement>('button,a,[tabindex]:not([tabindex="-1"])'));if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}}};document.addEventListener('keydown',key);document.body.style.overflow='hidden';return()=>{document.removeEventListener('keydown',key);document.body.style.overflow='';previous.current?.focus()};},[onClose]);const current=serviceCopy[service];const href=`${whatsapp}?text=${encodeURIComponent(current.message)}`;return <div className="modal-backdrop" role="presentation" onMouseDown={event=>{if(event.target===event.currentTarget)onClose()}}><section className="service-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button className="modal-close" ref={closeRef} onClick={onClose} aria-label="Fechar conversa">Fechar <span>×</span></button><p className="eyebrow">Conversa inicial gratuita</p><h2 id="modal-title">Sobre o que você quer conversar?</h2><div className="service-options">{(['nutrition','interprete','unknown'] as Service[]).map(option=><button key={option} className={service===option?'selected':''} type="button" aria-pressed={service===option} onClick={()=>setService(option)}><span>{service===option?'●':'○'}</span>{serviceCopy[option].label}</button>)}</div><div className="prepared-message"><span className="mono-note">MENSAGEM PREPARADA</span><p>{current.message}</p></div><a className="button modal-action" href={href} target="_blank" rel="noreferrer">Abrir WhatsApp ↗</a><p className="modal-note">A conversa é gratuita e sem compromisso. Gabriel explica o caminho e ajuda a entender o próximo passo.</p></section></div>}
-export function StickyMobileCTA(){const [visible,setVisible]=useState(false);const [modalService,setModalService]=useState<Service|null>(null);useEffect(()=>{const hero=document.querySelector('.hero');const final=document.querySelector('.final-cta');if(!hero)return;const observer=new IntersectionObserver(entries=>setVisible(!entries[0].isIntersecting),{threshold:.05});const endObserver=final?new IntersectionObserver(entries=>{if(entries[0].isIntersecting)setVisible(false)},{threshold:.2}):null;observer.observe(hero);if(final)endObserver?.observe(final);const click=(event:MouseEvent)=>{const target=event.target as HTMLElement;const anchor=target.closest('a[href*="wa.me"]') as HTMLAnchorElement|null;if(anchor&&!anchor.closest('.service-modal')){event.preventDefault();setModalService(serviceFromHref(anchor.href))}};document.addEventListener('click',click,true);return()=>{observer.disconnect();endObserver?.disconnect();document.removeEventListener('click',click,true)}},[]);const modal=modalService&&typeof document!=='undefined'?createPortal(<ServiceModal initialService={modalService} onClose={()=>setModalService(null)}/>,document.body):null;return <>{visible&&<div className="sticky-mobile-cta"><span>Conversa inicial gratuita</span><ServiceModalTrigger className="button" initialService="unknown">Escolher caminho ↗</ServiceModalTrigger></div>}{modal}</>}
+import Link from 'next/link';
+import { useRef, useState } from 'react';
+
+export function MobileMenu({ contactHref }: { contactHref: string }) {
+  const detailsRef = useRef<HTMLDetailsElement>(null);
+  const summaryRef = useRef<HTMLElement>(null);
+  const [open, setOpen] = useState(false);
+
+  const closeMenu = () => {
+    if (detailsRef.current) detailsRef.current.open = false;
+    setOpen(false);
+  };
+
+  return (
+    <details
+      ref={detailsRef}
+      className="mobile-menu"
+      onToggle={(event) => setOpen(event.currentTarget.open)}
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && detailsRef.current?.open) {
+          event.preventDefault();
+          closeMenu();
+          summaryRef.current?.focus();
+        }
+      }}
+    >
+      <summary ref={summaryRef} aria-expanded={open} aria-controls="mobile-navigation">
+        Menu
+      </summary>
+      <nav id="mobile-navigation" aria-label="Navegação móvel">
+        <Link href="/#como-funciona" onClick={closeMenu}>Como funciona</Link>
+        <Link href="/#formatos" onClick={closeMenu}>Formatos</Link>
+        <Link href="/blog" onClick={closeMenu}>Blog</Link>
+        <a className="mobile-contact" href={contactHref} target="_blank" rel="noreferrer" onClick={closeMenu}>
+          Conversa inicial <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </details>
+  );
+}
