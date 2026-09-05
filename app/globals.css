@@ -2317,6 +2317,10 @@ em {
   margin-top: 1.5rem;
 }
 
+.blog-markdown p {
+  overflow-wrap: anywhere;
+}
+
 .blog-markdown h2,
 .blog-markdown h3,
 .blog-markdown h4 {
