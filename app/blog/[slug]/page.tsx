@@ -10,6 +10,7 @@ import { absoluteUrl } from '../../../lib/site';
 import { BlogCard, BlogCover } from '../BlogCard';
 import { MarkdownArticle } from '../MarkdownArticle';
 import { ShareActions } from '../ShareActions';
+import { Reveal } from '../../motion';
 
 export const dynamicParams = false;
 
@@ -204,7 +205,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
         <ArticleStructuredData article={article} />
         <article>
           <header className="blog-article-hero">
-            <div className="page-width page-width--narrow">
+            <Reveal as="div" className="page-width page-width--narrow" stagger>
               <nav className="blog-breadcrumb" aria-label="Caminho de navegação">
                 <a href="/blog">Blog</a>
                 <span aria-hidden="true">/</span>
@@ -227,14 +228,14 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 <span aria-hidden="true">•</span>
                 <span>{getReadingTimeLabel(article)}</span>
               </div>
-            </div>
+            </Reveal>
           </header>
 
           <div className="page-width blog-article-content-width">
-            <figure className="blog-article-cover">
+            <Reveal as="figure" className="blog-article-cover">
               <BlogCover article={article} featured />
-            </figure>
-            <div className="blog-article-layout">
+            </Reveal>
+            <Reveal as="div" className="blog-article-layout" stagger>
               <div className="blog-article-main">
                 <ShareActions slug={article.slug} title={article.title} summary={article.summary} />
                 <MarkdownArticle content={article.content} />
@@ -292,21 +293,21 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 <AuthorBlock author={article.author} />
               </div>
               <ArticleSidebar articles={publicArticles} category={BLOG_CATEGORY_LABELS[article.category]} />
-            </div>
+            </Reveal>
           </div>
         </article>
 
         {relatedArticles.length > 0 && (
           <section className="blog-related" aria-labelledby="related-title">
-            <div className="page-width">
+            <Reveal as="div" className="page-width" stagger>
               <div className="blog-section-heading">
                 <p>Continue por aqui</p>
                 <h2 id="related-title">Conteúdos relacionados</h2>
               </div>
-              <div className="blog-grid">
+              <Reveal as="div" className="blog-grid" stagger>
                 {relatedArticles.map((relatedArticle) => <BlogCard key={relatedArticle.slug} article={relatedArticle} />)}
-              </div>
-            </div>
+              </Reveal>
+            </Reveal>
           </section>
         )}
       </main>

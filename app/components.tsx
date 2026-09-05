@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { CONTACT_MESSAGE, contactUrl } from '../lib/contact';
-import { MobileMenu, SiteNavLink } from './interactive';
+import { HeaderScrollState, MobileMenu, SiteNavLink } from './interactive';
 
 export function Header() {
   const contactHref = contactUrl();
 
   return (
     <header className="it-header">
+      <HeaderScrollState />
       <div className="it-header-shell">
         <Link className="it-wordmark" href="/" aria-label="Interprete., voltar ao início">
           <Image className="it-wordmark-image" src="/brand/svg/wordmark-amaranto.svg" alt="Interprete." width={240} height={44} priority />

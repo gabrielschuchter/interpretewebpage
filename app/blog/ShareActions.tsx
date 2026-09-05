@@ -63,7 +63,7 @@ export function ShareActions({ slug, title, summary }: { slug: string; title: st
           <span aria-hidden="true">□</span> Copiar link
         </button>
       </div>
-      <span className="sr-only" aria-live="polite">{status}</span>
+      <span className={status ? 'blog-share-status is-visible' : 'blog-share-status'} aria-live="polite">{status}</span>
     </div>
   );
 }

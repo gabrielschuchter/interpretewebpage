@@ -58,10 +58,22 @@
   --border-strong: 2px;
   --shadow-none: none;
 
-  --motion-fast: 120ms;
-  --motion-base: 180ms;
-  --motion-slow: 280ms;
-  --motion-ease: cubic-bezier(0.2, 0, 0, 1);
+  /* Motion system: one calm, editorial language across the site. */
+  --motion-instant: 120ms;
+  --motion-fast: 200ms;
+  --motion-normal: 320ms;
+  --motion-slow: 520ms;
+  --motion-stagger: 70ms;
+  --motion-distance: 12px;
+  --motion-distance-small: 5px;
+  --motion-reveal-blur: 4px;
+  --motion-ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --motion-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --motion-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  /* Compatibility aliases for existing component rules. */
+  --motion-base: var(--motion-fast);
+  --motion-ease: var(--motion-ease-out);
+  --motion-delay: 0ms;
   --target-min: 44px;
   --focus-width: 3px;
   --focus-offset: 3px;
@@ -85,13 +97,5 @@
   :root {
     --page-gutter: 3.5rem;
     --grid-gap: 1.5rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --motion-fast: 0ms;
-    --motion-base: 0ms;
-    --motion-slow: 0ms;
   }
 }

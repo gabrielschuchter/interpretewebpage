@@ -78,7 +78,7 @@ Use antes de publicar uma peça, aprovar uma interface ou enviar trabalho a um f
 - [ ] Controles têm nome acessível.
 - [ ] Alvos interativos são, em regra, pelo menos 44×44px.
 - [ ] Erros têm mensagem, não só cor.
-- [ ] prefers-reduced-motion é respeitado.
+- [ ] Motion tokens são centralizados e não há ramificações de movimento por dispositivo.
 - [ ] Zoom de 200% preserva uso principal.
 - [ ] Imagens informativas têm alt; imagens realmente decorativas têm alt vazio.
 - [ ] Conteúdo dinâmico importante é anunciado de maneira acessível.

@@ -48,7 +48,7 @@ Fallbacks: Georgia/Times para display, system sans para interface e Menlo/Consol
 - Usar grid explícito, bastante respiro e texto corrido alinhado à esquerda.
 - Áreas clicáveis devem ter no mínimo 44 px em mobile.
 - Estados de foco devem ser sempre visíveis e usar `--color-focus`/`--focus-ring`.
-- Movimento deve respeitar `prefers-reduced-motion`.
+- Movimento deve usar os tokens centrais de duração, easing, distância e stagger do sistema.
 
 ## Conteúdo
 

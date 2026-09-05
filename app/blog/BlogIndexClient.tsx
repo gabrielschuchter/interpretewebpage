@@ -8,6 +8,7 @@ import { createBlogSearch, searchBlog } from '../../lib/blog/search';
 import type { BlogBrowserArticle } from '../../lib/blog/types';
 import type { BlogCategory } from '../../lib/blog/constants';
 import { BlogCard } from './BlogCard';
+import { Reveal } from '../motion';
 
 type CategoryFilter = 'all' | BlogCategory;
 
@@ -127,22 +128,20 @@ export function BlogIndexClient({ articles }: { articles: BlogBrowserArticle[] }
   return (
     <>
       <section className="blog-hero blog-hero--portal" aria-labelledby="blog-title">
-        <div className="page-width">
-          <div className="blog-hero-layout">
-            <div>
-              <h1 id="blog-title">Conteúdos do Interprete.</h1>
-              <p>Prática Baseada em Evidências, leitura crítica, epidemiologia clínica e interpretação de resultados.</p>
-            </div>
-            <div className="blog-hero-search">
-              <SearchControl query={query} onChange={setQuery} onClear={() => setQuery('')} />
-              <span>Uma biblioteca para começar uma leitura mais consciente.</span>
-            </div>
+        <Reveal as="div" className="page-width blog-hero-layout" stagger>
+          <div>
+            <h1 id="blog-title">Conteúdos do Interprete.</h1>
+            <p>Prática Baseada em Evidências, leitura crítica, epidemiologia clínica e interpretação de resultados.</p>
           </div>
-        </div>
+          <div className="blog-hero-search">
+            <SearchControl query={query} onChange={setQuery} onClear={() => setQuery('')} />
+            <span>Uma biblioteca para começar uma leitura mais consciente.</span>
+          </div>
+        </Reveal>
       </section>
 
       <section className="blog-category-bar" aria-label="Filtrar conteúdos por categoria">
-        <div className="page-width">
+        <Reveal as="div" className="page-width" stagger>
           <span className="blog-filter-label">Categorias</span>
           <div className="blog-filter-options">
             <button type="button" className={category === 'all' ? 'is-selected' : undefined} aria-pressed={category === 'all'} onClick={() => setCategory('all')}>Todas</button>
@@ -152,11 +151,11 @@ export function BlogIndexClient({ articles }: { articles: BlogBrowserArticle[] }
               </button>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="blog-discovery blog-discovery--portal" aria-labelledby="blog-list-title">
-        <div className="page-width">
+        <Reveal as="div" className="page-width" stagger>
           <div className="blog-results-bar">
             <p className="blog-results-count" aria-live="polite" aria-atomic="true">
               {results.length === 1 ? '1 conteúdo encontrado' : results.length + ' conteúdos encontrados'}
@@ -181,9 +180,9 @@ export function BlogIndexClient({ articles }: { articles: BlogBrowserArticle[] }
                 <h2 id="blog-list-title">{hasActiveFilter ? 'Encontre um conteúdo' : 'Mais leituras para continuar'}</h2>
               </div>
               {gridArticles.length > 0 ? (
-                <div className="blog-grid blog-grid--portal">
+                <Reveal as="div" className="blog-grid blog-grid--portal" stagger>
                   {gridArticles.map((article) => <BlogCard key={article.slug} article={article} />)}
-                </div>
+                </Reveal>
               ) : (
                 <div className="blog-empty" role="status">
                   <p>{articles.length === 0 ? 'Ainda não há conteúdos públicos.' : 'Nenhum conteúdo corresponde a essa busca e filtro.'}</p>
@@ -207,7 +206,7 @@ export function BlogIndexClient({ articles }: { articles: BlogBrowserArticle[] }
             </div>
             <a className="it-button" href="/#cursos">Conhecer a formação <span aria-hidden="true">↗</span></a>
           </section>
-        </div>
+        </Reveal>
       </section>
     </>
   );

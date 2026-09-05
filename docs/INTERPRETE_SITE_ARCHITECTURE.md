@@ -33,7 +33,7 @@ O layout define metadata-base, title template, Open Graph, Twitter e ícone. Cad
 
 ## Motion e acessibilidade
 
-O CSS local limita movimento a transições de estado e respeita `prefers-reduced-motion`. O JavaScript porta estados de hover/focus, menu móvel, accordions, tabs, carousel, FAQ, feedback de navegação e loading. Controles mantêm nomes acessíveis, foco visível e área de toque de pelo menos 44px.
+O CSS local centraliza o motion system em tokens de duração, easing, distância e stagger. O JavaScript porta reveals via IntersectionObserver, estado de scroll do header, hover/focus, menu móvel, accordions, tabs, carousel, FAQ, feedback de navegação e loading. Controles mantêm nomes acessíveis, foco visível e área de toque de pelo menos 44px.
 
 ## Como rodar
 

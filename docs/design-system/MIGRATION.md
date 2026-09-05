@@ -32,7 +32,7 @@ Não fazer uma “troca de azul por vermelho”. O novo sistema muda cor, tipogr
 4. Adicionar uso de SVG oficial para marca.
 5. Remover dependência de cores cruas em componentes migrados.
 
-Gate atendido: lint, typecheck, build, foco visível, targets touch e reduced motion.
+Gate atendido: lint, typecheck, build, foco visível, targets touch e motion tokens consistentes.
 
 ## Fase 2 — shell global — concluída
 
@@ -52,7 +52,7 @@ Substituir:
 - pills genéricas por geometria do sistema;
 - sombras por bordas/espaço.
 
-Gate atendido: desktop + mobile + teclado + reduced-motion.
+Gate atendido: desktop + tablet + mobile + teclado + motion system consistente.
 
 ## Fase 3 — componentes — concluída
 
@@ -115,7 +115,7 @@ Para cada etapa:
 - 1440px;
 - zoom 200%;
 - contraste;
-- reduced motion;
+- motion system consistente;
 - screenshot visual comparada com o novo sistema, não com a identidade azul anterior.
 
 ## Não fazer

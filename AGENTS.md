@@ -35,7 +35,7 @@ A decisão D001 fixa a hierarquia canônica: Pink Essence aproximadamente 58%, D
 - Fundo claro é o padrão. Superfície escura é exceção deliberada para capas, aberturas, fechamentos e momentos simbólicos.
 - Todo estado deve continuar compreensível sem depender apenas de cor.
 - Texto corrido deve atingir WCAG AA; Classic Crimson e Debian Red não são cores de corpo sobre Pink Essence.
-- Implementação nova deve ser mobile-first e respeitar prefers-reduced-motion.
+- Implementação nova deve ser mobile-first e seguir os motion tokens centrais do site.
 - Conteúdo público da marca não recebe assinatura individual.
 
 ## Regra de alteração

@@ -16,6 +16,7 @@ import {
   trustTopics,
 } from '../lib/interprete/marketing';
 import { Button, SectionLabel } from './components';
+import { Reveal } from './motion';
 
 type IconName = 'question' | 'search' | 'book' | 'chart' | 'shield' | 'layers' | 'message' | 'calendar' | 'route' | 'headset' | 'arrow';
 
@@ -121,7 +122,7 @@ function Hero() {
   return (
     <section className="it-hero" aria-labelledby="home-title">
       <div className="it-container it-hero-grid">
-        <div className="it-hero-copy">
+        <Reveal as="div" className="it-hero-copy" stagger>
           <SectionLabel>Escola de prática baseada em evidências</SectionLabel>
           <h1 id="home-title">Aprenda a <em>interpretar evidências</em> e decida com mais autonomia.</h1>
           <p>O Interprete. organiza leitura crítica e aplicação em um percurso que começa na dúvida e volta para a decisão.</p>
@@ -134,8 +135,8 @@ function Hero() {
             <div><dt>02</dt><dd>Leitura com critério</dd></div>
             <div><dt>03</dt><dd>Decisão contextualizada</dd></div>
           </dl>
-        </div>
-        <div className="it-hero-method" aria-label="Método do Interprete.">
+        </Reveal>
+        <Reveal as="div" className="it-hero-method" aria-label="Método do Interprete." stagger>
           <div className="it-hero-method-mark"><Image src="/brand/svg/simbolo-solto-creme.svg" alt="" width={570} height={677} priority /></div>
           <div className="it-hero-method-content">
             <span className="it-tech-label">O método em seis movimentos</span>
@@ -148,7 +149,7 @@ function Hero() {
             </ol>
           </div>
           <span className="it-hero-method-foot">Não aceite a evidência. Interprete.</span>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -157,10 +158,10 @@ function Hero() {
 function TrustMarquee() {
   return (
     <section className="it-topic-rail" aria-labelledby="trust-title">
-      <div className="it-container it-topic-rail-heading">
+      <Reveal as="div" className="it-container it-topic-rail-heading" stagger>
         <SectionLabel>Um eixo de estudo</SectionLabel>
         <h2 id="trust-title">Da dúvida à decisão, com as perguntas certas no caminho.</h2>
-      </div>
+      </Reveal>
       <div className="it-topic-rail-viewport" aria-label="Temas do percurso">
         <ul className="it-topic-rail-track">
           {trustTopics.map((topic) => <li className="it-topic-rail-item" key={topic}><span aria-hidden="true" />{topic}</li>)}
@@ -177,11 +178,11 @@ function ToolsSection({ articles }: { articles: BlogBrowserArticle[] }) {
   return (
     <section id="ferramentas" className="it-section it-tools" aria-labelledby="tools-title">
       <div className="it-container">
-        <div className="it-section-intro it-section-intro--split">
+        <Reveal as="div" className="it-section-intro it-section-intro--split" stagger>
           <div><SectionLabel>Ferramentas de raciocínio</SectionLabel><h2 id="tools-title">Cada recurso organiza uma etapa da leitura.</h2></div>
           <p>Juntos, eles ajudam você a perguntar melhor, avaliar com critério e interpretar sem atalhos. Um caminho visível para cada dúvida.</p>
-        </div>
-        <div className="it-tools-layout">
+        </Reveal>
+        <Reveal as="div" className="it-tools-layout" stagger>
           <div className="it-tool-list" role="tablist" aria-label="Etapas e recursos do Interprete." aria-orientation="vertical">
             {academyTools.map((candidate, index) => (
               <button
@@ -202,16 +203,16 @@ function ToolsSection({ articles }: { articles: BlogBrowserArticle[] }) {
               </button>
             ))}
           </div>
-          <div className="it-tools-preview-column" id="tool-panel" role="tabpanel" aria-labelledby={'tool-tab-' + activeTool} tabIndex={0}>
+          <div className="it-tools-preview-column" id="tool-panel" role="tabpanel" aria-labelledby={'tool-tab-' + activeTool} tabIndex={0} key={activeTool}>
             <div className="it-tools-preview-heading"><SectionLabel>Um recurso por vez</SectionLabel><span className="it-tech-label">{String(activeTool + 1).padStart(2, '0')} / 06</span></div>
             <ToolPreview title={tool.title} detail={tool.detail} icon={tool.icon} index={activeTool} />
             <div className="it-tool-preview-copy"><h3>{tool.title}</h3><p>{tool.detail}</p><div><Link className="it-inline-link" href="/blog">Ler conteúdos relacionados <Icon name="arrow" /></Link><Link className="it-button it-button--small" href="/planos">Ver formatos <span aria-hidden="true">↗</span></Link></div></div>
           </div>
-        </div>
+        </Reveal>
         <div id="conteudos" className="it-home-blog">
-          <div className="it-home-blog-heading"><div><SectionLabel>Conteúdos para continuar</SectionLabel><h3>Uma pergunta pode abrir a próxima leitura.</h3></div><Link className="it-inline-link" href="/blog">Ver todo o Blog <Icon name="arrow" /></Link></div>
+          <Reveal as="div" className="it-home-blog-heading" stagger><div><SectionLabel>Conteúdos para continuar</SectionLabel><h3>Uma pergunta pode abrir a próxima leitura.</h3></div><Link className="it-inline-link" href="/blog">Ver todo o Blog <Icon name="arrow" /></Link></Reveal>
           {articles.length > 0 ? (
-            <div className="it-home-blog-grid">{articles.slice(0, 3).map((article, index) => <HomeArticleCard article={article} featured={index === 0} key={article.slug} />)}</div>
+            <Reveal as="div" className="it-home-blog-grid" stagger>{articles.slice(0, 3).map((article, index) => <HomeArticleCard article={article} featured={index === 0} key={article.slug} />)}</Reveal>
           ) : (
             <p className="it-home-blog-empty">Novos conteúdos serão publicados em breve. Enquanto isso, converse sobre o percurso de estudo.</p>
           )}
@@ -234,13 +235,13 @@ function CoursesSection() {
   return (
     <section id="cursos" className="it-section it-courses" aria-labelledby="courses-title">
       <div className="it-container">
-        <div className="it-courses-banner">
+        <Reveal as="div" className="it-courses-banner" stagger>
           <div><SectionLabel>Percurso de estudo</SectionLabel><h2 id="courses-title">Você não precisa chegar sabendo tudo.</h2></div>
           <p>O estudo parte de problemas reais e organiza as competências necessárias para buscar, avaliar e aplicar evidências.</p>
           <ul className="it-topic-list"><li>Prática Baseada em Evidências</li><li>Leitura crítica</li><li>Estatística aplicada</li><li>Decisão contextualizada</li></ul>
-        </div>
-        <div className="it-hierarchy-heading"><div><SectionLabel>Organização do estudo</SectionLabel><h3>Uma sequência para aprender com ordem.</h3></div><p>Escolha uma frente para ver as perguntas e habilidades que compõem o percurso.</p></div>
-        <div className="it-hierarchy">
+        </Reveal>
+        <Reveal as="div" className="it-hierarchy-heading" stagger><div><SectionLabel>Organização do estudo</SectionLabel><h3>Uma sequência para aprender com ordem.</h3></div><p>Escolha uma frente para ver as perguntas e habilidades que compõem o percurso.</p></Reveal>
+        <Reveal as="div" className="it-hierarchy" stagger>
           <div className="it-group-list" role="tablist" aria-label="Frentes do percurso" aria-orientation="vertical">
             {learningGroups.map((candidate, index) => <button key={candidate.title} id={'group-tab-' + index} type="button" role="tab" aria-selected={activeGroup === index} aria-controls="group-panel" tabIndex={activeGroup === index ? 0 : -1} className={activeGroup === index ? 'it-group-tab is-active' : 'it-group-tab'} onClick={() => changeGroup(index)} onKeyDown={(event) => handleTabKey(event, index, learningGroups.length, 'group-tab-', changeGroup)}><span>0{index + 1}</span><strong>{candidate.title}</strong><i aria-hidden="true">→</i></button>)}
           </div>
@@ -252,13 +253,13 @@ function CoursesSection() {
                 const answerId = 'learning-answer-' + activeGroup + '-' + index;
                 return <article className={itemOpen ? 'it-learning-item is-open' : 'it-learning-item'} key={item}>
                   <button type="button" aria-expanded={itemOpen} aria-controls={answerId} onClick={() => setOpenItem(itemOpen ? -1 : index)}><span>{String(index + 1).padStart(2, '0')}</span><strong>{item}</strong><i aria-hidden="true">{itemOpen ? '−' : '+'}</i></button>
-                  <div className="it-learning-answer" id={answerId} hidden={!itemOpen}><p>Uma etapa do percurso para ler com mais ordem, reconhecer limites e voltar à decisão com contexto.</p></div>
+                  <div className="it-learning-answer" id={answerId} data-open={itemOpen ? 'true' : 'false'} aria-hidden={!itemOpen}><div><p>Uma etapa do percurso para ler com mais ordem, reconhecer limites e voltar à decisão com contexto.</p></div></div>
                 </article>;
               })}
             </div>
             <Link className="it-inline-link it-hierarchy-link" href="/planos">Conhecer os formatos <Icon name="arrow" /></Link>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -268,11 +269,11 @@ function SupportSection() {
   return (
     <section id="suporte" className="it-section it-support" aria-labelledby="support-title">
       <div className="it-container">
-        <div className="it-section-intro it-section-intro--split"><div><SectionLabel>Acompanhamento</SectionLabel><h2 id="support-title">Estudo com estrutura e contato.</h2></div><p>Você pode começar com uma dúvida. O percurso cria pontos de apoio para que ela não fique parada no meio do caminho.</p></div>
-        <div className="it-support-grid">
+        <Reveal as="div" className="it-section-intro it-section-intro--split" stagger><div><SectionLabel>Acompanhamento</SectionLabel><h2 id="support-title">Estudo com estrutura e contato.</h2></div><p>Você pode começar com uma dúvida. O percurso cria pontos de apoio para que ela não fique parada no meio do caminho.</p></Reveal>
+        <Reveal as="div" className="it-support-grid" stagger>
           {supportItems.map((item, index) => <article className="it-support-card" key={item.title}><div className="it-support-card-top"><span className="it-icon"><Icon name={item.icon} /></span><span className="it-support-number">0{index + 1}</span></div><h3>{item.title}</h3><p>{item.description}</p></article>)}
-        </div>
-        <div className="it-centered-cta"><Button href={contactUrl()}>Começar pela conversa</Button></div>
+        </Reveal>
+        <Reveal as="div" className="it-centered-cta"><Button href={contactUrl()}>Começar pela conversa</Button></Reveal>
       </div>
     </section>
   );
@@ -295,9 +296,9 @@ function JourneySection() {
   return (
     <section className="it-proof" aria-labelledby="proof-title">
       <div className="it-container">
-        <div className="it-section-intro it-proof-intro"><SectionLabel>O raciocínio continua</SectionLabel><h2 id="proof-title">Autonomia para ler e decidir.</h2><p>A dedicação ao estudo ganha uma forma que continua depois de cada encontro: pergunta, evidência, interpretação e contexto.</p></div>
-        <div className="it-proof-card"><div className="it-proof-card-copy"><div className="it-proof-card-heading"><span className="it-icon it-icon--inverse"><Icon name="route" /></span><h3>Um método para continuar estudando.</h3></div><p>O Interprete. não entrega conclusões prontas. Ele organiza um jeito de voltar à literatura quando surgir a próxima dúvida.</p><ul><li><span aria-hidden="true">✓</span> Perguntas mais específicas</li><li><span aria-hidden="true">✓</span> Leitura com critérios explícitos</li><li><span aria-hidden="true">✓</span> Resultados interpretados no contexto</li></ul><Link className="it-inline-link it-inline-link--inverse" href="/sobre">Entender o método <Icon name="arrow" /></Link></div><MethodBoard /></div>
-        <div className="it-carousel"><div className="it-carousel-heading"><h3>O que você desenvolve</h3><div className="it-carousel-controls"><button type="button" aria-label="Voltar" onClick={() => selectSlide(activeSlide - 1)}>←</button><button type="button" aria-label="Avançar" onClick={() => selectSlide(activeSlide + 1)}>→</button></div></div><div className="it-carousel-window"><article className="it-journey-slide" aria-live="polite"><span className="it-tech-label">Etapa {String(activeSlide + 1).padStart(2, '0')}</span><h4>{slide.title}</h4><p>{slide.description}</p></article></div><div className="it-carousel-dots" aria-label="Etapas do desenvolvimento">{journeySlides.map((candidate, index) => <button key={candidate.title} type="button" aria-label={'Ver ' + candidate.title} aria-pressed={activeSlide === index} className={activeSlide === index ? 'is-active' : ''} onClick={() => selectSlide(index)}><span aria-hidden="true" /></button>)}</div></div>
+        <Reveal as="div" className="it-section-intro it-proof-intro" stagger><SectionLabel>O raciocínio continua</SectionLabel><h2 id="proof-title">Autonomia para ler e decidir.</h2><p>A dedicação ao estudo ganha uma forma que continua depois de cada encontro: pergunta, evidência, interpretação e contexto.</p></Reveal>
+        <Reveal as="div" className="it-proof-card" stagger><div className="it-proof-card-copy"><div className="it-proof-card-heading"><span className="it-icon it-icon--inverse"><Icon name="route" /></span><h3>Um método para continuar estudando.</h3></div><p>O Interprete. não entrega conclusões prontas. Ele organiza um jeito de voltar à literatura quando surgir a próxima dúvida.</p><ul><li><span aria-hidden="true">✓</span> Perguntas mais específicas</li><li><span aria-hidden="true">✓</span> Leitura com critérios explícitos</li><li><span aria-hidden="true">✓</span> Resultados interpretados no contexto</li></ul><Link className="it-inline-link it-inline-link--inverse" href="/sobre">Entender o método <Icon name="arrow" /></Link></div><MethodBoard /></Reveal>
+        <Reveal as="div" className="it-carousel" stagger><div className="it-carousel-heading"><h3>O que você desenvolve</h3><div className="it-carousel-controls"><button type="button" aria-label="Voltar" onClick={() => selectSlide(activeSlide - 1)}>←</button><button type="button" aria-label="Avançar" onClick={() => selectSlide(activeSlide + 1)}>→</button></div></div><div className="it-carousel-window"><article className="it-journey-slide" aria-live="polite" key={activeSlide}><span className="it-tech-label">Etapa {String(activeSlide + 1).padStart(2, '0')}</span><h4>{slide.title}</h4><p>{slide.description}</p></article></div><div className="it-carousel-dots" aria-label="Etapas do desenvolvimento">{journeySlides.map((candidate, index) => <button key={candidate.title} type="button" aria-label={'Ver ' + candidate.title} aria-pressed={activeSlide === index} className={activeSlide === index ? 'is-active' : ''} onClick={() => selectSlide(index)}><span aria-hidden="true" /></button>)}</div></Reveal>
       </div>
     </section>
   );
@@ -306,10 +307,10 @@ function JourneySection() {
 function CareerCta() {
   return (
     <section className="it-career-cta" aria-labelledby="career-title">
-      <div className="it-container it-career-inner">
+      <Reveal as="div" className="it-container it-career-inner" stagger>
         <div className="it-career-rule" aria-hidden="true"><span>Interprete.</span><span>próximo passo</span></div>
         <div className="it-career-card"><SectionLabel>O próximo passo começa aqui</SectionLabel><h2 id="career-title">Uma pergunta pode mudar o jeito como você <em>estuda e decide.</em></h2><p>Conte o que você quer entender e descubra como organizar uma rota de estudo possível para o seu momento.</p><Button href={contactUrl()} className="it-button--light">Quero conversar</Button></div>
-      </div>
+      </Reveal>
     </section>
   );
 }
@@ -320,15 +321,15 @@ function FaqSection() {
   return (
     <section id="faq" className="it-section it-faq" aria-labelledby="faq-title">
       <div className="it-container">
-        <div className="it-section-intro it-section-intro--split"><div><SectionLabel>Antes de começar</SectionLabel><h2 id="faq-title">Perguntas frequentes.</h2></div><p>O essencial para entender o percurso e chegar à conversa inicial com mais clareza.</p></div>
-        <div className="it-faq-list">
+        <Reveal as="div" className="it-section-intro it-section-intro--split" stagger><div><SectionLabel>Antes de começar</SectionLabel><h2 id="faq-title">Perguntas frequentes.</h2></div><p>O essencial para entender o percurso e chegar à conversa inicial com mais clareza.</p></Reveal>
+        <Reveal as="div" className="it-faq-list" stagger>
           {faqItems.map((faq, index) => {
             const isOpen = openFaq === index;
             const answerId = 'faq-answer-' + index;
-            return <article className={isOpen ? 'it-faq-item is-open' : 'it-faq-item'} key={faq.question}><button type="button" aria-expanded={isOpen} aria-controls={answerId} onClick={() => setOpenFaq(isOpen ? null : index)}><span>{faq.question}</span><i aria-hidden="true">{isOpen ? '−' : '+'}</i></button><div className="it-faq-answer" id={answerId} hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+              return <article className={isOpen ? 'it-faq-item is-open' : 'it-faq-item'} key={faq.question}><button type="button" aria-expanded={isOpen} aria-controls={answerId} onClick={() => setOpenFaq(isOpen ? null : index)}><span>{faq.question}</span><i aria-hidden="true">{isOpen ? '−' : '+'}</i></button><div className="it-faq-answer" id={answerId} data-open={isOpen ? 'true' : 'false'} aria-hidden={!isOpen}><div><p>{faq.answer}</p></div></div></article>;
           })}
-        </div>
-        <div className="it-centered-cta"><Button href={contactUrl()}>Quero conhecer o Interprete.</Button></div>
+        </Reveal>
+        <Reveal as="div" className="it-centered-cta"><Button href={contactUrl()}>Quero conhecer o Interprete.</Button></Reveal>
       </div>
     </section>
   );

@@ -109,11 +109,16 @@
   --it-shadow-default: none;
 
   /* Motion */
-  --it-duration-fast: 160ms;
-  --it-duration-default: 200ms;
-  --it-duration-slow: 220ms;
+  --it-duration-instant: 120ms;
+  --it-duration-fast: 200ms;
+  --it-duration-default: 320ms;
+  --it-duration-slow: 520ms;
   --it-ease-standard: cubic-bezier(.2, .8, .2, 1);
-  --it-motion-shift: 4px;
+  --it-ease-in: cubic-bezier(.4, 0, 1, 1);
+  --it-ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --it-motion-shift: 5px;
+  --it-motion-distance: 12px;
+  --it-motion-stagger: 70ms;
 
   /* Interaction */
   --it-target-min: 44px;
@@ -129,13 +134,4 @@
   --it-text-muted: var(--it-color-pink-essence);
   --it-border-subtle: color-mix(in srgb, var(--it-color-pink-essence) 28%, transparent);
   --it-border-strong: var(--it-color-pink-essence);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --it-duration-fast: 0ms;
-    --it-duration-default: 0ms;
-    --it-duration-slow: 0ms;
-    --it-motion-shift: 0px;
-  }
 }

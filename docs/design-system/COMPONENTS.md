@@ -201,7 +201,7 @@ tipo/categoria → título → resumo → data/tempo de leitura → próximo pas
 - Preferir reserva de espaço estável.
 - Skeleton plano, sem shimmer gradiente.
 - Se duração puder ser longa, usar texto de status.
-- Respeitar reduced motion.
+- Usar os motion tokens centrais e manter o comportamento consistente em todas as larguras.
 
 ## 20. Footer
 

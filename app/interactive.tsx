@@ -13,6 +13,32 @@ export function SiteNavLink({ href, children, className = 'it-nav-link' }: { hre
   return <Link className={classes} href={href} aria-current={isCurrent ? 'page' : undefined}>{children}</Link>;
 }
 
+export function HeaderScrollState() {
+  useEffect(() => {
+    const header = document.querySelector<HTMLElement>('.it-header');
+    if (!header) return;
+
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      header.toggleAttribute('data-scrolled', window.scrollY > 12);
+    };
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  return null;
+}
+
 export function MobileMenu({ contactHref }: { contactHref: string }) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const summaryRef = useRef<HTMLElement>(null);

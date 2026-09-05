@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Footer, Header, PageShell, SectionLabel } from './components';
+import { Reveal } from './motion';
 
 export const metadata: Metadata = {
   title: 'Página não encontrada',
@@ -18,7 +19,7 @@ export default function NotFound() {
   return (
     <PageShell>
       <Header />
-      <main className="not-found">
+      <Reveal as="main" className="not-found" stagger>
         <SectionLabel>404 / conteúdo não encontrado</SectionLabel>
         <h1>Este caminho não existe.</h1>
         <p>A página que você procura pode ter sido movida. Volte ao início ou continue pelo arquivo editorial.</p>
@@ -26,7 +27,7 @@ export default function NotFound() {
           <Link className="it-button" href="/">Voltar ao início <span aria-hidden="true">↗</span></Link>
           <Link className="it-button it-button--secondary" href="/blog">Abrir o blog <span aria-hidden="true">↗</span></Link>
         </div>
-      </main>
+      </Reveal>
       <Footer />
     </PageShell>
   );

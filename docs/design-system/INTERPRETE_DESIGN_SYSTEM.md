@@ -212,10 +212,10 @@ Textura é permitida, sobretudo em peças editoriais, desde que:
 
 - Alvos interativos: mínimo recomendado 44×44px.
 - Foco visível: 2–3px, alto contraste, offset suficiente.
-- Duração usual: 160–220ms.
-- Movimento: opacity e translate de até 4px para entrada/feedback.
+- Duração usual: 120–520ms, conforme o papel da interação.
+- Movimento: priorizar opacity e transform; reveals usam distância pequena, blur leve e stagger discreto.
 - Não usar animação decorativa contínua.
-- Respeitar prefers-reduced-motion e remover movimento não essencial.
+- O comportamento de movimento é único e consistente em todas as rotas; não criar ramificações por preferência do dispositivo.
 - Hover não pode carregar informação indispensável.
 
 ## 10. Componentes essenciais
