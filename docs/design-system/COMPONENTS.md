@@ -8,9 +8,10 @@ Os componentes abaixo descrevem anatomia, variantes e estados. Não são uma lic
 Label + ícone opcional + estado.
 
 ### Variantes
-- Primary: fundo Classic Crimson, texto branco, borda da própria cor.
-- Secondary: fundo transparente/Pink Essence, texto Crimson Violet, borda 2px Crimson Violet.
-- Tertiary: texto Dark Amaranth/Crimson Violet, sem caixa; sublinhado ou indicação visual no hover/focus.
+- Primary: fundo Dark Amaranth, texto Pink Essence/white, borda da própria cor.
+- Conversion: fundo Classic Crimson, texto branco, apenas quando a ação pedir ênfase comercial.
+- Secondary: fundo transparente/Pink Essence, texto Dark Amaranth, borda 1px Dark Amaranth.
+- Tertiary: texto Dark Amaranth, sem caixa; sublinhado ou indicação visual no hover/focus.
 - Destructive/critical: Crimson Violet como superfície + Pink Essence/white, acompanhado de linguagem explícita. Não usar Debian/Classic apenas para “parecer perigoso”.
 
 ### Tamanhos
@@ -52,7 +53,7 @@ Wordmark oficial + navegação principal + ação contextual.
 
 ### Padrão
 - superfície White ou Pink Essence;
-- borda 1px support.border ou 2px Crimson Violet;
+- borda 1px support.border ou 2px Dark Amaranth;
 - raio 0;
 - shadow none;
 - padding 24–32px;
@@ -62,7 +63,7 @@ Wordmark oficial + navegação principal + ação contextual.
 - Editorial: título serif + metadados.
 - Operational: título Inter + estado/ação.
 - Data: IBM Plex Mono para métricas.
-- Selected: borda 2px Crimson Violet + marcador textual/ícone; não depender só de cor.
+- Selected: borda 2px Dark Amaranth + marcador textual/ícone; não depender só de cor.
 
 Cards não devem virar pequenos “banners decorativos”. Cada card representa uma unidade real.
 
@@ -90,9 +91,9 @@ Sempre incluir ícone ou label textual. Nunca confiar só na cor.
 
 - Label persistente acima do campo.
 - Helper text abaixo.
-- Borda 1px support.border; focus 2px Dark Amaranth/Crimson Violet.
+- Borda 1px support.border; focus 2px Dark Amaranth.
 - Fundo white.
-- Texto Crimson Violet/Ink.
+- Texto Ink/Dark Amaranth.
 - Placeholder muted, nunca substitui label.
 - Erro: mensagem explícita + ícone/marcador; cor de acento é apoio.
 - Altura mínima 44px.
@@ -127,7 +128,7 @@ Sempre incluir ícone ou label textual. Nunca confiar só na cor.
 ## 11. Menu / Popover
 
 - Superfície White ou Dark Amaranth conforme contexto.
-- Borda 2px Crimson Violet ou equivalente no escuro.
+- Borda 2px Dark Amaranth ou equivalente no escuro.
 - Sem sombra por padrão; se precisar separar de conteúdo visualmente complexo, usar backdrop/borda e registrar a exceção.
 - Focus trap somente quando a semântica exigir modal; popover comum não deve prender foco.
 
@@ -151,7 +152,7 @@ Sempre incluir ícone ou label textual. Nunca confiar só na cor.
 ## 14. Table
 
 - Cabeçalho Inter semibold; números IBM Plex Mono.
-- Linha de cabeçalho 2px Crimson Violet; linhas internas 1px support.border.
+- Linha de cabeçalho 2px Dark Amaranth; linhas internas 1px support.border.
 - Sem zebra automática se a separação por linhas resolver.
 - Valores alinhados à direita; rótulos à esquerda.
 - Unidade no cabeçalho ou junto ao valor de modo consistente.

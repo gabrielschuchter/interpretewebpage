@@ -1,0 +1,50 @@
+.page { min-height: 100vh; color: var(--color-text-primary); background: var(--color-essence); font-family: var(--font-body); }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.5rem clamp(1.25rem, 5vw, 5rem); color: var(--color-essence); background: var(--color-amaranth); }
+.header img { width: clamp(9rem, 20vw, 15rem); height: auto; }
+.kicker, .eyebrow, .tag, .typeGrid span, .logoCard span { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; }
+.kicker, .dark .eyebrow { color: var(--color-essence); }
+.hero, .section { width: min(100% - 2.5rem, var(--content-wide)); margin-inline: auto; }
+.hero { padding: clamp(5rem, 12vw, 10rem) 0 clamp(4rem, 9vw, 8rem); }
+.hero h1, .section h2, .display, .panel h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -.035em; }
+.hero h1 { max-width: 13ch; margin-top: 1rem; font-size: clamp(3rem, 8vw, 7rem); line-height: .98; }
+.hero > p:last-child { max-width: 48ch; margin-top: 2rem; color: var(--color-text-secondary); font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.6; }
+.eyebrow { color: var(--color-amaranth); }
+.section { padding: clamp(4rem, 9vw, 8rem) 0; }
+.sectionHeading { max-width: 58rem; margin-bottom: 3rem; }
+.section h2 { margin-top: .75rem; font-size: clamp(2.25rem, 5vw, 4.5rem); line-height: 1; }
+.sectionHeading > p:last-child { max-width: 62ch; margin-top: 1rem; color: var(--color-text-secondary); line-height: 1.65; }
+.dark { width: 100%; padding-inline: max(1.25rem, calc((100vw - var(--content-wide)) / 2)); color: var(--color-essence); background: var(--color-amaranth); }
+.dark .sectionHeading > p:last-child, .dark .typeGrid p { color: var(--color-essence); }
+.colorGrid, .logoGrid, .typeGrid { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.colorCard { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; align-items: center; padding: 1rem; border: 1px solid var(--color-border-subtle); background: var(--color-surface); }
+.swatch { width: 5rem; aspect-ratio: 1; border: 1px solid var(--color-border-subtle); }
+.colorCard strong, .colorCard code, .colorCard small { display: block; }
+.colorCard code { margin-top: .35rem; color: var(--color-text-secondary); font: .75rem var(--font-mono); }
+.colorCard small { margin-top: .35rem; color: var(--color-crimson); font: .7rem var(--font-mono); }
+.typeGrid > div { padding: 1.5rem 0; border-top: 1px solid color-mix(in srgb, var(--color-essence) 30%, transparent); }
+.typeGrid h3 { margin-top: 1rem; font-size: clamp(1.75rem, 4vw, 3.25rem); }
+.typeGrid p { max-width: 32ch; margin-top: 1rem; line-height: 1.6; }
+.body { font-family: var(--font-body); font-weight: 600; }
+.mono { font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2.5rem) !important; font-weight: 400; }
+.logoGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.logoCard { display: grid; align-content: space-between; min-height: 12rem; padding: 1.5rem; border: 1px solid var(--color-border-subtle); background: var(--color-surface); }
+.logoCard:nth-child(2), .logoCard:nth-child(4) { background: var(--color-amaranth); }
+.logoCard img { width: 100%; height: auto; max-height: 5rem; object-fit: contain; }
+.logoCard span { margin-top: 1.5rem; color: var(--color-text-secondary); }
+.logoCard:nth-child(2) span, .logoCard:nth-child(4) span { color: var(--color-essence); }
+.canvas { padding-bottom: 4rem; }
+.componentRow { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.button, .buttonSecondary { display: inline-flex; min-height: 2.75rem; align-items: center; gap: .5rem; padding: .8rem 1.2rem; border: 2px solid var(--color-amaranth); border-radius: var(--radius-none); font-weight: 600; transition: transform var(--motion-fast) var(--motion-ease), background-color var(--motion-fast) var(--motion-ease); }
+.button { color: var(--color-essence); background: var(--color-amaranth); }
+.button:hover, .button:focus-visible { background: var(--color-crimson); transform: translateY(-1px); }
+.buttonSecondary { color: var(--color-amaranth); background: transparent; }
+.buttonSecondary:hover, .buttonSecondary:focus-visible { color: var(--color-essence); background: var(--color-amaranth); }
+.tag { padding: .45rem .65rem; border: 1px solid var(--color-amaranth); color: var(--color-amaranth); }
+.panel { max-width: 38rem; margin-top: 4rem; padding: 2rem; border: 2px solid var(--color-amaranth); background: var(--color-surface); }
+.panel h3 { margin-top: .75rem; font-size: clamp(2rem, 4vw, 3.5rem); }
+.panel p { max-width: 48ch; margin-top: 1rem; color: var(--color-text-secondary); line-height: 1.6; }
+.rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 3rem; max-width: 70rem; padding: 0; list-style: none; }
+.rules li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; padding: 1.2rem 0; border-top: 1px solid color-mix(in srgb, var(--color-essence) 25%, transparent); line-height: 1.5; }
+.rules li span { color: var(--color-crimson); font: .8rem var(--font-mono); }
+@media (max-width: 800px) { .colorGrid, .logoGrid, .typeGrid, .rules { grid-template-columns: 1fr; } .hero, .section { width: min(100% - 2rem, var(--content-wide)); } .dark { padding-inline: 1rem; } .header { gap: 1rem; } .kicker { text-align: right; } }
+@media (prefers-reduced-motion: reduce) { .button, .buttonSecondary { transition: none; } }

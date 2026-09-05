@@ -10,8 +10,8 @@ export default function NotFound() {
         <h1>Este caminho não existe.</h1>
         <p>A página que você procura pode ter sido movida. Volte ao início ou continue pelo arquivo editorial.</p>
         <div className="actions">
-          <Link className="academy-button" href="/">Voltar ao início <span aria-hidden="true">↗</span></Link>
-          <Link className="academy-button academy-button--secondary" href="/blog">Abrir o blog <span aria-hidden="true">↗</span></Link>
+          <Link className="it-button" href="/">Voltar ao início <span aria-hidden="true">↗</span></Link>
+          <Link className="it-button it-button--secondary" href="/blog">Abrir o blog <span aria-hidden="true">↗</span></Link>
         </div>
       </main>
       <Footer />

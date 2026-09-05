@@ -26,13 +26,9 @@ A marca é técnica sem ser hermética. Jargão é explicado. Dados são legíve
 Quando duas referências divergem, prevalece:
 
 1. este documento e DECISIONS.md;
-2. correções explícitas dos fundadores;
-3. Manual de Marca v1;
-4. ativos oficiais;
-5. mockups aprovados;
-6. código legado.
-
-O mockup usa Source Serif 4 em alguns pontos. Isso é uma referência de protótipo, não uma alteração de marca: Source Serif Pro continua canônica.
+2. o Manual de Marca v1 e seus assets oficiais;
+3. mockups aprovados, quando não contradizem este contrato;
+4. código legado.
 
 ## 3. Cor
 
@@ -42,9 +38,9 @@ O mockup usa Source Serif 4 em alguns pontos. Isso é uma referência de protót
 | --- | --- | --- | --- |
 | color.pinkEssence | Pink Essence | #F1EBE8 | fundo claro dominante; texto sobre escuro |
 | color.darkAmaranth | Dark Amaranth | #8C1535 | cor primária; marca; superfícies institucionais; menus |
-| color.crimsonViolet | Crimson Violet | #410230 | texto forte; fundo institucional escuro; borda forte; crítico |
-| color.classicCrimson | Classic Crimson | #D62839 | ação e destaque |
-| color.debianRed | Debian Red | #D60858 | tags e superfícies sutis; acento alternativo |
+| color.classicCrimson | Classic Crimson | #D62839 | conversão e destaque |
+| color.debianRed | Debian Red | #D60858 | acento alternativo |
+| color.crimsonViolet | Crimson Violet | #410230 | exceção crítica ou institucional; uso mínimo |
 
 Neutros de apoio derivados dos mockups aprovados podem ser usados em interface, mas não alteram a paleta de marca:
 
@@ -59,25 +55,26 @@ Neutros de apoio derivados dos mockups aprovados podem ser usados em interface, 
 
 ### 3.2 Proporção canônica
 
-Em uma composição clara típica:
+Em uma composição clara típica, use a seguinte dominância perceptiva aproximada:
 
-- 60% Pink Essence.
-- 20% Dark Amaranth.
-- 12% Crimson Violet.
-- 8% vermelho de destaque.
+- 58% Pink Essence.
+- 28% Dark Amaranth.
+- 7% Classic Crimson.
+- 5% Debian Red.
+- até 2% Crimson Violet.
 
-O vermelho de destaque é um slot: escolha Classic Crimson OU Debian Red. Não use ambos disputando atenção.
+Os percentuais são orientação de peso visual, não uma divisão literal de pixels. Crimson Violet é opcional e pode ficar em 0%. Classic Crimson e Debian Red ocupam o mesmo slot de acento: escolha um por peça, sem competição.
 
 A proporção mede dominância visual aproximada, não pixels literais. Grandes áreas de fundo, blocos, tipografia pesada, bordas e CTAs têm pesos perceptivos diferentes. A regra serve para evitar igualdade cromática.
 
 ### 3.3 Exceção de superfície escura
 
-Capas, aberturas de seção, fechamentos e peças de alta densidade simbólica podem inverter a dominância: Crimson Violet ou Dark Amaranth assume o campo e Pink Essence vira texto. Essa exceção não cria uma nova porcentagem fixa. Use no máximo um vermelho de acento.
+Capas, aberturas de seção, fechamentos e peças de alta densidade simbólica podem usar Dark Amaranth como campo institucional e Pink Essence como texto. Crimson Violet fica reservado a aplicações críticas ou excepcionais e não deve virar o fundo padrão do produto. Use no máximo um vermelho de acento.
 
 ### 3.4 Combinações de contraste aprovadas
 
-- Crimson Violet sobre Pink Essence: excelente para texto corrido.
 - Dark Amaranth sobre Pink Essence: aprovado para texto e marca.
+- Ink sobre Pink Essence: aprovado para texto corrido.
 - Pink Essence ou branco sobre Dark Amaranth: aprovado.
 - Branco sobre Classic Crimson e Debian Red: apropriado para rótulos/ações em tamanho normal.
 - Classic Crimson ou Debian Red sobre Pink Essence: não usar em corpo de leitura; reserve a display, ícone, borda ou elemento com contraste validado.
@@ -89,14 +86,15 @@ WCAG AA é o piso: 4,5:1 para texto normal e 3:1 para texto grande e componentes
 - background.default = Pink Essence
 - surface.default = White
 - surface.brand = Dark Amaranth
-- surface.dark = Crimson Violet
-- text.strong = Crimson Violet
+- surface.dark = Dark Amaranth
+- text.strong = Dark Amaranth
 - text.body = Ink
 - text.muted = Muted
 - text.onDark = Pink Essence
 - border.subtle = Border
-- border.strong = Crimson Violet
-- action.primary = Classic Crimson
+- border.strong = Dark Amaranth
+- action.primary = Dark Amaranth
+- action.conversion = Classic Crimson
 - action.alt = Debian Red
 - focus = Dark Amaranth
 - critical = Crimson Violet
@@ -144,11 +142,11 @@ Rótulo técnico usa caixa alta e tracking entre .16em e .18em. Texto corrido fi
 
 Escala base: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 72 e 96 px.
 
-- Container máximo de interface institucional: 1440px.
-- Conteúdo editorial: até 68ch.
-- Padding lateral: 16px mobile, 24px tablet, 48px desktop.
-- Grid: 4 colunas mobile, 6 tablet, 12 desktop.
-- Gutters: 16px mobile, 20px tablet, 24px desktop.
+- Canvas máximo de interface institucional: 1440px; container de conteúdo: 1180–1280px, preferencialmente 1240px.
+- Conteúdo editorial: até 68ch, com alvo de leitura de aproximadamente 740px.
+- Padding lateral: 18–24px mobile, 32px tablet, 48px desktop.
+- Grid: 4 colunas mobile, 8 tablet, 12 desktop.
+- Gutters: 16px mobile, 24px tablet, 24px desktop.
 - Breakpoints de referência: 480, 768, 1024 e 1280px.
 - Se um componente precisa de mais um breakpoint para funcionar, priorize comportamento intrínseco antes de adicionar regra global.
 
@@ -159,7 +157,7 @@ Muito respiro é parte da identidade. Não comprimir cartões ou seções para a
 ### 6.1 Bordas
 - 1px: separação sutil.
 - 2px: hierarquia forte, seleção, contêiner editorial ou ferramenta.
-- Cor padrão: support.border; forte: Crimson Violet.
+- Cor padrão: support.border; forte: Dark Amaranth.
 
 ### 6.2 Raio
 - 0: padrão de cards, painéis e campos estruturais.
@@ -186,7 +184,7 @@ Use apenas arquivos em public/brand/.
 - Área de proteção: altura do “I” em todos os lados.
 - Wordmark: mínimo 90px digital / 25mm impresso.
 - Símbolo: mínimo 32px digital / 10mm impresso.
-- Fundo claro: wordmark Crimson Violet ou Dark Amaranth.
+- Fundo claro: wordmark Dark Amaranth ou Crimson Violet quando o contraste estiver validado.
 - Fundo escuro: wordmark Pink Essence.
 - Monocromático: preto ou branco integral.
 
@@ -232,8 +230,8 @@ Regra comum: cada variante existe por diferença semântica, não para oferecer 
 - IBM Plex Mono para medidas e valores.
 - Eixos, unidade, período e fonte sempre visíveis.
 - Dark Amaranth como série principal.
-- Crimson Violet como série secundária.
-- Um único vermelho de acento para destaque.
+- Classic Crimson ou Debian Red como série de destaque, conforme o slot ativo.
+- Crimson Violet não é a primeira série e pode ser omitido.
 - Não usar cor como único canal: combine com rótulo, padrão, forma ou anotação.
 - Sem 3D, perspectiva, gradiente ou truncamento enganoso de eixo.
 - O gráfico deve preservar magnitude e incerteza quando relevantes.

@@ -1,13 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Interprete.</title>
   <desc id="desc">Prática Baseada em Evidências, leitura crítica e aplicação.</desc>
-  <rect width="1200" height="630" fill="#041325"/>
-  <path d="M0 490 1200 70M0 610 1200 190" stroke="#2eb6ff" stroke-opacity=".28" stroke-width="2"/>
-  <ellipse cx="915" cy="320" rx="470" ry="135" fill="none" stroke="#0065ff" stroke-opacity=".58" stroke-width="2" transform="rotate(-18 915 320)"/>
-  <ellipse cx="915" cy="320" rx="390" ry="95" fill="none" stroke="#2eb6ff" stroke-opacity=".35" stroke-width="2" transform="rotate(-18 915 320)"/>
-  <circle cx="1015" cy="272" r="8" fill="#2eb6ff"/>
-  <text x="76" y="92" fill="#54c2ff" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">PRÁTICA BASEADA EM EVIDÊNCIAS</text>
-  <text x="76" y="350" fill="#fff" font-family="Arial, sans-serif" font-size="104" font-weight="700">Interprete.</text>
-  <text x="80" y="415" fill="#b9c7d9" font-family="Arial, sans-serif" font-size="26">Perguntar. Interpretar. Aplicar.</text>
-  <text x="80" y="550" fill="#54c2ff" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3">PERGUNTAR / DECIDIR</text>
+  <rect width="1200" height="630" fill="#F1EBE8"/>
+  <rect width="390" height="630" fill="#8C1535"/>
+  <image href="/brand/svg/wordmark-creme.svg" x="58" y="64" width="274" height="52" preserveAspectRatio="xMinYMid meet"/>
+  <text x="58" y="282" fill="#F1EBE8" font-family="Georgia, serif" font-size="52" font-weight="700">Perguntar.</text>
+  <text x="58" y="350" fill="#F1EBE8" font-family="Georgia, serif" font-size="52" font-weight="700">Interpretar.</text>
+  <text x="58" y="418" fill="#F1EBE8" font-family="Georgia, serif" font-size="52" font-weight="700">Aplicar.</text>
+  <text x="472" y="176" fill="#8C1535" font-family="Georgia, serif" font-size="62" font-weight="700">Prática Baseada</text>
+  <text x="472" y="254" fill="#8C1535" font-family="Georgia, serif" font-size="62" font-weight="700">em Evidências.</text>
+  <text x="476" y="326" fill="#7A5A69" font-family="Arial, sans-serif" font-size="25">Formação acompanhada para ler,</text>
+  <text x="476" y="364" fill="#7A5A69" font-family="Arial, sans-serif" font-size="25">decidir e aplicar com critério.</text>
+  <line x1="476" y1="438" x2="1058" y2="438" stroke="#D62839" stroke-width="4"/>
+  <text x="476" y="492" fill="#40222F" font-family="Arial, sans-serif" font-size="22" letter-spacing="1">INTERPRETE. · EVIDÊNCIA EM PRÁTICA</text>
 </svg>

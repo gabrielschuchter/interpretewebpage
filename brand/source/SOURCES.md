@@ -71,17 +71,16 @@ Folder ID: 11NFK1lPFPKdpHcngO6CBYvcD7XIRZLWp
 - wordmark-preto.svg — 1PR5PdYiFRwqXklj69KXgXT18VFagZiSe
 - wordmark-violeta.svg — 1G9jcjRIvitAdIBUJ9VpxoKoRXsPQUhsz
 
-## Correção conhecida do Manual v1
+## Hierarquia canônica do Manual v1
 
-O PDF mostra, na seção 6.6, Crimson Violet em 20% e Dark Amaranth em 12%. Isso foi corrigido pelos fundadores.
+O Design System transforma a paleta em orientação de dominância perceptiva para o produto:
+- Pink Essence aproximadamente 58%
+- Dark Amaranth aproximadamente 28%
+- Classic Crimson aproximadamente 7%
+- Debian Red aproximadamente 5%
+- Crimson Violet até aproximadamente 2%, podendo ser 0%
 
-Fonte de verdade no repositório:
-- Pink Essence 60%
-- Dark Amaranth 20%
-- Crimson Violet 12%
-- vermelho de destaque 8%
-
-Ver DECISIONS.md, D001.
+Crimson Violet é excepcional; Classic Crimson e Debian Red são alternativas do mesmo slot de acento. Ver `docs/design-system/DECISIONS.md`, D001.
 
 ## Precedência
 

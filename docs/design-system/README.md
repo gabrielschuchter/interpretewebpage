@@ -9,7 +9,7 @@ Comece por INTERPRETE_DESIGN_SYSTEM.md.
 - COMPONENTS.md — anatomia, variantes e estados.
 - PATTERNS.md — páginas, materiais e formatos recorrentes.
 - CHECKLIST.md — gate obrigatório de aprovação.
-- MIGRATION.md — migração segura da identidade azul legada.
+- MIGRATION.md — histórico e critérios da migração da identidade legada.
 - tokens.css — tokens portáveis para implementação web.
 - tokens.json — representação independente de plataforma.
 - CHANGELOG.md — histórico do sistema.
@@ -22,8 +22,8 @@ Comece por INTERPRETE_DESIGN_SYSTEM.md.
 
 ## Regra mais importante
 
-A seção 6.6 do PDF tem Dark Amaranth e Crimson Violet com percentuais invertidos. A regra aprovada é:
+A composição canônica é uma orientação de dominância visual, não uma divisão literal de pixels:
 
-**60% Pink Essence · 20% Dark Amaranth · 12% Crimson Violet · 8% vermelho de acento.**
+**Pink Essence ~58% · Dark Amaranth ~28% · Classic Crimson ~7% · Debian Red ~5% · Crimson Violet até ~2%.**
 
-O slot de 8% usa Classic Crimson ou Debian Red, nunca os dois em competição.
+Crimson Violet é excepcional: não é fundo padrão, cabeçalho, navegação, CTA primário, texto corrido ou primeira série de gráfico. Classic Crimson e Debian Red ocupam o mesmo slot de acento em cada peça; não competem entre si.

@@ -1,14 +1,14 @@
 # Transformação de conteúdo: Academy → Interprete.
 
-Este documento registra a transformação aplicada ao port visual. A arquitetura visual, o ritmo e os componentes seguem o source kit fornecido; a informação pública foi substituída por conteúdo verificável do Interprete.
+Este documento registra a transformação de conteúdo aplicada ao port inicial. A arquitetura funcional foi preservada, mas a linguagem visual atual segue o Design System canônico do Interprete. A informação pública foi substituída por conteúdo verificável do Interprete.
 
 | Bloco do source kit | Tratamento no Interprete. | Regra de conteúdo |
 | --- | --- | --- |
 | Badge da hero com número de pesquisadores | Badge de formação acompanhada | Não usar contagem de pessoas ou prova social não confirmada. |
 | Headline de autonomia em análise de dados | Headline de autonomia para interpretar evidências | Preserva a promessa institucional já existente, sem atribuir software ou métrica. |
-| Faixa de universidades | Faixa contínua de temas do percurso | Mantém marquee e densidade, sem apresentar instituições como clientes. |
+| Faixa de universidades | Faixa editorial de temas do percurso | Apresenta temas reais do estudo, sem apresentar instituições como clientes e sem movimento contínuo. |
 | Ferramentas estatísticas | Recursos de pergunta, busca, leitura e interpretação | Cada item deriva do conteúdo editorial e do método já confirmado. |
-| Bloco “CURSOS” | Bloco “PERCURSO” | Mantém painel azul, tipografia outline, chips e hierarquia. |
+| Bloco “CURSOS” | Bloco “PERCURSO” | Usa painel institucional Dark Amaranth, tipografia editorial e hierarquia por borda/espaço. |
 | Estrutura de cursos/subcategorias | Frentes e etapas de PBE | Mantém tabs, painel ativo, accordions e transições. |
 | Quatro canais de suporte | Conversa inicial, ritmo, 12 semanas e contato institucional | Não criar e-mail, comunidade, aulas ou encontros que não estejam confirmados. |
 | Certificado e depoimentos | Método e desenvolvimento de autonomia | Mantém card branco, composição visual, carousel, controles e dots sem inventar certificados, alunos ou testemunhos. |

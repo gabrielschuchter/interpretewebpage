@@ -14,7 +14,9 @@ const ignored = new Set(['node_modules', '.next', '.git', 'output', 'brand/sourc
 const textExt = new Set(['.css', '.scss', '.sass', '.less', '.ts', '.tsx', '.js', '.jsx', '.mjs', '.mdx', '.html']);
 const allowedHexFiles = new Set([
   path.normalize('docs/design-system/tokens.css'),
-  path.normalize('docs/design-system/tokens.json')
+  path.normalize('docs/design-system/tokens.json'),
+  path.normalize('app/tokens.css'),
+  path.normalize('lib/design-system.ts')
 ]);
 
 const rules = [

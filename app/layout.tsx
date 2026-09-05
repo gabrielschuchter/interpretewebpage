@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { absoluteUrl, SITE_URL } from '../lib/site';
+import { brand } from '../lib/design-system';
 import './tokens.css';
 import './globals.css';
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   applicationName: 'Interprete.',
   publisher: 'Interprete.',
   alternates: { canonical: '/' },
-  icons: { icon: '/favicon.svg' },
+  icons: { icon: '/brand/favicon/favicon-32.png' },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#041325',
+  themeColor: brand.colors.pinkEssence,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -19,12 +19,12 @@ A ordem de precedência é:
 5. Mockups aprovados em brand/source/ como referência de implementação.
 6. Código atual do site apenas como legado técnico, nunca como referência visual.
 
-A decisão D001 corrige a seção 6.6 do Manual de Marca: a proporção canônica é Pink Essence 60%, Dark Amaranth 20%, Crimson Violet 12% e um slot de vermelho de destaque de 8%. O slot de 8% usa Classic Crimson OU Debian Red; nunca os dois competindo na mesma composição.
+A decisão D001 fixa a hierarquia canônica: Pink Essence aproximadamente 58%, Dark Amaranth aproximadamente 28%, Classic Crimson aproximadamente 7%, Debian Red aproximadamente 5% e Crimson Violet até aproximadamente 2%. Crimson Violet é excepcional e pode ficar em 0%; Classic Crimson e Debian Red são alternativas do mesmo slot de acento.
 
 ## Hard gates
 
 - Não inventar cores. Em UI nova, usar tokens do sistema.
-- Não usar a paleta azul --academy-* como referência. O site existente antecede este sistema e é legado.
+- Não usar a identidade azul legada, nomes técnicos ou classes --academy-* como referência visual. O runtime público migrado usa classes `it-*`.
 - Não usar gradientes.
 - Não criar logomarca com texto, CSS, pseudo-elementos ou ícones improvisados. Usar os arquivos oficiais.
 - O ponto final faz parte de “Interprete.” e nunca é removido.
@@ -44,7 +44,7 @@ Uma mudança que contradiga o sistema não é “ajuste visual”: é mudança d
 
 ## Legado
 
-Os arquivos app/tokens.css, app/globals.css, app/components.tsx e partes de app/layout.tsx ainda carregam a identidade azul anterior. Não copie classes academy-*, cores, marca recriada, gradientes, sombras ou arredondamentos desse legado para trabalho novo. Consulte docs/design-system/MIGRATION.md antes de migrá-los.
+Os arquivos app/tokens.css, app/globals.css, app/components.tsx e app/layout.tsx são a implementação pública dos tokens canônicos. Não reintroduza classes, cores, marca recriada, gradientes, sombras ou arredondamentos da identidade azul legada. Consulte docs/design-system/MIGRATION.md antes de alterar a linguagem visual.
 
 ## Definição de pronto
 

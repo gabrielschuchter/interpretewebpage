@@ -2,11 +2,11 @@
 
 ## Visão geral
 
-O site usa Next.js 16, React 19, TypeScript, App Router e Tailwind CSS 4. A camada visual pública segue a arquitetura estrutural da Psicometria Online Academy fornecida no source kit: header escuro em cápsula, hero dividido, faixa de confiança em marquee, painel de ferramentas, percurso hierárquico, suporte, seção azul de método, CTA final, FAQ e footer.
+O site usa Next.js 16, React 19, TypeScript, App Router e Tailwind CSS 4. A camada visual pública preserva a arquitetura de conteúdo e interação do produto, mas segue o Design System canônico do Interprete: canvas Pink Essence, superfícies planas, Dark Amaranth estrutural, tipografia editorial e leitura científica.
 
-O clone preserva a linguagem de layout, densidade, tipografia local DM Sans, paleta azul/navy/cinza claro, raios, bordas, sombras, estados e ritmo vertical da fonte. A identidade, a navegação e os textos são do Interprete; alegações, instituições, pessoas, depoimentos e métricas da Academy não são reutilizados quando não há confirmação equivalente.
+A experiência é editorial e institucional, não um clone visual de uma Academy: hierarquia vem de Source Serif Pro, Inter, IBM Plex Mono, espaço, bordas e cor chapada. Não há dependência de azul/navy, DM Sans, gradientes, blur, partículas, sombras decorativas ou marquee contínuo.
 
-A landing é composta por `app/academy-home.tsx`, que mantém as interações da página em componentes pequenos: tabs de ferramentas, grupos hierárquicos, accordions, carousel de percurso, FAQ, marquee e CTA com partículas. Os dados de marketing ficam centralizados em `lib/interprete/marketing.ts`.
+A landing é composta por `app/academy-home.tsx` por compatibilidade histórica de nome, mas suas seções usam classes `it-*` e assets oficiais. As interações permanecem separadas em tabs de ferramentas, grupos hierárquicos, accordions, carousel e FAQ; os dados de marketing ficam centralizados em `lib/interprete/marketing.ts`.
 
 ## Rotas
 
@@ -17,7 +17,7 @@ A landing é composta por `app/academy-home.tsx`, que mantém as interações da
 - `/sobre` — princípios e modo de trabalho do Interprete, sem biografias ou números não confirmados.
 - `/interprete` e `/home` — redirects permanentes para `/`.
 
-O header e o footer compartilhados estão em `app/components.tsx`. O menu móvel está em `app/interactive.tsx`; a busca do blog e o compartilhamento permanecem componentes com estado no cliente. Os loaders de página usam skeleton/shimmer da mesma linguagem visual.
+O header e o footer compartilhados estão em `app/components.tsx`. O menu móvel está em `app/interactive.tsx`; a busca do blog e o compartilhamento permanecem componentes com estado no cliente. Os loaders de página usam skeleton plano, sem shimmer gradiente.
 
 ## Conteúdo e contato
 
@@ -33,7 +33,7 @@ O layout define metadata-base, title template, Open Graph, Twitter e ícone. Cad
 
 ## Motion e acessibilidade
 
-O CSS local inclui os keyframes usados pela experiência: marquee, pulse de avatar/WhatsApp, reveal, shimmer, scan-light, spin, trail e scale-pulse. O JavaScript porta estados de hover/focus, menu móvel animado, accordions, tabs, carousel, FAQ, feedback de navegação e loading. Não existe lógica de detecção ou desativação de animações por preferência do sistema; os estados continuam determinísticos para a validação visual solicitada.
+O CSS local limita movimento a transições de estado e respeita `prefers-reduced-motion`. O JavaScript porta estados de hover/focus, menu móvel, accordions, tabs, carousel, FAQ, feedback de navegação e loading. Controles mantêm nomes acessíveis, foco visível e área de toque de pelo menos 44px.
 
 ## Como rodar
 

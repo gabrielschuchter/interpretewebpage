@@ -80,7 +80,7 @@ function BlogSidebar({
         <p className="subsection-label">Estudo acompanhado</p>
         <h2>Uma pergunta pode virar uma rota.</h2>
         <p>Conheça o Interprete. e entenda como o estudo pode continuar com estrutura.</p>
-        <a className="academy-button" href={contactUrl()} target="_blank" rel="noreferrer">Quero conhecer <span aria-hidden="true">↗</span></a>
+        <a className="it-button" href={contactUrl()} target="_blank" rel="noreferrer">Quero conhecer <span aria-hidden="true">↗</span></a>
       </section>
     </aside>
   );
@@ -201,7 +201,7 @@ export function BlogIndexClient({ articles }: { articles: BlogBrowserArticle[] }
               <h2>Quer levar uma pergunta mais longe?</h2>
               <span>O conteúdo abre uma rota. O Interprete. ajuda a percorrê-la.</span>
             </div>
-            <a className="academy-button" href="/#cursos">Conhecer a formação <span aria-hidden="true">↗</span></a>
+            <a className="it-button" href="/#cursos">Conhecer a formação <span aria-hidden="true">↗</span></a>
           </section>
         </div>
       </section>

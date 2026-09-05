@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Footer, Header, PageShell } from '../../components';
@@ -90,7 +91,7 @@ function ArticleStructuredData({ article }: { article: NonNullable<ReturnType<ty
       name: 'Interprete.',
       logo: {
         '@type': 'ImageObject',
-        url: absoluteUrl('/favicon.svg'),
+        url: absoluteUrl('/brand/favicon/favicon-512.png'),
       },
     },
     datePublished: article.publishedAt,
@@ -118,7 +119,7 @@ function CitationBlock({ article }: { article: NonNullable<ReturnType<typeof get
 function AuthorBlock({ author }: { author: string }) {
   return (
     <aside className="blog-author" aria-label="Autoria institucional">
-      <div className="blog-author-mark" aria-hidden="true">I.</div>
+      <div className="blog-author-mark" aria-hidden="true"><Image src="/brand/svg/simbolo-amaranto.svg" alt="" width={32} height={32} /></div>
       <div>
         <p className="section-label">Autoria institucional</p>
         <h2>{author}</h2>
@@ -150,13 +151,13 @@ function ArticleSidebar({ articles, category }: { articles: ReturnType<typeof ge
       <section className="blog-sidebar-block">
         <p className="subsection-label">Arquivo</p>
         <h2>{category}</h2>
-        <a className="text-link" href="/blog">Ver todos os conteúdos <span aria-hidden="true">→</span></a>
+        <a className="it-inline-link" href="/blog">Ver todos os conteúdos <span aria-hidden="true">→</span></a>
       </section>
       <section className="blog-sidebar-cta">
         <p className="subsection-label">Estudo acompanhado</p>
         <h2>Uma pergunta pode virar uma rota.</h2>
         <p>Conheça o Interprete. e entenda como o estudo pode continuar com estrutura.</p>
-        <a className="academy-button" href={contactUrl()} target="_blank" rel="noreferrer">Quero conhecer <span aria-hidden="true">↗</span></a>
+        <a className="it-button" href={contactUrl()} target="_blank" rel="noreferrer">Quero conhecer <span aria-hidden="true">↗</span></a>
       </section>
     </aside>
   );
@@ -208,7 +209,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             </div>
           </header>
 
-          <div className="page-width page-width--narrow">
+          <div className="page-width blog-article-content-width">
             <figure className="blog-article-cover">
               <BlogCover article={article} featured />
             </figure>
@@ -239,7 +240,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                       <p>Próximo passo</p>
                       <h2>{article.callToAction.label}</h2>
                     </div>
-                    <a className="academy-button" href={article.callToAction.url} target={externalCta ? '_blank' : undefined} rel={externalCta ? 'noreferrer' : undefined}>
+                    <a className="it-button" href={article.callToAction.url} target={externalCta ? '_blank' : undefined} rel={externalCta ? 'noreferrer' : undefined}>
                       Acessar <span aria-hidden="true">↗</span>
                     </a>
                   </aside>
@@ -251,7 +252,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                     <h2>Uma pergunta pode virar uma rota de estudo.</h2>
                     <span>Conheça o Interprete. e leve esta forma de ler para a sua prática.</span>
                   </div>
-                  <a className="academy-button" href="/planos">Ver formatos <span aria-hidden="true">↗</span></a>
+                  <a className="it-button" href="/planos">Ver formatos <span aria-hidden="true">↗</span></a>
                 </aside>
 
                 {article.references.length > 0 && (

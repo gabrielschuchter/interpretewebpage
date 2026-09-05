@@ -20,8 +20,9 @@ Use antes de publicar uma peça, aprovar uma interface ou enviar trabalho a um f
 ## B. Cor
 
 - [ ] O fundo claro é Pink Essence por padrão.
-- [ ] A composição respeita a dominância aproximada 60% Pink Essence / 20% Dark Amaranth / 12% Crimson Violet / 8% acento.
-- [ ] Há apenas um vermelho de acento: Classic Crimson OU Debian Red.
+- [ ] A composição respeita a dominância aproximada 58% Pink Essence / 28% Dark Amaranth / 7% Classic Crimson / 5% Debian Red / até 2% Crimson Violet.
+- [ ] Crimson Violet não foi usado como fundo padrão, cabeçalho, navegação, CTA primário, texto corrido, borda padrão ou primeira série de gráfico.
+- [ ] Há apenas um vermelho de acento por peça: Classic Crimson OU Debian Red.
 - [ ] Nenhuma cor nova foi criada fora dos tokens aprovados.
 - [ ] Não há gradiente.
 - [ ] Classic Crimson/Debian Red não são usados como texto corrido sobre Pink Essence.

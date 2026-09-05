@@ -1,15 +1,15 @@
-# Migração do site legado para o design system
+# Migração do site para o Design System canônico
 
 ## Estado atual
 
-O repositório contém uma implementação anterior ao Manual de Marca. Ela usa uma identidade visual azul, DM Sans, componentes com sombras, arredondamentos amplos, gradientes e um símbolo recriado em CSS.
+As rotas públicas foram migradas para a linguagem canônica sem alterar a arquitetura funcional. Nomes técnicos que carregam histórico podem permanecer por compatibilidade, mas não definem mais classes, tokens, fontes, cores ou padrões visuais.
 
 Arquivos centrais afetados:
 - app/tokens.css
 - app/globals.css
 - app/components.tsx
 - app/layout.tsx
-- componentes e páginas que consomem classes academy-*
+- componentes e páginas que consumiam classes legadas; os consumidores públicos agora usam `it-*`
 
 Isso não invalida a lógica do site. Significa apenas que o visual atual não deve ser usado como fonte de decisão.
 
@@ -17,18 +17,14 @@ Isso não invalida a lógica do site. Significa apenas que o visual atual não d
 
 Não fazer uma “troca de azul por vermelho”. O novo sistema muda cor, tipografia, geometria, logomarca, hierarquia e padrões. Uma substituição mecânica criaria uma interface híbrida e inconsistente.
 
-## Fase 0 — concluída por este pacote
+## Fase 0 — concluída
 
-- preservar fontes de referência;
-- importar ativos oficiais;
-- estabelecer tokens e regras;
-- registrar correção cromática;
-- marcar o legado explicitamente;
-- criar checklist e padrões.
+- fontes de referência preservadas;
+- assets oficiais importados e usados pelo runtime;
+- tokens e regras canônicas estabelecidos;
+- documentação, checklist e padrões alinhados ao Manual de Marca.
 
-Sem alteração visual de produção nesta fase.
-
-## Fase 1 — fundação técnica
+## Fase 1 — fundação técnica — concluída
 
 1. Carregar Source Serif Pro, Inter e IBM Plex Mono de fonte licenciada/aprovada.
 2. Introduzir tokens canônicos em camada própria.
@@ -36,9 +32,9 @@ Sem alteração visual de produção nesta fase.
 4. Adicionar uso de SVG oficial para marca.
 5. Remover dependência de cores cruas em componentes migrados.
 
-Gate: nenhuma mudança de página completa antes de primitives passarem acessibilidade.
+Gate atendido: lint, typecheck, build, foco visível, targets touch e reduced motion.
 
-## Fase 2 — shell global
+## Fase 2 — shell global — concluída
 
 Migrar:
 - layout/themeColor;
@@ -52,13 +48,13 @@ Migrar:
 Substituir:
 - símbolo CSS por asset oficial;
 - DM Sans por famílias canônicas;
-- azul/navi por tokens;
+- azul/navy por tokens canônicos;
 - pills genéricas por geometria do sistema;
 - sombras por bordas/espaço.
 
-Gate: desktop + mobile + teclado + reduced-motion.
+Gate atendido: desktop + mobile + teclado + reduced-motion.
 
-## Fase 3 — componentes
+## Fase 3 — componentes — concluída
 
 Migrar por família:
 1. Buttons/links.
@@ -71,7 +67,7 @@ Migrar por família:
 
 Não migrar um componente “por aparência”; alinhar anatomia, estados e semântica ao contrato de COMPONENTS.md.
 
-## Fase 4 — páginas institucionais
+## Fase 4 — páginas institucionais — concluída
 
 Reconstruir landing usando PATTERNS.md:
 - hero;
@@ -86,12 +82,12 @@ Reconstruir landing usando PATTERNS.md:
 
 Validar proporção cromática em composição total e regra de um vermelho.
 
-## Fase 5 — blog e conteúdo
+## Fase 5 — blog e conteúdo — concluída
 
 - aplicar 68ch e hierarquia editorial;
 - revisar cards sem fotografia decorativa;
 - garantir referência legível;
-- adaptar templates do Pages CMS ao padrão editorial;
+- preservar templates do Pages CMS no padrão editorial;
 - revisar autoria pública conforme Manual de Marca.
 
 ## Fase 6 — produto/portal
@@ -100,12 +96,11 @@ Aplicar padrões de portal, guia, relatório e ferramenta de leitura crítica. A
 
 ## Estratégia de compatibilidade
 
-Durante transição:
-- legado fica sob classes academy-*;
-- componentes novos devem usar prefixo it-* ou CSS Modules/tokens novos;
+Durante manutenção:
+- componentes públicos usam prefixo `it-*` ou CSS Modules/tokens novos;
 - não misturar tokens antigos e novos no mesmo componente;
-- uma página pode migrar por seção somente se a fronteira visual for deliberada e temporária;
-- remover legado apenas quando não houver consumidor.
+- nomes técnicos legados podem ser removidos em uma alteração posterior sem mudar conteúdo ou comportamento;
+- não reintroduzir a linguagem azul em novas superfícies.
 
 ## Verificação
 
@@ -125,7 +120,7 @@ Para cada etapa:
 
 ## Não fazer
 
-- busca/substituição global de hex;
+- fazer busca/substituição global de hex sem revisar a composição;
 - reconstruir logo com fonte;
 - portar gradiente/sombra “porque já existia”;
 - manter DM Sans em parte nova;
@@ -133,4 +128,4 @@ Para cada etapa:
 - criar dezenas de variantes para acomodar legado;
 - quebrar lógica funcional para obter consistência visual.
 
-A meta é migrar sem contaminar o sistema novo com decisões antigas.
+A meta é manter a arquitetura estável sem contaminar o sistema novo com decisões antigas.

@@ -22,23 +22,25 @@
   --it-bg-default: var(--it-color-pink-essence);
   --it-surface-default: var(--it-color-white);
   --it-surface-brand: var(--it-color-dark-amaranth);
-  --it-surface-dark: var(--it-color-crimson-violet);
-  --it-text-strong: var(--it-color-crimson-violet);
+  --it-surface-dark: var(--it-color-dark-amaranth);
+  --it-text-strong: var(--it-color-dark-amaranth);
   --it-text-body: var(--it-color-ink);
   --it-text-muted: var(--it-color-muted);
   --it-text-on-dark: var(--it-color-pink-essence);
   --it-border-subtle: var(--it-color-border);
-  --it-border-strong: var(--it-color-crimson-violet);
-  --it-action-primary: var(--it-color-classic-crimson);
+  --it-border-strong: var(--it-color-dark-amaranth);
+  --it-action-primary: var(--it-color-dark-amaranth);
+  --it-action-conversion: var(--it-color-classic-crimson);
   --it-action-alternate: var(--it-color-debian-red);
   --it-focus: var(--it-color-dark-amaranth);
   --it-critical: var(--it-color-crimson-violet);
 
   /* Composition targets */
-  --it-composition-pink-essence: 60%;
-  --it-composition-dark-amaranth: 20%;
-  --it-composition-crimson-violet: 12%;
-  --it-composition-accent-red: 8%;
+  --it-composition-pink-essence: 58%;
+  --it-composition-dark-amaranth: 28%;
+  --it-composition-classic-crimson: 7%;
+  --it-composition-debian-red: 5%;
+  --it-composition-crimson-violet-max: 2%;
 
   /* Typography */
   --it-font-display: "Source Serif Pro", Georgia, "Times New Roman", serif;

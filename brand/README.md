@@ -40,8 +40,8 @@ Esta pasta documenta a origem e o contrato dos ativos oficiais. Arquivos de uso 
 
 ## Nota de precedência
 
-A proporção de cor impressa na seção 6.6 do Manual de Marca v1 contém uma inversão entre Dark Amaranth e Crimson Violet. A regra canônica do projeto está em docs/design-system/DECISIONS.md, D001:
+A composição canônica do projeto, conforme `docs/design-system/DECISIONS.md`, D001, é uma orientação de dominância perceptiva:
 
-**Pink Essence 60% · Dark Amaranth 20% · Crimson Violet 12% · vermelho de destaque 8%.**
+**Pink Essence ~58% · Dark Amaranth ~28% · Classic Crimson ~7% · Debian Red ~5% · Crimson Violet até ~2%.**
 
-O vermelho de destaque é Classic Crimson OU Debian Red, nunca ambos competindo na mesma peça.
+Crimson Violet pode ficar em 0% e não é cor padrão de fundo, navegação, CTA, texto ou borda. Classic Crimson e Debian Red ocupam o mesmo slot de acento; nunca competem na mesma peça.

@@ -2,49 +2,48 @@
 
 Registro de decisões que complementam ou corrigem as fontes anteriores. A entrada mais recente não apaga a anterior: ela a substitui explicitamente.
 
-## D001 — Proporção cromática corrigida
+## D001 — Hierarquia cromática canônica
 **Status:** aprovada  
 **Data:** 2026-09-04  
 **Escopo:** toda a marca
 
-A seção 6.6 do Manual de Marca v1 mostra Pink Essence 60%, Crimson Violet 20%, Dark Amaranth 12% e Classic Crimson 8%.
+A composição orientadora aprovada para interfaces e peças claras é:
 
-A proporção aprovada pelos fundadores é:
+- Pink Essence: aproximadamente 58%.
+- Dark Amaranth: aproximadamente 28%.
+- Classic Crimson: aproximadamente 7%.
+- Debian Red: aproximadamente 5%.
+- Crimson Violet: até aproximadamente 2%, apenas em situações excepcionais.
 
-- Pink Essence: 60%.
-- Dark Amaranth: 20%.
-- Crimson Violet: 12%.
-- Vermelho de destaque: 8%.
+Os percentuais medem dominância perceptiva, não pixels literais. Dark Amaranth é a cor estrutural principal. Crimson Violet não deve ocupar fundo padrão, cabeçalho, navegação, CTA primário, texto corrido, borda padrão ou primeira série de gráfico. Classic Crimson e Debian Red são alternativas do mesmo slot de acento e não devem competir na mesma peça.
 
-O slot de 8% usa Classic Crimson OU Debian Red. A regra do manual “nunca dois vermelhos disputando a mesma peça” continua valendo.
-
-**Consequência:** esta decisão prevalece sobre o gráfico/texto do PDF e deve ser refletida em tokens, templates, revisão e implementação.
+**Consequência:** esta decisão prevalece sobre qualquer composição anterior e deve ser refletida em tokens, templates, revisão e implementação.
 
 ## D002 — Source Serif Pro é a serif canônica
 **Status:** aprovada por precedência documental  
 **Data:** 2026-09-04
 
-Os mockups de interface usam Source Serif 4 em sua implementação empacotada. O Manual de Marca define Source Serif Pro. Portanto, Source Serif 4 é artefato do protótipo e não substitui Source Serif Pro.
+Source Serif Pro é a família serif canônica para títulos editoriais, chamadas de autoridade e leitura institucional. Fallbacks não alteram a decisão de marca.
 
 ## D003 — Neutros de apoio dos mockups
 **Status:** aprovada como camada de interface  
 **Data:** 2026-09-04
 
-Os mockups introduzem #FFFFFF, #40222F, #7A5A69, #E2D6D1 e #E4DAD5. Essas cores podem existir como tokens de suporte para superfície, texto secundário, borda e canvas. Não são “novas cores de marca”, não entram na proporção 60/20/12/8 e não podem competir visualmente com a paleta oficial.
+Os mockups introduzem #FFFFFF, #40222F, #7A5A69, #E2D6D1 e #E4DAD5. Essas cores podem existir como tokens de suporte para superfície, texto secundário, borda e canvas. Não são “novas cores de marca”, não entram na composição 58/28/7/5/até-2 e não podem competir visualmente com a paleta oficial.
 
 ## D004 — UI atual é legado
 **Status:** aprovada  
 **Data:** 2026-09-04
 
-A implementação azul existente no repositório antecede o novo Manual de Marca. Classes academy-*, a paleta azul, DM Sans, o símbolo recriado em CSS, gradientes, sombras e a linguagem arredondada atual não são referência para novo trabalho.
+A implementação azul existente no repositório antecede o novo Manual de Marca. Classes e nomes técnicos legados podem permanecer temporariamente por compatibilidade, mas a superfície pública migrada usa tokens `it-*`, assets oficiais, tipografia canônica, cor chapada, bordas e espaço. O legado não é referência visual para novo trabalho.
 
-Este commit não faz a migração visual do produto. Ele estabelece o contrato que deverá orientar uma migração separada e controlada.
+Esta decisão é considerada concluída para as rotas públicas do site; qualquer superfície nova deve entrar pelo contrato canônico, não reabrir a linguagem legada.
 
 ## D005 — Sombra não é linguagem de hierarquia
 **Status:** aprovada por interpretação do manual + mockups  
 **Data:** 2026-09-04
 
-O Manual proíbe sombra na logomarca e privilegia cor chapada, alto contraste e muito respiro; os mockups constroem hierarquia sobretudo com bordas e espaço. Portanto, novos componentes têm shadow:none por padrão. Camadas transitórias podem receber separação funcional excepcional, preferencialmente via backdrop e borda.
+O Manual proíbe sombra na logomarca e privilegia cor chapada, alto contraste e muito respiro; os mockups constroem hierarquia sobretudo com bordas e espaço. Portanto, novos componentes têm shadow:none por padrão. Camadas transitórias podem receber separação funcional excepcional, preferencialmente via superfície sólida e borda.
 
 ## D006 — Cantos predominantemente retos
 **Status:** aprovada por referência de mockup  
@@ -56,7 +55,7 @@ Painéis, cards, tabelas e formulários usam raio 0 por padrão. Raio 8 e pill s
 **Status:** aprovada  
 **Data:** 2026-09-04
 
-Classic Crimson é a ação/destaque padrão. Debian Red pode substituí-lo quando a peça pedir o acento previsto no manual. A coexistência dos dois como destaques concorrentes é proibida.
+Dark Amaranth é a ação primária e a cor estrutural padrão. Classic Crimson é o acento de conversão; Debian Red pode substituí-lo quando a peça pedir o acento previsto no manual. A coexistência dos dois como destaques concorrentes é proibida. Crimson Violet fica reservado a usos críticos ou excepcionais.
 
 ## Como adicionar decisão
 

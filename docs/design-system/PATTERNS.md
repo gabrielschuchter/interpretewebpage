@@ -226,7 +226,7 @@ Usar para:
 - encerramento;
 - peça com alta densidade simbólica.
 
-Crimson Violet ou Dark Amaranth domina. Texto Pink Essence. Um acento vermelho apenas. Não aplicar gradiente nem brilho.
+Dark Amaranth domina. Texto Pink Essence. Um acento vermelho apenas. Crimson Violet só entra em uma exceção justificada. Não aplicar gradiente nem brilho.
 
 ## 13. Princípio de rastreabilidade do pattern
 
