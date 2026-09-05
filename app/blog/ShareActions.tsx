@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { absoluteUrl } from '../../lib/site';
+import { StudyIcon } from '../visuals';
 
 async function copyToClipboard(value: string) {
   if (navigator.clipboard?.writeText) {
@@ -57,10 +58,10 @@ export function ShareActions({ slug, title, summary }: { slug: string; title: st
       <span>Compartilhar</span>
       <div className="blog-share-actions">
         <button type="button" onClick={() => void share()}>
-          <span aria-hidden="true">↗</span> Compartilhar
+          <StudyIcon name="arrow" size={17} /> Compartilhar
         </button>
         <button type="button" onClick={() => void copyLink()}>
-          <span aria-hidden="true">□</span> Copiar link
+          <StudyIcon name="bookmark" size={17} /> Copiar link
         </button>
       </div>
       <span className={status ? 'blog-share-status is-visible' : 'blog-share-status'} aria-live="polite">{status}</span>

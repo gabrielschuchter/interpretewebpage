@@ -73,17 +73,17 @@ export function MobileMenu({ contactHref }: { contactHref: string }) {
     <details ref={detailsRef} className="it-mobile-menu" onToggle={(event) => setOpen(event.currentTarget.open)}>
       <summary ref={summaryRef} aria-expanded={open} aria-controls="it-mobile-navigation">
         <span className="it-menu-icon" aria-hidden="true"><i /><i /></span>
-        <span className="sr-only">Abrir menu</span>
+        <span className="sr-only">{open ? 'Fechar menu' : 'Abrir menu'}</span>
       </summary>
       <nav id="it-mobile-navigation" aria-label="Navegação móvel">
-        {mobileLink('/#cursos', 'Formação')}
+        {mobileLink('/#metodo', 'A escola')}
         {mobileLink('/#ferramentas', 'Ferramentas')}
-        {mobileLink('/#conteudos', 'Conteúdos')}
-        {mobileLink('/blog', 'Blog')}
-        {mobileLink('/#suporte', 'Suporte')}
-        {mobileLink('/planos', 'Ver formatos')}
+        {mobileLink('/#cursos', 'Percurso')}
+        {mobileLink('/blog', 'Cadernos')}
+        {mobileLink('/sobre', 'Sobre')}
+        {mobileLink('/planos', 'Formatos')}
         <a className="it-mobile-contact" href={contactHref} target="_blank" rel="noreferrer" onClick={closeMenu}>
-          Quero começar <span aria-hidden="true">↗</span>
+          Começar <span aria-hidden="true">↗</span>
         </a>
       </nav>
     </details>

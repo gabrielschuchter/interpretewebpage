@@ -1,14 +1,12 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Footer, Header, PageShell, SectionLabel } from '../components';
 import { pageMetadata } from '../../lib/seo';
 import { Reveal } from '../motion';
+import { StudyIcon } from '../visuals';
 
-export const metadata: Metadata = pageMetadata({
-  title: 'Sobre o Interprete.',
-  description: 'Conheça o método editorial e formativo do Interprete.',
-  pathname: '/sobre',
-});
+export const metadata: Metadata = pageMetadata({ title: 'Sobre o Interprete.', description: 'Conheça o método editorial e formativo do Interprete.', pathname: '/sobre' });
 
 const principles = [
   ['Perguntar', 'Toda leitura começa por uma decisão ou dúvida que merece ser formulada com precisão.'],
@@ -17,20 +15,5 @@ const principles = [
 ] as const;
 
 export default function AboutPage() {
-  return (
-    <PageShell>
-      <Header />
-      <main className="it-info-page">
-        <section className="it-info-hero it-info-hero--brand">
-          <Reveal as="div" className="it-container" stagger><SectionLabel>Sobre o Interprete.</SectionLabel><h1>Aprender a ler evidências é aprender a fazer perguntas melhores.</h1><p>O Interprete. organiza Prática Baseada em Evidências, leitura crítica e aplicação em um percurso acompanhado — com conteúdo editorial para continuar a investigação.</p></Reveal>
-        </section>
-        <section className="it-info-section" aria-labelledby="about-method-title">
-          <Reveal as="div" className="it-container it-about-grid" stagger><div><SectionLabel>O método</SectionLabel><h2 id="about-method-title">Um jeito de estudar que não termina no artigo.</h2></div><div className="it-about-copy"><p>O percurso parte de problemas concretos e cria uma ordem para buscar, avaliar, interpretar e aplicar evidências. A proposta não é substituir fontes especializadas nem oferecer respostas automáticas: é desenvolver critérios para que cada decisão possa ser examinada com mais clareza.</p><p>O Blog é o arquivo público desse mesmo eixo editorial. Nele, conceitos, perguntas e leituras ajudam a abrir a próxima investigação.</p><Link className="it-inline-link" href="/blog">Explorar o Blog <span aria-hidden="true">→</span></Link></div></Reveal>
-        </section>
-        <section className="it-info-section it-info-section--subtle" aria-labelledby="principles-title"><div className="it-container"><Reveal as="div" className="it-section-intro" stagger><SectionLabel>Uma prática em três movimentos</SectionLabel><h2 id="principles-title">A sequência importa.</h2><p>Uma estrutura simples para não confundir acesso à informação com entendimento.</p></Reveal><Reveal as="div" className="it-principle-grid" stagger>{principles.map(([title, description], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{description}</p></article>)}</Reveal></div></section>
-        <section className="it-info-callout"><Reveal as="div" className="it-container" stagger><div><SectionLabel>Próximo passo</SectionLabel><h2>Traga uma pergunta real para a conversa.</h2></div><Link className="it-button it-button--light" href="/#cursos">Ver o percurso <span aria-hidden="true">↗</span></Link></Reveal></section>
-      </main>
-      <Footer />
-    </PageShell>
-  );
+  return <PageShell><Header /><main className="it-info-page it-about-page"><section className="it-subpage-hero it-subpage-hero--about"><div className="it-container it-subpage-hero-layout"><Reveal as="div" className="it-subpage-copy" stagger><div className="it-hero-kicker"><SectionLabel>Interprete. / sobre</SectionLabel><span>ciência · prática · pessoas</span></div><h1>Aprender a ler evidências é aprender a fazer perguntas melhores.</h1><p>O Interprete. organiza Prática Baseada em Evidências, leitura crítica e aplicação em um percurso acompanhado — com conteúdo editorial para continuar a investigação.</p></Reveal><Reveal as="figure" className="it-about-art" stagger><Image src="/interprete/visual-library/photography/classroom.webp" alt="Pessoa estudando em um ambiente real de trabalho, entre livros e uma tela." fill sizes="(max-width: 767px) 100vw, 38vw" /><span>contexto / atenção / prática</span><div aria-hidden="true" /></Reveal></div></section><section className="it-about-foundation" aria-labelledby="about-method-title"><div className="it-container it-about-foundation-layout"><Reveal as="div" className="it-side-rail" stagger><span>02</span><span>origem</span><i aria-hidden="true" /></Reveal><Reveal as="div" className="it-about-foundation-copy" stagger><SectionLabel>o método</SectionLabel><h2 id="about-method-title">Um jeito de estudar que não termina no artigo.</h2><p>O percurso parte de problemas concretos e cria uma ordem para buscar, avaliar, interpretar e aplicar evidências. A proposta não é substituir fontes especializadas nem oferecer respostas automáticas: é desenvolver critérios para que cada decisão possa ser examinada com mais clareza.</p><p>O Blog é o arquivo público desse mesmo eixo editorial. Nele, conceitos, perguntas e leituras ajudam a abrir a próxima investigação.</p><Link className="it-inline-link" href="/blog">Explorar os cadernos <StudyIcon name="arrow" size={17} /></Link></Reveal><Reveal as="div" className="it-about-quote" stagger><StudyIcon name="quote" size={36} /><p>A ciência não fala por si.<br /><em>É preciso interpretá-la.</em></p></Reveal></div></section><section className="it-principles-section" aria-labelledby="principles-title"><div className="it-container"><Reveal as="div" className="it-section-lead it-section-lead--wide" stagger><div><SectionLabel>uma prática em três movimentos</SectionLabel><h2 id="principles-title">A sequência importa.</h2></div><p>Uma estrutura simples para não confundir acesso à informação com entendimento.</p></Reveal><Reveal as="ol" className="it-principles-list" stagger>{principles.map(([title, description], index) => <li key={title}><span>0{index + 1}</span><div><h3>{title}</h3><p>{description}</p></div><StudyIcon name="arrow" size={18} /></li>)}</Reveal></div></section><section className="it-info-callout it-about-callout"><Reveal as="div" className="it-container it-callout-inner" stagger><div><SectionLabel>próximo passo</SectionLabel><h2>Traga uma pergunta real para a conversa.</h2><p>O estudo fica mais vivo quando tem uma situação concreta para investigar.</p></div><Link className="it-button it-button--light" href="/#cursos">Ver o percurso <StudyIcon name="arrow" size={17} /></Link></Reveal></section></main><Footer /></PageShell>;
 }
