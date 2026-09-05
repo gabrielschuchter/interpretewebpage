@@ -2406,10 +2406,15 @@ em {
   background: transparent;
 }
 
-.blog-markdown table {
-  display: block;
+.blog-table-scroll {
   width: 100%;
   overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.blog-markdown table {
+  width: max-content;
+  min-width: 100%;
   border-collapse: collapse;
   font-size: 0.92rem;
 }

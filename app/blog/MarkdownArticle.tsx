@@ -13,6 +13,11 @@ export function MarkdownArticle({ content }: { content: string }) {
             return <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined} {...props}>{children}</a>;
           },
           img: ({ src, alt, node: _node, ...props }) => src ? <img src={src} alt={alt ?? ''} loading="lazy" {...props} /> : null,
+          table: ({ children, node: _node, ...props }) => (
+            <div className="blog-table-scroll">
+              <table {...props}>{children}</table>
+            </div>
+          ),
         }}
       >
         {content}
