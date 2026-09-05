@@ -1,0 +1,69 @@
+{
+  "name": "Interprete.",
+  "version": "1.0.0",
+  "source": "Google Drive brand package, captured 2026-09-04",
+  "colors": {
+    "pinkEssence": "#F1EBE8",
+    "darkAmaranth": "#8C1535",
+    "crimsonViolet": "#410230",
+    "classicCrimson": "#D62839",
+    "debianRed": "#D60858"
+  },
+  "composition": {
+    "pinkEssence": 60,
+    "darkAmaranth": 20,
+    "crimsonViolet": 12,
+    "accentRed": 8,
+    "accentRule": "Classic Crimson OR Debian Red; never both as competing accents"
+  },
+  "logo": {
+    "preferred": "/brand/svg/wordmark-violeta.svg",
+    "lightBackgroundAlternates": [
+      "/brand/svg/wordmark-violeta.svg",
+      "/brand/svg/wordmark-amaranto.svg"
+    ],
+    "darkBackground": "/brand/svg/wordmark-creme.svg",
+    "minimumDigitalPx": { "wordmarkWidth": 90, "symbol": 32 },
+    "clearspace": "height of the I on every side"
+  },
+  "svg": [
+    "simbolo-amaranto.svg",
+    "simbolo-branco.svg",
+    "simbolo-creme.svg",
+    "simbolo-crimson.svg",
+    "simbolo-preto.svg",
+    "simbolo-solto-amaranto.svg",
+    "simbolo-solto-creme.svg",
+    "pilula-amaranto.svg",
+    "pilula-creme.svg",
+    "pilula-violeta.svg",
+    "wordmark-amaranto.svg",
+    "wordmark-branco.svg",
+    "wordmark-creme.svg",
+    "wordmark-preto.svg",
+    "wordmark-violeta.svg"
+  ],
+  "png": [
+    "pilula-violeta.png",
+    "simbolo-amaranto.png",
+    "simbolo-branco.png",
+    "simbolo-creme.png",
+    "simbolo-crimson.png",
+    "simbolo-preto.png",
+    "simbolo-solto-amaranto.png",
+    "simbolo-solto-creme.png",
+    "pilula-amaranto.png",
+    "pilula-creme.png",
+    "wordmark-amaranto.png",
+    "wordmark-branco.png",
+    "wordmark-creme.png",
+    "wordmark-preto.png",
+    "wordmark-violeta.png"
+  ],
+  "favicon": [
+    "favicon-32.png",
+    "favicon-64.png",
+    "favicon-180.png",
+    "favicon-512.png"
+  ]
+}

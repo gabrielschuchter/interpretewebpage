@@ -1,0 +1,396 @@
+Interprete.
+Manual de Marca
+Versão 0.1 — documento de trabalho
+Setembro de 2026
+Uso interno.
+Sumário
+Para atualizar: clique com o botão direito sobre o sumário e escolha "Atualizar campo".
+1. Sobre este manual
+1.1 Para que serve
+Este manual define quem é a marca Interprete., como ela fala e como seus materiais são construídos. Ele existe para que qualquer pessoa que produza algo em nome da marca — os dois fundadores, um convidado, um designer, um editor de vídeo — chegue ao mesmo resultado sem depender de conversa prévia.
+Manual de marca é um contrato de consistência. Toda regra aqui foi escrita para ser conferível: ou o material cumpre, ou não cumpre.
+1.2 Status do documento
+Esta é a versão 1. As seções de fundamentos, público, pilares, territórios, voz e composição estão fechadas e valem a partir de já. A seção 8, Identidade Visual, está estruturada, mas pendente: aguarda a definição do design system pelos fundadores. Nenhum material impresso ou de alta visibilidade deve ser produzido antes de essa seção ser preenchida.
+1.3 Como usar
+Antes de criar qualquer peça, leia a seção 7 (voz e tom) e a subseção da seção 9, correspondente ao formato.
+Em caso de dúvida entre duas opções, escolha a que estiver mais alinhada aos valores da seção 2.4, não a que parecer mais atraente.
+O checklist da seção 10 é obrigatório antes de qualquer publicação.
+1.4 Governança
+A marca tem uma única voz, ainda que tenha dois fundadores. Nenhum material é assinado individualmente: a autoria pública é sempre do “Interprete.”. Os fundadores aparecem como quem conduz a formação e não principalmente como quem assina o conteúdo.
+Consequência prática: todo material publicado passa por revisão cruzada. Quem escreve não é quem aprova. Voz única precisa de processo de revisão, pois sem isso, não há consistência de marca.
+2. Fundamentos da marca
+2.1 O que é o Interprete.
+O Interprete. é uma escola de prática baseada em evidências para profissionais de saúde. Seu produto central são mentorias em grupo de seis meses que ensinam a buscar, ler, interpretar e aplicar evidência científica na decisão clínica — com aulas síncronas ao vivo e material gravado ou confeccionado de apoio.
+Seus produtos secundários consistem em Grupos de Estudo e Newsletter gratuitos para proporcionar aos seus clientes e prospects uma comunicação direta com a marca, a partir de conteúdos informativos, institucionais e/ou comerciais.
+A marca nasceu de uma constatação: o ensino de prática baseada em evidências na graduação raramente é bem empregado e o profissional formado acaba refém da opinião alheia, do congresso e do colega que fala mais alto. O custo disso não recai sobre ele e sim sobre o paciente: em tempo, oportunidade e dinheiro gastos a mais do que o necessário.
+2.2 Nome e grafia
+A marca se escreve Interprete. — com inicial maiúscula e ponto final sempre, inclusive no meio de frases.
+O ponto é parte do nome, não pontuação. Não é substituído por vírgula nem suprimido em títulos.
+Não se flexiona: nunca "Interpretes", "do Interprete" sem o ponto, ou "Interprete Academy".
+Em fim de frase, não se duplica o ponto. Escreve-se "...uma formação do Interprete." e não "...do Interprete.."
+2.3 Missão
+Formar profissionais de saúde capazes de buscar, ler e interpretar evidência científica com autonomia, para que a conduta de consultório nasça do raciocínio próprio e não da opinião de quem fala mais alto.
+Versão curta, para assinatura, bio e capa de material:
+Não aceite a evidência. Interprete.
+A versão longa é institucional e vai em documentos, propostas e apresentações formais. A versão curta é a que fala com o aluno e circula nos canais públicos. As duas convivem; não se misturam na mesma peça.
+2.4 Visão
+Ser a escola de referência em prática baseada em evidências para profissionais de saúde no Brasil, formando uma geração clinicamente ativa e cientificamente letrada.
+2.5 Valores
+Cada valor tem um princípio e um par de comportamentos. Valor sem regra de comportamento é decoração: o que define a marca é o que ela se recusa a fazer.
+Valor 1 — Racional antes do veredito
+O que importa não é a conclusão do artigo, é o caminho que leva até ela.
+Fazemos: mostrar como a leitura foi construída, incluindo as dúvidas e os pontos em que a evidência não permite concluir ou aplicar.
+Não fazemos: aula expositiva de artigo sem abrir o raciocínio de interpretação.
+Valor 2 — Nenhuma receita pronta
+Não entregamos protocolo de consultório. Entregamos a capacidade de construir o seu.
+Fazemos: ensinar o método de decisão e deixar o aluno chegar à conduta.
+Não fazemos: material "copia e cola" que diz o que prescrever.
+Valor 3 — Crença é revisável
+Toda conclusão é provisória e se atualiza diante de evidência melhor. Raciocínio bayesiano aplicado à própria opinião.
+Fazemos: mudar de posição publicamente quando a evidência pede, inclusive quem ensina.
+Não fazemos: defender uma posição por autoria ou por já a termos ensinado.
+Valor 4 — O aluno chega preparado
+Aprendizado depende de leitura prévia, dúvida trazida e participação. A responsabilidade é dividida.
+Fazemos: enviar material antes, cobrar a leitura e abrir espaço estruturado para dúvida.
+Não fazemos: prometer transformação sem esforço do aluno.
+Valor 5 — Formação é coletiva
+O grupo é parte do método. Interpretar junto expõe pontos cegos que a leitura solitária esconde.
+Fazemos: encontro síncrono, discussão entre pares e feedback contínuo.
+Não fazemos: vender curso gravado passivo como equivalente à mentoria.
+3. Posicionamento
+3.1 Declaração
+Para o estudante e o profissional de saúde recém-formado que não confia na própria leitura da literatura, o Interprete. é a escola de prática baseada em evidências que ensina o raciocínio por trás da decisão — porque devolve autonomia em vez de entregar protocolo.
+3.2 O que somos e o que não somos
+3.3 Diferenciais
+Ensina o processo de busca e interpretação, não o resultado da interpretação de outra pessoa.
+Torna o raciocínio visível: o aluno vê como a conclusão foi construída, em qual parte se fortalece e quando ela é frágil.
+Trabalha a transitividade — a ponte entre o dado do estudo e o paciente real, a depender do contexto.
+Formato de mentoria em grupo, com leitura prévia, encontro ao vivo e feedback de evolução.
+Modelo síncrono e próximo. Nenhum aluno fica na mão.
+4. Público-alvo
+4.1 Público primário
+Estudantes de graduação — em especial de ligas acadêmicas — e profissionais de saúde recém-formados, com foco em nutricionistas.
+4.2 Público secundário
+Nutricionistas e outros profissionais de saúde já em atuação clínica, que querem fundamentar melhor a própria conduta.
+4.3 Regra de adaptação de linguagem
+O material é escrito por padrão para o público primário. Isso significa:
+Jargão sempre explicado na primeira aparição, sem exceção.
+Linguagem horizontal, levemente hierárquica, mas nunca de autoridade absoluta sobre iniciante.
+Ênfase na viabilidade — "você consegue fazer isso" — e não na complexidade do tema.
+Exemplos tirados de situação de consultório reconhecível, não de abstração metodológica.
+Quando a peça for dirigida ao público secundário, ajusta-se apenas a densidade técnica e o exemplo clínico. Tom, valores e proibições não mudam.
+5. Pilares de marca
+Pilares são os temas sobre os quais a marca tem legitimidade para falar. Todo conteúdo produzido deve poder ser classificado em um deles. Conteúdo que não cabe em nenhum pilar não é publicado.
+Pilar 1 — Busca
+Encontrar a evidência certa para a pergunta certa. Pergunta clínica estruturada, escolha de base, estratégia de busca, filtros, triagem.
+Pilar 2 — Interpretação
+O que o estudo mede, o que não mede e o que a conclusão realmente autoriza dizer. Desenho, desfecho, magnitude de efeito, incerteza, risco de viés e outras avaliações de validade e confiabilidade, somadas a concepção de sua relevância para a prática clínica.
+Pilar 3 — Transitividade
+A ponte entre o dado e o paciente à sua frente. Aplicabilidade, população estudada, contexto, viabilidade prática, decisão compartilhada, etc.
+Pilar 4 — Letramento crítico
+Reconhecer o argumento de autoridade, o congresso mal fundamentado, o gráfico enganoso e o próprio viés e/ou pensamento falacioso. É o pilar que sustenta o conteúdo aberto, porque gera identificação antes de qualquer oferta.
+Distribuição sugerida em conteúdo aberto: letramento crítico e interpretação puxam o alcance; busca e transitividade sustentam a autoridade técnica e a conversão.
+6. Territórios de marca
+Territórios são os espaços de discurso que a marca ocupa — como ela entra no assunto, não apenas de que assunto trata. Cada território abaixo tem uma postura e um tipo de pauta associado.
+Território 1 — O bastidor da decisão
+Mostrar o caminho, não o veredito. Pautas que abrem o processo: como uma pergunta virou uma busca, por que um artigo foi descartado, onde a leitura empacou.
+Postura: transparente e didática.
+Território 2 — A autoridade sob suspeita
+Questionar a fonte da afirmação, não a pessoa. Pautas sobre argumento de autoridade, palestra de congresso sem lastro, conduta repetida por tradição e/ou tempo investido, etc.
+Postura: firme, nunca pessoal. A marca ataca o argumento.
+Território 3 — Do artigo ao paciente
+Aplicabilidade concreta. Pautas que pegam um achado e estimam se ele sobrevive ao consultório: população-alvo, dose, viabilidade e custo, adesão, tempo até desfecho, histórico de aprendizagem do paciente, entre outros...
+Postura: prática e honesta sobre limites.
+Território 4 — O erro como método (o Eterno Aprendiz)
+Interpretações que mudaram, incluindo as nossas. Pautas sobre revisão de crença, atualização diante de evidência nova, o que ensinávamos antes e não ensinamos mais, assim como a humildade de sempre se manter um aprendiz
+Postura: vulnerável e rigorosa ao mesmo tempo. É o território que mais diferencia a marca e o mais difícil de imitar.
+Território 5 — Formação e começo de carreira
+A lacuna entre o que a graduação nos ensina hoje e o que a clínica também exige. Pautas sobre insegurança inicial, gestão de tempo, o que estudar primeiro e como não se perder na literatura.
+Postura: acolhedora, sem condescendência. É a porta de entrada do público primário.
+7. Voz e tom
+7.1 Arquétipo de voz
+A voz do Interprete. combina duas posturas:
+Professor claro e paciente — explica e varia sem condescender necessariamente, repete sem irritação...
+Mentor socrático — devolve a pergunta em vez de entregar a resposta, provoca o raciocínio e deixa o aluno concluir muitas vezes.
+A primeira torna a marca acessível ao iniciante. A segunda impede que ela vire entrega de receita pronta, o que contradiria o Valor 2. As duas se equilibram: sem a paciência, o socrático soa arrogante; sem a provocação, o professor vira “palestrina”.
+7.2 Nível de informalidade
+Ironia leve e pontual é permitida e desejável. É o que humaniza o rigor e impede o tom professoral de virar solenidade. Regras:
+A ironia recai sobre ideias, práticas e argumentos — nunca sobre pessoas, profissões ou o próprio aluno.
+No máximo um momento irônico por peça. Ironia recorrente vira marca de deboche.
+Não se usa recorrentemente ironia em material de aula, guia, relatório ou qualquer peça de avaliação.
+7.3 Princípios de escrita
+Frase curta em peça visual. Se a frase tem mais de duas vírgulas, quebre em duas.
+Todo jargão é definido na primeira aparição, sem pedir desculpa por usá-lo.
+Toda afirmação forte vem com o grau de certeza explícito. Ex.: "a evidência atual sugere" quando é isso que a evidência faz ou “limitando-se nos seguintes aspectos...”.
+Primeira pessoa do plural em material institucional. Usar o "eu acho" com sabedoria quando partir desse princípio em peça publicada.
+Nada de promessa de resultado. Nada de "transforme", "destrave", "revolucione".
+Números e magnitudes preferidos a adjetivos. "Reduziu 3 mm Hg" vale mais que "reduziu significativamente".
+Quando houver incerteza, ela aparece. Esconder limitação é falha de marca, não de estilo.
+O texto termina com uma pergunta, uma tarefa ou um próximo passo — coerente com o mentor socrático.
+7.4 Faixa de tom por canal
+7.5 Léxico
+7.6 Proibições
+Discurso motivacional. Promessa de transformação, frase de efeito sem lastro, apelo emocional descolado do conteúdo.
+Prova social baseada em resultado de paciente.
+Ataque nominal a profissionais, marcas ou instituições.
+Afirmação categórica sobre tema com evidência frágil.
+Assinatura individual em material público da marca.
+Uso de conclusão de artigo sem que o racional esteja disponível em algum ponto da peça ou do material de apoio.
+Arrogância e falta de empatia.
+8. Identidade visual
+STATUS: PENDENTE. Esta seção está estruturada mas não preenchida. Aguarda a definição do design system pelos fundadores. Preencher os campos abaixo antes de produzir qualquer material de alta visibilidade.
+Nota estratégica: por ser marca independente e circular no mesmo mercado que outras marcas dos fundadores, a identidade visual do Interprete. deve ser deliberadamente distinta delas. Paleta, tipografia e construção de logo próximas às de uma marca vizinha geram confusão e diluem as duas.
+8.1 Logomarca
+8.2 Paleta de cores
+Definir também: proporção de uso entre as cores, combinações proibidas e contraste mínimo para acessibilidade (referência: WCAG AA, 4,5:1 para texto corrido).
+8.3 Tipografia
+Definir também: escala tipográfica, entrelinha padrão e alinhamento padrão para cada formato.
+8.4 Elementos de apoio
+Grafismo ou elemento gráfico recorrente — a definir.
+Tratamento de imagem e fotografia — a definir.
+Estilo de ícones e de gráficos de dados — a definir.
+Padrão de citação visual de referências bibliográficas em peças — a definir.
+8.5 Usos proibidos
+A preencher junto com a logomarca. Lista mínima a cobrir: distorção de proporção, alteração de cor, aplicação sobre fundo de baixo contraste, adição de sombra ou contorno, rotação, uso do símbolo como padrão de fundo, recriação manual do lettering.
+9. Regras de composição
+9.1 Princípios comuns a todos os formatos
+Toda peça pertence a um pilar (seção 5) e a um território (seção 6). Se não pertence, não é publicada.
+Toda afirmação técnica tem fonte rastreável, ainda que a referência não apareça na peça.
+Nenhuma peça entrega conduta pronta sem o racional que a sustenta.
+Toda peça termina com pergunta, tarefa ou próximo passo.
+Nenhuma peça é assinada individualmente.
+9.2 Posts
+Função
+Abrir o raciocínio e gerar identificação. O post não esgota o tema; ele expõe a lacuna que a formação preenche.
+Estrutura
+Abertura: uma pergunta ou uma afirmação comum do mercado que será examinada. Máximo duas linhas.
+Desenvolvimento: o racional, em passos curtos. Um raciocínio por peça, nunca dois.
+Fechamento: a pergunta devolvida ao leitor ou o próximo passo.
+Regras
+Uma ideia por post. Se há duas, são dois posts.
+Legenda de 600 a 1.200 caracteres para post de racional; até 300 para post de provocação.
+Jargão explicado na própria peça, sem remeter a outro conteúdo.
+Sem números de resultado de paciente, sem antes e depois, sem depoimento de conduta.
+Chamada para ação no máximo em uma a cada três peças.
+Não fazer
+Carrossel que apresenta conclusão de estudo sem o racional de interpretação.
+Título que promete resultado ("o que ninguém te conta sobre...").
+Ironia sobre pessoas ou categorias profissionais.
+9.3 Textos de blog
+Função
+Aprofundar um raciocínio com espaço para nuance e referência. É o formato de autoridade técnica e de busca orgânica.
+Estrutura
+Título: descreve o raciocínio, não promete resultado.
+Abertura (1 a 2 parágrafos): a pergunta clínica ou o problema de interpretação.
+Contexto: o que se costuma afirmar sobre o tema e de onde vem essa afirmação.
+Desenvolvimento: a análise, com desenho de estudo, desfecho, magnitude e limitações explicitados.
+Transitividade: o que isso significa (e o que não significa) para o paciente real.
+Fechamento: síntese honesta, incluindo o que permanece incerto.
+Adequação para SEO.
+Referências ao final, em formato padronizado.
+Regras
+Extensão de 1.200 a 2.500 palavras.
+Subtítulos a cada 300 a 400 palavras.
+Mínimo de três referências primárias verificáveis.
+Toda limitação metodológica relevante aparece no texto, não em nota de rodapé.
+Nenhum texto termina com certeza maior do que a evidência sustenta.
+9.4 Newsletter
+Função
+Manter relação contínua e mostrar o pensamento em movimento. É o canal mais próximo da voz socrática, porque conversa em vez de publicar.
+Estrutura padrão
+Assunto: concreto e sem sensacionalismo. Máximo 60 caracteres.
+Abertura: uma situação, pergunta ou observação real. Dois a três parágrafos curtos que geram contexto.
+Núcleo: um raciocínio destrinchado — o conteúdo principal da edição.
+Aplicação: o que fazer com isso na próxima semana de consultório.
+Fechamento: pergunta ao leitor ou convite a responder o e-mail.
+Rodapé fixo: identificação da marca, gestão de inscrição, link para a formação.
+Regras
+Um tema por edição.
+Extensão de 600 a 1.200 palavras.
+Periodicidade fixa e anunciada. Frequência irregular custa mais que frequência baixa.
+No máximo uma oferta a cada duas edições, sempre em paralelo à trilha principal.
+A newsletter é própria do Interprete. — não replica conteúdo de outra marca dos fundadores.
+9.5 Guia de aula
+Função
+Documento entregue ao aluno antes do encontro síncrono. Existe para garantir o Valor 4: o aluno chega preparado. Sem guia enviado com antecedência, a aula perde o método.
+Estrutura obrigatória
+Identificação: título da aula, módulo, data, duração prevista.
+Objetivos de aprendizagem: de três a cinco, redigidos como capacidade observável ("ao fim desta aula você será capaz de...").
+Pergunta condutora: a pergunta que a aula responde. Uma só.
+Leitura prévia obrigatória: referências completas, com indicação do que observar em cada uma.
+Leitura complementar: opcional, claramente separada da obrigatória.
+Glossário: termos técnicos que aparecerão, definidos antes.
+Tarefa de aquecimento: exercício curto a ser feito antes do encontro.
+Espaço para dúvidas: campo em que o aluno registra o que trará ao encontro.
+Regras
+Enviado com no mínimo 72 horas de antecedência.
+Leitura prévia obrigatória limitada ao que é realizável no prazo — em regra, um a dois artigos.
+Sem ironia e sem linguagem coloquial.
+O guia nunca antecipa a conclusão da aula. Ele prepara a pergunta, não entrega a resposta.
+9.6 Relatório de aula
+Função
+Registro do que foi discutido e do que ficou pendente, enviado após o encontro. Sustenta o feedback de evolução e dá continuidade entre encontros.
+Estrutura obrigatória
+Identificação: aula, data, participantes presentes.
+Síntese do raciocínio construído: o caminho percorrido, não apenas a conclusão.
+Pontos de divergência: onde o grupo discordou e por quê. Registrar divergência não resolvida é obrigatório.
+Dúvidas em aberto: o que ficou sem resposta e o que será necessário para respondê-la.
+Crenças revisadas: o que o grupo — ou quem conduziu — passou a ver de outro modo (Valor 3).
+Encaminhamentos: tarefas, leituras e prazos até o próximo encontro.
+Referências utilizadas na aula.
+Regras
+Enviado em até 72 horas após o encontro.
+Registro objetivo, sem juízo sobre desempenho individual em documento coletivo.
+Feedback individual, quando houver, é documento separado.
+O relatório não corrige o que foi dito em aula sem sinalizar a correção de forma explícita.
+9.7 Slides de aula
+Função
+Sustentar a fala, nunca substituí-la. Slide que pode ser lido sozinho é apostila, e apostila contradiz o formato síncrono.
+Estrutura da apresentação
+Abertura: pergunta condutora da aula, isolada em um slide.
+Mapa: o percurso do encontro, em três a cinco etapas.
+Desenvolvimento: um slide por ideia.
+Slides de evidência: dados apresentados com desenho, população, desfecho e magnitude visíveis.
+Slides de provocação: pergunta em tela para discussão do grupo.
+Fechamento: o que ficou em aberto, não uma lista de conclusões.
+Regras de composição
+Máximo de 30 palavras por slide.
+Uma ideia por slide, sem exceção.
+Nenhum slide apresenta conclusão de estudo sem que desenho e limitação apareçam na mesma sequência.
+Gráfico sempre com eixo rotulado, unidade e fonte visíveis.
+Imagem só entra se carregar informação; não se usa imagem decorativa.
+Referência completa no rodapé do slide em que o dado aparece.
+Sem animação de transição, sem ironia, sem meme.
+10. Checklist de aprovação
+Aplicável a toda peça antes da publicação ou do envio. Qualquer resposta negativa impede a publicação.
+11. Controle de versão
+Somos
+Não somos
+Escola com modelo para a decisão clínica
+Curso de condutas e protocolos
+Formação com encontro síncrono e discussão
+Videoteca gravada de consumo passivo
+Interpretação com racional exposto
+Apresentação de artigos sem racional
+Marca independente, com identidade própria
+Extensão ou submarca de outra marca
+Linguagem de par para par, com rigor
+Discurso motivacional ou de guru
+Dimensão
+Descrição
+Momento
+Fim da graduação ou primeiros anos de prática clínica
+Dor principal
+Insegurança na decisão clínica; não confia na própria leitura de um artigo
+Dor secundária
+Percebe que quem ensina no mercado nem sempre tem lastro, mas não sabe como verificar
+Objeção
+"É complexo demais", "não tenho base de estatística", "não tenho dinheiro agora", “acho que posso não ser suficiente”
+Gatilho de decisão
+Ver o raciocínio destrinchado e concluir que consegue reproduzi-lo
+Sensibilidade a preço
+Alta
+Dimensão
+Descrição
+Momento
+Prática consolidada, com repertório clínico e pouco tempo
+Dor principal
+Sabe decidir na prática, mas não sabe justificar tecnicamente a decisão
+Objeção
+"Já sei ler artigo", "não tenho agenda para mais um curso"
+Gatilho de decisão
+Perceber uma lacuna concreta no próprio raciocínio, não uma promessa genérica
+Sensibilidade a preço
+Média
+Canal
+Postura dominante
+Informalidade
+Post
+Socrático — abre pergunta, provoca leitura
+Ironia permitida (1 por peça)
+Blog
+Professoral — desenvolve e explica
+Baixa
+Newsletter
+Professoral + socrático — conversa aberta
+Ironia permitida (sem limites claros)
+Guia de aula
+Professoral — instrucional
+Nenhuma
+Relatório de aula
+Professoral — registro objetivo
+Baixa
+Slides
+Socrático — sustenta a fala e complementa-a, mas não a substitui
+Baixa
+Usamos
+Evitamos
+evidência, magnitude, incerteza, aplicabilidade
+verdade científica, comprovado, cientificamente provado
+a evidência sugere / não permite concluir
+estudos mostram que (sem qualificação)
+raciocínio, critério, decisão
+protocolo, receita, passo a passo definitivo
+prática, consultório, paciente real
+transformação, jornada, destravar
+revisar a crença, atualizar a posição
+estava errado e agora está certo
+Item
+A definir
+Versão principal
+Versões alternativas (horizontal, reduzida, símbolo)
+Área de proteção (medida mínima)
+Tamanho mínimo de reprodução (impresso e digital)
+Aplicação sobre fundo claro
+Aplicação sobre fundo escuro
+Versão monocromática
+Formatos de arquivo e onde ficam armazenados
+Função
+Nome
+HEX
+Uso
+Primária
+Secundária
+Apoio 1
+Apoio 2
+Neutro claro (fundo)
+Neutro escuro (texto)
+Destaque / ação
+Função
+Família
+Peso
+Uso
+Títulos
+Subtítulos
+Texto corrido
+Legenda / nota
+Substituta de sistema (fallback)
+#
+Verificação
+1
+A peça pertence a um pilar e a um território identificáveis?
+2
+Toda afirmação técnica tem fonte rastreável?
+3
+O racional está exposto e não apenas a conclusão?
+4
+O grau de certeza está explícito onde a evidência é limitada?
+5
+Todo jargão foi definido na primeira aparição?
+6
+A peça está livre de promessa de resultado?
+7
+A ironia, se houver, recai sobre ideias e aparece uma única vez?
+8
+A peça está livre de assinatura individual?
+9
+A peça termina com pergunta, ação/tarefa ou próximo passo?
+10
+Foi revisada por quem não a escreveu?
+Versão
+Data
+Alterações
+Responsável
+0.1
+Set/2026
+Fundamentos, posicionamento, público, pilares, territórios, voz e regras de composição. Identidade visual pendente.
