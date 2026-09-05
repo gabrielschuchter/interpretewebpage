@@ -34,3 +34,9 @@ Os artigos ficam em content/blog e são validados durante o build. A configuraç
 ## URL pública
 
 Defina NEXT_PUBLIC_SITE_URL para gerar canonical, Open Graph e sitemap com a origem pública. Na Vercel, VERCEL_PROJECT_PRODUCTION_URL é usado como fallback quando a variável pública não estiver definida.
+
+## Design system do Interprete.
+
+O sistema de design canônico está em [docs/design-system](docs/design-system/README.md). Novas interfaces e migrações devem seguir `AGENTS.md` e o checklist obrigatório.
+
+A identidade azul existente é legado e não deve ser usada como referência visual para trabalho novo. Ativos oficiais estão em `public/brand/`; fontes originais e inventário do Google Drive ficam em `brand/source/`.
