@@ -1,0 +1,36 @@
+INTERPRETE. — ARQUIVOS DE LOGOMARCA
+Versão 1.0 · Setembro de 2026
+
+CONTEÚDO
+  /svg      vetor, escalável, texto convertido em curvas (não depende da fonte instalada)
+  /png      bitmap com fundo transparente nas versões sem container
+  /favicon  símbolo em Dark Amaranth nos tamanhos de ícone
+
+VERSÕES
+  wordmark-*          assinatura principal, sem container. Use sempre que houver espaço.
+  pilula-*            wordmark sobre retângulo arredondado. Use sobre fundo fotográfico
+                      ou de baixo contraste.
+  simbolo-*           "I." em quadrado arredondado. Redes sociais, favicon, avatar.
+  simbolo-solto-*     "I." sem container, para marca d'água e aplicações discretas.
+
+CORES
+  Dark Amaranth   #8C1535   primária
+  Crimson Violet  #410230   fundo escuro e texto sobre fundo claro
+  Classic Crimson #D62839   destaque
+  Pink Essence    #F1EBE8   sobre fundo escuro
+  Preto e branco            versão monocromática, sem meio-tom
+
+REGRAS DE APLICAÇÃO
+  Área de proteção   altura do "I" em todos os lados. Os arquivos vêm recortados
+                     no limite do desenho: a folga é aplicada no layout.
+  Tamanho mínimo     wordmark 90 px ou 25 mm de largura
+                     símbolo  32 px ou 10 mm
+  Fundo claro        wordmark em Crimson Violet ou Dark Amaranth
+  Fundo escuro       wordmark em Pink Essence
+
+NÃO FAZER
+  Distorcer a proporção, recolorir fora da paleta, aplicar sombra, contorno ou
+  gradiente, girar a assinatura, sobrepor a fundo carregado, redigitar o lettering
+  ou trocar a fonte.
+
+O ponto final é parte do nome. Nunca é removido.

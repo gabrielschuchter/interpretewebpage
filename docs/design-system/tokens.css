@@ -1,0 +1,139 @@
+/* Interprete. Design System v1.0
+   Fonte canônica: INTERPRETE_DESIGN_SYSTEM.md + DECISIONS.md
+   Este arquivo é referência/portável. A integração no runtime deve acontecer em uma migração própria. */
+
+:root {
+  /* Brand */
+  --it-color-pink-essence: #F1EBE8;
+  --it-color-dark-amaranth: #8C1535;
+  --it-color-crimson-violet: #410230;
+  --it-color-classic-crimson: #D62839;
+  --it-color-debian-red: #D60858;
+
+  /* Support neutrals, derived from approved interface mockups */
+  --it-color-white: #FFFFFF;
+  --it-color-black: #000000;
+  --it-color-ink: #40222F;
+  --it-color-muted: #7A5A69;
+  --it-color-border: #E2D6D1;
+  --it-color-canvas: #E4DAD5;
+
+  /* Semantic color */
+  --it-bg-default: var(--it-color-pink-essence);
+  --it-surface-default: var(--it-color-white);
+  --it-surface-brand: var(--it-color-dark-amaranth);
+  --it-surface-dark: var(--it-color-crimson-violet);
+  --it-text-strong: var(--it-color-crimson-violet);
+  --it-text-body: var(--it-color-ink);
+  --it-text-muted: var(--it-color-muted);
+  --it-text-on-dark: var(--it-color-pink-essence);
+  --it-border-subtle: var(--it-color-border);
+  --it-border-strong: var(--it-color-crimson-violet);
+  --it-action-primary: var(--it-color-classic-crimson);
+  --it-action-alternate: var(--it-color-debian-red);
+  --it-focus: var(--it-color-dark-amaranth);
+  --it-critical: var(--it-color-crimson-violet);
+
+  /* Composition targets */
+  --it-composition-pink-essence: 60%;
+  --it-composition-dark-amaranth: 20%;
+  --it-composition-crimson-violet: 12%;
+  --it-composition-accent-red: 8%;
+
+  /* Typography */
+  --it-font-display: "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --it-font-body: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --it-font-mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+
+  --it-font-size-hero: clamp(3rem, 6vw, 5.5rem);
+  --it-font-size-display: clamp(2.5rem, 5vw, 4rem);
+  --it-font-size-h1: clamp(2rem, 4vw, 3rem);
+  --it-font-size-h2: clamp(1.75rem, 3vw, 2.25rem);
+  --it-font-size-h3: clamp(1.375rem, 2vw, 1.75rem);
+  --it-font-size-body-lg: 1.125rem;
+  --it-font-size-body: 1rem;
+  --it-font-size-body-sm: .875rem;
+  --it-font-size-label: .6875rem;
+  --it-font-size-data: .875rem;
+
+  --it-line-hero: 1;
+  --it-line-display: 1.05;
+  --it-line-h1: 1.1;
+  --it-line-h2: 1.15;
+  --it-line-h3: 1.2;
+  --it-line-body-lg: 1.55;
+  --it-line-body: 1.6;
+  --it-line-body-sm: 1.55;
+  --it-line-label: 1.3;
+  --it-line-data: 1.4;
+
+  --it-weight-regular: 400;
+  --it-weight-medium: 500;
+  --it-weight-semibold: 600;
+  --it-weight-bold: 700;
+  --it-tracking-label: .17em;
+
+  /* Space */
+  --it-space-1: .25rem;   /* 4 */
+  --it-space-2: .5rem;    /* 8 */
+  --it-space-3: .75rem;   /* 12 */
+  --it-space-4: 1rem;     /* 16 */
+  --it-space-5: 1.25rem;  /* 20 */
+  --it-space-6: 1.5rem;   /* 24 */
+  --it-space-8: 2rem;     /* 32 */
+  --it-space-10: 2.5rem;  /* 40 */
+  --it-space-12: 3rem;    /* 48 */
+  --it-space-16: 4rem;    /* 64 */
+  --it-space-18: 4.5rem;  /* 72 */
+  --it-space-24: 6rem;    /* 96 */
+
+  /* Layout */
+  --it-container-max: 90rem; /* 1440 */
+  --it-reading-max: 68ch;
+  --it-page-gutter-mobile: 1rem;
+  --it-page-gutter-tablet: 1.5rem;
+  --it-page-gutter-desktop: 3rem;
+  --it-grid-gutter-mobile: 1rem;
+  --it-grid-gutter-tablet: 1.25rem;
+  --it-grid-gutter-desktop: 1.5rem;
+
+  /* Geometry */
+  --it-border-width-subtle: 1px;
+  --it-border-width-strong: 2px;
+  --it-radius-default: 0;
+  --it-radius-micro: 2px;
+  --it-radius-brand: 8px;
+  --it-radius-pill: 999px;
+  --it-shadow-default: none;
+
+  /* Motion */
+  --it-duration-fast: 160ms;
+  --it-duration-default: 200ms;
+  --it-duration-slow: 220ms;
+  --it-ease-standard: cubic-bezier(.2, .8, .2, 1);
+  --it-motion-shift: 4px;
+
+  /* Interaction */
+  --it-target-min: 44px;
+  --it-focus-width: 3px;
+  --it-focus-offset: 3px;
+}
+
+.it-theme-dark {
+  --it-bg-default: var(--it-color-crimson-violet);
+  --it-surface-default: var(--it-color-dark-amaranth);
+  --it-text-strong: var(--it-color-pink-essence);
+  --it-text-body: var(--it-color-pink-essence);
+  --it-text-muted: var(--it-color-pink-essence);
+  --it-border-subtle: color-mix(in srgb, var(--it-color-pink-essence) 28%, transparent);
+  --it-border-strong: var(--it-color-pink-essence);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --it-duration-fast: 0ms;
+    --it-duration-default: 0ms;
+    --it-duration-slow: 0ms;
+    --it-motion-shift: 0px;
+  }
+}
