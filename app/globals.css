@@ -333,6 +333,10 @@ em {
   border-bottom-color: var(--color-crimson);
 }
 
+.it-header-secondary.is-current {
+  border-bottom-color: var(--color-crimson);
+}
+
 .it-header-primary {
   gap: 0.35rem;
   border: var(--border-strong) solid var(--color-amaranth);
@@ -388,7 +392,7 @@ em {
 .it-mobile-menu nav {
   position: absolute;
   top: 3.8rem;
-  right: 0;
+  right: calc((var(--page-gutter) + 1rem) * -1);
   display: grid;
   min-width: min(20rem, calc(100vw - 2 * var(--page-gutter)));
   padding: 0.75rem;
@@ -408,7 +412,8 @@ em {
 }
 
 .it-mobile-menu nav a:hover,
-.it-mobile-menu nav a:focus-visible {
+.it-mobile-menu nav a:focus-visible,
+.it-mobile-menu nav a.is-current {
   color: var(--color-essence);
   background: var(--color-crimson);
 }
@@ -857,6 +862,12 @@ em {
   display: grid;
   grid-template-columns: 1.25fr repeat(2, minmax(0, 1fr));
   gap: var(--grid-gap);
+}
+
+.it-home-blog-empty {
+  max-width: 38rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
 }
 
 .it-home-article {
@@ -2043,6 +2054,13 @@ em {
   text-underline-offset: 0.15em;
 }
 
+.blog-sidebar-empty {
+  margin-top: 1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
 .blog-sidebar-categories {
   display: grid;
   justify-items: start;
@@ -2219,6 +2237,7 @@ em {
 }
 
 .blog-article-cover .blog-cover {
+  width: 100%;
   min-height: 22rem;
   border: var(--border-strong) solid var(--color-amaranth);
   aspect-ratio: 2 / 1;
@@ -2685,6 +2704,7 @@ em {
 .it-price-card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   min-height: 27rem;
   padding: 1.5rem;
   border: var(--border-subtle) solid var(--color-border-subtle);
@@ -3077,6 +3097,11 @@ em {
     font-size: clamp(3rem, 13vw, 5rem);
   }
 
+  .blog-article-hero h1 {
+    font-size: clamp(2.5rem, 11vw, 5rem);
+    overflow-wrap: anywhere;
+  }
+
   .blog-card--featured {
     display: block;
   }
@@ -3087,6 +3112,11 @@ em {
 
   .blog-card--featured .blog-cover {
     min-height: 15rem;
+  }
+
+  .blog-cover {
+    width: 100%;
+    min-height: 12rem;
   }
 
   .blog-grid,
@@ -3111,8 +3141,17 @@ em {
   }
 
   .blog-article-cover .blog-cover {
-    min-height: 14rem;
+    min-height: 12rem;
     aspect-ratio: 1.35 / 1;
+  }
+
+  .it-price-card {
+    padding: 1rem;
+  }
+
+  .it-price-card h3 {
+    font-size: clamp(1.7rem, 8vw, 2.4rem);
+    overflow-wrap: anywhere;
   }
 
   .blog-share {

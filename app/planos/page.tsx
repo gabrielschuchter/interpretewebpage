@@ -2,12 +2,13 @@ import type { Metadata } from 'next';
 import { Button, Footer, Header, PageShell, SectionLabel } from '../components';
 import { formats } from '../../lib/interprete/marketing';
 import { contactUrl } from '../../lib/contact';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Formatos',
   description: 'Conheça os formatos de acompanhamento do Interprete.',
-  alternates: { canonical: '/planos' },
-};
+  pathname: '/planos',
+});
 
 export default function PlansPage() {
   return (

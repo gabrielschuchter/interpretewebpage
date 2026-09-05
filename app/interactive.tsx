@@ -4,18 +4,20 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
-export function SiteNavLink({ href, children }: { href: string; children: React.ReactNode }) {
+export function SiteNavLink({ href, children, className = 'it-nav-link' }: { href: string; children: React.ReactNode; className?: string }) {
   const pathname = usePathname();
   const route = href.split('#')[0] || '/';
   const isCurrent = route !== '/' && pathname.startsWith(route);
+  const classes = [className, isCurrent ? 'is-current' : ''].filter(Boolean).join(' ');
 
-  return <Link className={isCurrent ? 'it-nav-link is-current' : 'it-nav-link'} href={href} aria-current={isCurrent ? 'page' : undefined}>{children}</Link>;
+  return <Link className={classes} href={href} aria-current={isCurrent ? 'page' : undefined}>{children}</Link>;
 }
 
 export function MobileMenu({ contactHref }: { contactHref: string }) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const summaryRef = useRef<HTMLElement>(null);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
@@ -33,6 +35,13 @@ export function MobileMenu({ contactHref }: { contactHref: string }) {
     if (detailsRef.current) detailsRef.current.open = false;
     setOpen(false);
   };
+  const isCurrent = (href: string) => {
+    const route = href.split('#')[0] || '/';
+    return route !== '/' && pathname.startsWith(route);
+  };
+  const mobileLink = (href: string, label: string) => (
+    <Link href={href} onClick={closeMenu} className={isCurrent(href) ? 'is-current' : undefined} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</Link>
+  );
 
   return (
     <details ref={detailsRef} className="it-mobile-menu" onToggle={(event) => setOpen(event.currentTarget.open)}>
@@ -41,12 +50,12 @@ export function MobileMenu({ contactHref }: { contactHref: string }) {
         <span className="sr-only">Abrir menu</span>
       </summary>
       <nav id="it-mobile-navigation" aria-label="Navegação móvel">
-        <Link href="/#cursos" onClick={closeMenu}>Formação</Link>
-        <Link href="/#ferramentas" onClick={closeMenu}>Ferramentas</Link>
-        <Link href="/#conteudos" onClick={closeMenu}>Conteúdos</Link>
-        <Link href="/blog" onClick={closeMenu}>Blog</Link>
-        <Link href="/#suporte" onClick={closeMenu}>Suporte</Link>
-        <Link href="/planos" onClick={closeMenu}>Ver formatos</Link>
+        {mobileLink('/#cursos', 'Formação')}
+        {mobileLink('/#ferramentas', 'Ferramentas')}
+        {mobileLink('/#conteudos', 'Conteúdos')}
+        {mobileLink('/blog', 'Blog')}
+        {mobileLink('/#suporte', 'Suporte')}
+        {mobileLink('/planos', 'Ver formatos')}
         <a className="it-mobile-contact" href={contactHref} target="_blank" rel="noreferrer" onClick={closeMenu}>
           Quero começar <span aria-hidden="true">↗</span>
         </a>

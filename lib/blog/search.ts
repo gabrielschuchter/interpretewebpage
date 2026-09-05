@@ -11,6 +11,19 @@ type SearchDocument = {
   body: string;
 };
 
+const searchOptions = {
+  boost: {
+    title: 6,
+    tags: 4,
+    summary: 2,
+    category: 2,
+    body: 1,
+  },
+  combineWith: 'AND' as const,
+  prefix: true,
+  fuzzy: 0.2,
+};
+
 export function normalizeBlogSearch(value: string) {
   return value
     .normalize('NFD')
@@ -22,17 +35,7 @@ export function createBlogSearch(articles: BlogBrowserArticle[]) {
   const search = new MiniSearch<SearchDocument>({
     fields: ['title', 'tags', 'summary', 'category', 'body'],
     storeFields: ['id'],
-    searchOptions: {
-      boost: {
-        title: 6,
-        tags: 4,
-        summary: 2,
-        category: 2,
-        body: 1,
-      },
-      prefix: true,
-      fuzzy: 0.2,
-    },
+    searchOptions,
   });
 
   search.addAll(articles.map((article) => ({
@@ -51,15 +54,5 @@ export function searchBlog(search: MiniSearch<SearchDocument>, query: string) {
   const normalizedQuery = normalizeBlogSearch(query);
   if (!normalizedQuery) return [];
 
-  return search.search(normalizedQuery, {
-    boost: {
-      title: 6,
-      tags: 4,
-      summary: 2,
-      category: 2,
-      body: 1,
-    },
-    prefix: true,
-    fuzzy: 0.2,
-  }).map((result) => result.id);
+  return search.search(normalizedQuery, searchOptions).map((result) => result.id);
 }

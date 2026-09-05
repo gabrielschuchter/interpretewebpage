@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, type KeyboardEvent } from 'react';
 import { BLOG_CATEGORY_LABELS, BLOG_TYPE_LABELS } from '../lib/blog/constants';
 import { formatBlogDate, getReadingTimeLabel } from '../lib/blog/format';
 import type { BlogBrowserArticle } from '../lib/blog/types';
@@ -18,6 +18,33 @@ import {
 import { Button, SectionLabel } from './components';
 
 type IconName = 'question' | 'search' | 'book' | 'chart' | 'shield' | 'layers' | 'message' | 'calendar' | 'route' | 'headset' | 'arrow';
+
+function handleTabKey(
+  event: KeyboardEvent<HTMLButtonElement>,
+  currentIndex: number,
+  total: number,
+  tabPrefix: string,
+  onSelect: (index: number) => void,
+) {
+  const direction = event.key === 'ArrowRight' || event.key === 'ArrowDown'
+    ? 1
+    : event.key === 'ArrowLeft' || event.key === 'ArrowUp'
+      ? -1
+      : 0;
+  const nextIndex = event.key === 'Home'
+    ? 0
+    : event.key === 'End'
+      ? total - 1
+      : direction
+        ? (currentIndex + direction + total) % total
+        : null;
+
+  if (nextIndex === null) return;
+
+  event.preventDefault();
+  onSelect(nextIndex);
+  document.getElementById(tabPrefix + nextIndex)?.focus();
+}
 
 function Icon({ name }: { name: IconName }) {
   const common = {
@@ -155,7 +182,7 @@ function ToolsSection({ articles }: { articles: BlogBrowserArticle[] }) {
           <p>Juntos, eles ajudam você a perguntar melhor, avaliar com critério e interpretar sem atalhos. Um caminho visível para cada dúvida.</p>
         </div>
         <div className="it-tools-layout">
-          <div className="it-tool-list" role="tablist" aria-label="Etapas e recursos do Interprete.">
+          <div className="it-tool-list" role="tablist" aria-label="Etapas e recursos do Interprete." aria-orientation="vertical">
             {academyTools.map((candidate, index) => (
               <button
                 key={candidate.title}
@@ -164,8 +191,10 @@ function ToolsSection({ articles }: { articles: BlogBrowserArticle[] }) {
                 role="tab"
                 aria-selected={activeTool === index}
                 aria-controls="tool-panel"
+                tabIndex={activeTool === index ? 0 : -1}
                 className={activeTool === index ? 'it-tool-card is-active' : 'it-tool-card'}
                 onClick={() => setActiveTool(index)}
+                onKeyDown={(event) => handleTabKey(event, index, academyTools.length, 'tool-tab-', setActiveTool)}
               >
                 <span className="it-icon"><Icon name={candidate.icon} /></span>
                 <span className="it-tool-card-copy"><strong>{candidate.title}</strong><small>{candidate.description}</small></span>
@@ -181,7 +210,11 @@ function ToolsSection({ articles }: { articles: BlogBrowserArticle[] }) {
         </div>
         <div id="conteudos" className="it-home-blog">
           <div className="it-home-blog-heading"><div><SectionLabel>Conteúdos para continuar</SectionLabel><h3>Uma pergunta pode abrir a próxima leitura.</h3></div><Link className="it-inline-link" href="/blog">Ver todo o Blog <Icon name="arrow" /></Link></div>
-          <div className="it-home-blog-grid">{articles.slice(0, 3).map((article, index) => <HomeArticleCard article={article} featured={index === 0} key={article.slug} />)}</div>
+          {articles.length > 0 ? (
+            <div className="it-home-blog-grid">{articles.slice(0, 3).map((article, index) => <HomeArticleCard article={article} featured={index === 0} key={article.slug} />)}</div>
+          ) : (
+            <p className="it-home-blog-empty">Novos conteúdos serão publicados em breve. Enquanto isso, converse sobre o percurso de estudo.</p>
+          )}
         </div>
       </div>
     </section>
@@ -208,8 +241,8 @@ function CoursesSection() {
         </div>
         <div className="it-hierarchy-heading"><div><SectionLabel>Organização do estudo</SectionLabel><h3>Uma sequência para aprender com ordem.</h3></div><p>Escolha uma frente para ver as perguntas e habilidades que compõem o percurso.</p></div>
         <div className="it-hierarchy">
-          <div className="it-group-list" role="tablist" aria-label="Frentes do percurso">
-            {learningGroups.map((candidate, index) => <button key={candidate.title} id={'group-tab-' + index} type="button" role="tab" aria-selected={activeGroup === index} aria-controls="group-panel" className={activeGroup === index ? 'it-group-tab is-active' : 'it-group-tab'} onClick={() => changeGroup(index)}><span>0{index + 1}</span><strong>{candidate.title}</strong><i aria-hidden="true">→</i></button>)}
+          <div className="it-group-list" role="tablist" aria-label="Frentes do percurso" aria-orientation="vertical">
+            {learningGroups.map((candidate, index) => <button key={candidate.title} id={'group-tab-' + index} type="button" role="tab" aria-selected={activeGroup === index} aria-controls="group-panel" tabIndex={activeGroup === index ? 0 : -1} className={activeGroup === index ? 'it-group-tab is-active' : 'it-group-tab'} onClick={() => changeGroup(index)} onKeyDown={(event) => handleTabKey(event, index, learningGroups.length, 'group-tab-', changeGroup)}><span>0{index + 1}</span><strong>{candidate.title}</strong><i aria-hidden="true">→</i></button>)}
           </div>
           <div className="it-hierarchy-panel" id="group-panel" role="tabpanel" aria-labelledby={'group-tab-' + activeGroup} tabIndex={0}>
             <div className="it-hierarchy-panel-heading"><h4>{group.shortTitle}</h4><p>{group.description}</p></div>

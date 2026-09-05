@@ -53,16 +53,20 @@ function BlogSidebar({
       <section className="blog-sidebar-block">
         <p className="subsection-label">Curadoria</p>
         <h2>Para começar</h2>
-        <nav aria-label="Conteúdos para começar">
-          <ol className="starter-list">
-            {starterArticles.map((article, index) => (
-              <li key={article.slug}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <Link href={'/blog/' + article.slug}>{article.title}</Link>
-              </li>
-            ))}
-          </ol>
-        </nav>
+        {starterArticles.length > 0 ? (
+          <nav aria-label="Conteúdos para começar">
+            <ol className="starter-list">
+              {starterArticles.map((article, index) => (
+                <li key={article.slug}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <Link href={'/blog/' + article.slug}>{article.title}</Link>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        ) : (
+          <p className="blog-sidebar-empty">Novos conteúdos serão publicados aqui.</p>
+        )}
       </section>
       <section className="blog-sidebar-block">
         <p className="subsection-label">Arquivo</p>

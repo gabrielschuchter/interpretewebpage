@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { absoluteUrl, SITE_URL } from '../lib/site';
 import { brand } from '../lib/design-system';
+import { SiteStructuredData } from './structured-data';
 import './tokens.css';
 import './globals.css';
 
@@ -43,7 +44,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body><SiteStructuredData />{children}</body>
     </html>
   );
 }

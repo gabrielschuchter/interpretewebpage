@@ -20,7 +20,7 @@ export function Header() {
           <SiteNavLink href="/#suporte">Suporte</SiteNavLink>
         </nav>
         <div className="it-header-actions">
-          <Link className="it-header-secondary" href="/planos">Ver formatos</Link>
+          <SiteNavLink href="/planos" className="it-header-secondary">Ver formatos</SiteNavLink>
           <a className="it-header-primary" href={contactHref} target="_blank" rel="noreferrer">
             Quero começar <span aria-hidden="true">↗</span>
           </a>

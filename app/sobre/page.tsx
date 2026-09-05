@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Footer, Header, PageShell, SectionLabel } from '../components';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Sobre o Interprete.',
   description: 'Conheça o método editorial e formativo do Interprete.',
-  alternates: { canonical: '/sobre' },
-};
+  pathname: '/sobre',
+});
 
 const principles = [
   ['Perguntar', 'Toda leitura começa por uma decisão ou dúvida que merece ser formulada com precisão.'],

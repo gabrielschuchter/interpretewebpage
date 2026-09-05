@@ -1,5 +1,7 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { brand, designSystemRules } from '../../lib/design-system';
+import { Footer, Header, PageShell } from '../components';
 import styles from './page.module.css';
 
 const colorLabels: Record<keyof typeof brand.colors, string> = {
@@ -14,19 +16,22 @@ const logoVariants = [
   ['simbolo-amaranto.svg', 'Símbolo em Dark Amaranth'],
 ] as const;
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Design system',
   description: 'Referência interna do sistema de design do Interprete.',
+  alternates: { canonical: '/design-system' },
   robots: { index: false, follow: false },
 };
 
 export default function DesignSystemPage() {
   return (
-    <main className={styles.page}>
-      <header className={styles.header}>
-        <Image src="/brand/svg/wordmark-creme.svg" alt="Interprete." width={240} height={44} priority />
-        <span className={styles.kicker}>Design system · v1</span>
-      </header>
+    <PageShell>
+      <Header />
+      <main className={styles.page}>
+        <div className={styles.header}>
+          <Image src="/brand/svg/wordmark-creme.svg" alt="Interprete." width={240} height={44} priority />
+          <span className={styles.kicker}>Design system · v1</span>
+        </div>
       <section className={styles.hero}>
         <p className={styles.eyebrow}>Sistema de identidade e interface</p>
         <h1>Racional exposto. Cor chapada. Texto sem rodeio.</h1>
@@ -46,13 +51,15 @@ export default function DesignSystemPage() {
       </section>
       <section className={`${styles.section} ${styles.canvas}`} aria-labelledby="components-title">
         <div className={styles.sectionHeading}><p className={styles.eyebrow}>04 · Componentes</p><h2 id="components-title">Estados e linguagem de interface</h2></div>
-        <div className={styles.componentRow}><a className={styles.button} href="#components-title">Ação principal <span aria-hidden="true">↗</span></a><button className={styles.buttonSecondary} type="button">Ação secundária</button><span className={styles.tag}>RÓTULO / DADO</span></div>
+        <div className={styles.componentRow}><a className={styles.button} href="#components-title">Ação principal <span aria-hidden="true">↗</span></a><span className={styles.buttonSecondary}>Ação secundária</span><span className={styles.tag}>RÓTULO / DADO</span></div>
         <div className={styles.panel}><span className={styles.eyebrow}>Princípio</span><h3>Nenhuma receita pronta.</h3><p>Entregamos o raciocínio necessário para construir uma decisão própria e contextualizada.</p></div>
       </section>
       <section className={`${styles.section} ${styles.dark}`} aria-labelledby="rules-title">
         <div className={styles.sectionHeading}><p className={styles.eyebrow}>05 · Governança</p><h2 id="rules-title">Antes de publicar</h2></div>
         <ol className={styles.rules}>{designSystemRules.map((rule, index) => <li key={rule}><span>0{index + 1}</span>{rule}</li>)}</ol>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </PageShell>
   );
 }

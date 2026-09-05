@@ -74,28 +74,49 @@ function ArticleStructuredData({ article }: { article: NonNullable<ReturnType<ty
   const imageUrl = absoluteUrl(article.coverImage ?? '/og-interprete.svg');
   const structuredData = JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': canonicalUrl,
-    },
-    headline: article.title,
-    description: article.summary,
-    image: [imageUrl],
-    author: {
-      '@type': 'Organization',
-      name: article.author,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Interprete.',
-      logo: {
-        '@type': 'ImageObject',
-        url: absoluteUrl('/brand/favicon/favicon-512.png'),
+    '@graph': [
+      {
+        '@type': 'BlogPosting',
+        '@id': canonicalUrl + '#article',
+        url: canonicalUrl,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': canonicalUrl,
+        },
+        headline: article.title,
+        description: article.summary,
+        image: [imageUrl],
+        articleSection: BLOG_CATEGORY_LABELS[article.category],
+        keywords: article.tags,
+        inLanguage: 'pt-BR',
+        author: {
+          '@type': 'Organization',
+          name: article.author,
+        },
+        publisher: {
+          '@id': absoluteUrl('/#organization'),
+        },
+        datePublished: article.publishedAt,
+        dateModified: article.updatedAt ?? article.publishedAt,
       },
-    },
-    datePublished: article.publishedAt,
-    dateModified: article.updatedAt ?? article.publishedAt,
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Blog',
+            item: absoluteUrl('/blog'),
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: article.title,
+            item: canonicalUrl,
+          },
+        ],
+      },
+    ],
   }).replace(/</g, '\\u003c');
 
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />;

@@ -1,5 +1,18 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Footer, Header, PageShell, SectionLabel } from './components';
+
+export const metadata: Metadata = {
+  title: 'Página não encontrada',
+  description: 'A página que você tentou acessar não existe no Interprete.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+  alternates: {
+    canonical: '/404',
+  },
+};
 
 export default function NotFound() {
   return (
